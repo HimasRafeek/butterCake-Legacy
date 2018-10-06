@@ -85,22 +85,22 @@ Include Butter Cake css and Js File(Navbar Functionalites)
 
 
 ##### Padding
-- p-0 to 10 - 0 - 100px (xy)
-- pt-0 to 10 - 0 - 100px (padding top)
-- pb-0 to 10 - 0 - 100px (padding bottom)
-- pl-0 to 10 - 0 - 100px (padding left)
-- pr-0 to 10 - 0 - 100px (padding right)
+- p-0 to 10    ( 0 - 100px (xy))
+- pt-0 to 10   ( 0 - 100px (padding top))
+- pb-0 to 10   ( 0 - 100px (padding bottom))
+- pl-0 to 10   ( 0 - 100px (padding left))
+- pr-0 to 10   ( 0 - 100px (padding right))
 
 
 ##### Margin
-- .mx-auto (margin: 0 auto)
-- .ml-auto (margin-left: auto)
-- .mr-auto (margin-right: auto)
-- .m-0 to 10 - 0 - 100px (xy)
-- .mt-0 to 10 - 0 - 100px (margin top)
-- .mb-0 to 10 - 0 - 100px (margin bottom)
-- .ml-0 to 10 - 0 - 100px (margin left)
-- .mr-0 to 10 - 0 - 100px (margin right)
+- .mx-auto     ( margin: 0 auto)
+- .ml-auto     ( margin-left: auto)
+- .mr-auto     ( margin-right: auto)
+- .m-0 to 10   ( 0 - 100px (xy))
+- .mt-0 to 10  ( 0 - 100px (margin top))
+- .mb-0 to 10  ( 0 - 100px (margin bottom))
+- .ml-0 to 10  ( 0 - 100px (margin left))
+- .mr-0 to 10  ( 0 - 100px (margin right))
 
 ##### Width
 - .w-100 (width: 100%)
