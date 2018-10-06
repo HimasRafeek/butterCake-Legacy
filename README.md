@@ -43,10 +43,10 @@ Include Butter Cake css and Js File(Navbar Functionalites)
 
 ## Grid - Classes
 - .row
--- .col
--- .col-md-x
--- .col-lg-x
--- .col-xl-x
+- .col
+- .col-md-x
+- .col-lg-x
+- .col-xl-x
 
 ## Utilities - Classes
 
