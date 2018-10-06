@@ -83,7 +83,7 @@ Include Butter Cake css and Js File(Navbar Functionalites)
 ```
 
 
-
+#
 ##### Padding
 - p-0 to 10    ( 0 - 100px (xy))
 - pt-0 to 10   ( 0 - 100px (padding top))
@@ -91,7 +91,7 @@ Include Butter Cake css and Js File(Navbar Functionalites)
 - pl-0 to 10   ( 0 - 100px (padding left))
 - pr-0 to 10   ( 0 - 100px (padding right))
 
-
+#
 ##### Margin
 - .mx-auto     ( margin: 0 auto)
 - .ml-auto     ( margin-left: auto)
@@ -102,17 +102,18 @@ Include Butter Cake css and Js File(Navbar Functionalites)
 - .ml-0 to 10  ( 0 - 100px (margin left))
 - .mr-0 to 10  ( 0 - 100px (margin right))
 
+#
 ##### Width
 - .w-100 (width: 100%)
 
 
+#
+####  [PREVIEW FRAMEWORK](https://goo.gl/c871HJ)
 ##### Butter Cake is built using SASS, Source Files will be uploaded once Documented.
 
-
-####  [PREVIEW FRAMEWORK](https://goo.gl/c871HJ)<space><space>
+#
+#### Consider  [DONATING ME](https://goo.gl/ncixXn)
+##### I will spend all my free time improving the ButterCake core and its documentation.
 
 #
-#### Consider  [DONATING ME](https://goo.gl/ncixXn)<space><space>
-I will spend all my free time improving the ButterCake core and its documentation.
-
 **Thank you!**
