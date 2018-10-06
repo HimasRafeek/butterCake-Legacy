@@ -25,7 +25,7 @@ Include Butter Cake css and Js File(Navbar Functionalites)
 ```
 
 
-## _Utilities - Classes _
+## Utilities - Classes
 
 ##### Wrappers
 - .container
