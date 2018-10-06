@@ -136,6 +136,8 @@ Include Butter Cake css and Js File(Navbar Functionalites)
 
 #
 #### Consider  [DONATING ME](http://bit.ly/butterCake)
+##### Supporters Name Will Be Included.
+
 ##### I will spend all my free time improving the ButterCake core and its documentation.
 
 #
