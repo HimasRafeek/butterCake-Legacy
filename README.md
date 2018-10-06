@@ -25,6 +25,29 @@ Include Butter Cake css and Js File(Navbar Functionalites)
 ```
 
 
+## Grid
+```html
+<div class="row"> 
+  
+  <div class="col-md-6">
+  ..........
+  </div>
+  
+  <div class="col-md-6">
+  ..........
+  </div>
+  
+</div>
+
+```
+
+## Grid - Classes
+- .row
+-- .col
+-- .col-md-x
+-- .col-lg-x
+-- .col-xl-x
+
 ## Utilities - Classes
 
 ##### Wrappers
