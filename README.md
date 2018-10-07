@@ -136,6 +136,7 @@ Include Butter Cake css and Js File(Navbar Functionalites)
 
 #
 #### Consider  [DONATING ME](http://bit.ly/butterCake)
+[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/himasrafeek)
 ##### Supporters Name Will Be Included.
 
 ##### I will spend all my free time improving the ButterCake core and its documentation.
