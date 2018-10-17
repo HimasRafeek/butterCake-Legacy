@@ -133,7 +133,7 @@ Include Butter Cake css and Js File(Navbar Functionalites)
 
 
 #
-####  [PREVIEW FRAMEWORK](http://bit.ly/butterCakePreview)
+####  [PREVIEW FRAMEWORK](https://himasrafeek.github.io/butterCake/)
 ##### Butter Cake is built using SASS, Source Files will be uploaded once Documented.
 
 #
