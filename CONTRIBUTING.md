@@ -2,7 +2,7 @@
 
 There are many ways you can contribute to the development of the **Butter Cake** framework:
 
-- If you encounter any **bugs**, please open an [issue] (https://github.com/HimasRafeek/butterCake/issues/new). Try to include as much information possible, including but not limited to **detailed explanation, screenshots, operating system, browser and device**.
+- If you encounter any **bugs**, please open an [issue](https://github.com/HimasRafeek/butterCake/issues/new). Try to include as much information possible, including but not limited to **detailed explanation, screenshots, operating system, browser and device**.
 
 - **Feature requests** are a bit more complicated to process, as we need to get some community feedback on what is worth adding to the framework, but feel free to open an [issue](https://github.com/HimasRafeek/ButterCake/issues/new) and we'll have a nice discussion.
 
@@ -14,4 +14,4 @@ There are many ways you can contribute to the development of the **Butter Cake**
 
 - If you create **content that uses or showcases the framework** (Codepens, tutorials, videos or even a cool website or app), email me (contact@himasrafeek.com) a link to your content, so that I can help you share it with the world.
 
-- For anything **not included in this list**, either open an [issue] (https://github.com/HimasRafeek/butterCake/issues/new) or send me an email (contact@himasrafeek.com).
+- For anything **not included in this list**, either open an [issue](https://github.com/HimasRafeek/butterCake/issues/new) or send me an email (contact@himasrafeek.com).
