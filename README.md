@@ -2,7 +2,7 @@
 
 
 
-##### _Butter Cake is an open source CSS framework based on Flexbox, Giving Developer's Flexibility & less Classes to create components and included 100+ helper Classes to get the task done easily without writing too many lines of css._
+### _Butter Cake is an open source CSS framework based on Flexbox, Giving Developer's Flexibility & less Classes to create components and included 100+ helper Classes to get the task done easily without writing too many lines of css._
 
 
 ## _Requirements_
@@ -220,7 +220,7 @@ Flex Direction
 
 #
 ####  [PREVIEW FRAMEWORK](https://himasrafeek.github.io/butterCake/)
-##### Butter Cake is built using SASS, Source Files will be uploaded once Documented.
+##### Butter Cake is built using SASS, [Used Prepos](https://prepros.io/) to compile
 
 #
 [![ko-fi](https://www.ko-fi.com/img/donate_sm.png)](https://ko-fi.com/S6S1KATV)
