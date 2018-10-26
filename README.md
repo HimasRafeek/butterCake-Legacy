@@ -16,14 +16,14 @@ Butter Cake CSS Framwork
 ## _Usages_
 
 
-Include Butter Cake css and Js File(Navbar Functionalites)
+Download Butter Cake files, and include css and js file
 ```html
 
-<link rel="stylesheet" href="css/butterCake.min.css">
+<link rel="stylesheet" href="css/butterCake.css">
 
 .................
 
-<script src="js/butterCake.min.js"></script>
+<script src="js/butterCake.js"></script>
 ```
 
 
