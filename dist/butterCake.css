@@ -994,11 +994,6 @@ select {
   background-size: cover;
   background-repeat: no-repeat; }
 
-.bg-container {
-  background-position: center center;
-  background-size: contain;
-  background-repeat: no-repeat; }
-
 .bg-fixed {
   background-attachment: fixed; }
 

@@ -98,7 +98,6 @@ select{
     align-items: stretch !important
 }
 
-
 // FLEX BOTH
 .flex-center-center {
     justify-content: center !important;
@@ -454,11 +453,6 @@ $value in $colors {
     background-repeat: no-repeat;
 }
 
-.bg-container {
-    background-position: center center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
 
 .bg-fixed {
     background-attachment: fixed;
