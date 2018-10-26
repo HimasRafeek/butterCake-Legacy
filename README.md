@@ -1,16 +1,12 @@
 ![](https://sites.himasrafeek.com/butterCake/Hero-1.jpeg)
 
-Butter Cake CSS Framwork
-========================
 
-#### Just like Butter Cake
 
-##### _Butter Cake Dead Simple Css Framework, Similar Like Bootstrap with Less Classes_
+##### _Butter Cake is an open source CSS framework based on Flexbox, Giving Developer's Flexibility & less Classes to create components and included 100+ helper Classes to get the task done easily without writing too many lines of css._
 
 
 ## _Requirements_
   - Jquery
-
 
 
 ## _Usages_
@@ -50,11 +46,19 @@ Download Butter Cake files, and include css and js file
 - .col-lg-x
 - .col-xl-x
 
-## Utilities - Classes
+## Utilities - Helper Classes
 
 ##### Wrappers
 - .container
 - .container-fluid
+
+##### Display Property
+- .d-none
+- .d-block
+- .d-inline
+- .d-inline-block
+- .d-flex or .flex
+
 
 ##### Background Color
 - .bg-primary
@@ -71,11 +75,14 @@ Download Butter Cake files, and include css and js file
 
 
 ##### Button
-- .button (Must)
-- .primary
-- .dark
-- .light
-- .white
+- .btn-primary
+- .btn-secondary
+- .btn-success
+- .btn-warning
+- .btn-danger
+- .btn-dark
+- .btn-light
+- .btn-white
 
 - .rounded (rounded)
 - .outline (outline)
@@ -84,31 +91,23 @@ Download Butter Cake files, and include css and js file
 ```html
 <!-- REGULAR BUTTONS -->
             <div class="container-fluid py-1">
-                <a class="button primary" href="#!">button</a>
-                <a class="button dark " href="#!">button</a>
-                <a class="button light " href="#!">button</a>
-                <a class="button white " href="#!">button</a>
+                <a class="btn-primary" href="#!">button</a>
             </div>
 
             <!-- ROUNDED BUTTONS -->
             <div class="container-fluid py-1">
-                <a class="button primary rounded" href="#!">button</a>
-                <a class="button dark rounded" href="#!">button</a>
-                <a class="button light rounded" href="#!">button</a>
-                <a class="button white rounded" href="#!">button</a>
+                <a class="btn-primary rounded" href="#!">button</a>
             </div>
 
             <!-- OUTLINE BUTTONS -->
             <div class="container-fluid py-1">
-                <a class="button primary outline" href="#!">button</a>
-                <a class="button dark outline" href="#!">button</a>
-                <a class="button light outline" href="#!">button</a>
-                <a class="button white outline" href="#!">button</a>
-            </div>
+                <a class="btn-primary outline" href="#!">button</a>
+             </div>
 ```
 
 
-#
+# 
+
 ##### Padding
 - p-0 to 10    ( 0 - 100px (xy))
 - pt-0 to 10   ( 0 - 100px (padding top))
@@ -128,8 +127,95 @@ Download Butter Cake files, and include css and js file
 - .mr-0 to 10  ( 0 - 100px (margin right))
 
 #
+
+
+
 ##### Width
 - .w-100 (width: 100%)
+
+##### Normal Image
+- .img-fluid
+- .img-rounded
+- .img-cirle
+- .img-cover
+- .img-contain
+
+##### Background Image
+- .bg-cover
+- .bg-fixed
+
+
+##### List
+- .list-unstyled
+
+##### Shadow
+- .shadow
+
+##### Border Radius
+- .radius-none
+
+##### Border
+- .border-none
+- .border-top-none
+- .border-bottom-none
+- .border-left-none
+- .border-right-none
+
+
+##### Font 
+- .text-center
+- .text-left
+- .text-right
+- .capitalize
+- .uppercase
+- .lowercase
+
+Font Weight
+- .font-normal
+- .font-bold
+- .weight-100 to .weight-900
+
+Font Sizes
+- .display-1
+- .display-2
+- .display-3
+- .display-4
+
+
+##### Float
+- .float-left
+- .float-right
+- .clearfix
+
+
+##### Flexbox
+Jusitify
+- .flex-justify-start
+- .flex-justify-center
+- .flex-justify-end
+- .flex-justify-between
+- .flex-justify-around
+- .flex-justify-evenly
+- .flex-justify-baseline
+
+Align
+- .flex-align-start
+- .flex-align-center
+- .flex-align-end
+- .flex-align-stretch
+
+Flex align center - Vertically & Horizontally
+- .flex-center-center
+
+
+Flex Direction
+- .flex-column
+- .flex-row
+
+
+##### Disable
+- .disabled
+- disabled (attribute)
 
 
 #
