@@ -137,8 +137,7 @@ Include Butter Cake css and Js File(Navbar Functionalites)
 ##### Butter Cake is built using SASS, Source Files will be uploaded once Documented.
 
 #
-#### Consider  [DONATING ME](http://bit.ly/butterCake)
-[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/himasrafeek)
+[![ko-fi](https://www.ko-fi.com/img/donate_sm.png)](https://ko-fi.com/S6S1KATV)
 ##### Supporters Name Will Be Included.
 
 ##### I will spend most of my time improving the ButterCake core and its documentation.
