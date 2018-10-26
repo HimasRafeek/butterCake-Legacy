@@ -1,0 +1,41 @@
+// CODE
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.code-wrap{
+    overflow-x: auto;
+
+    code{
+        padding: 10px 15px;
+    }
+}
+
+code {
+    background-color: $color-light;
+    color: $danger;
+    margin: 0 5px;
+    padding: 4px 8px;
+    white-space: nowrap;
+    overflow-x: auto;
+    @if $btn-radius {
+        border-radius: $border-radius;
+    }
+}
+
+
+pre {
+    background: $color-light;
+    font-size: 14px;
+    border-left: 5px solid $color-primary;
+    overflow-y: hidden;
+
+    @if $btn-radius {
+        border-radius: $border-radius;
+    }
+
+    &>code {
+        display: block;
+        padding: 15px;
+        white-space: pre;
+        border-radius: 0;
+    }
+}

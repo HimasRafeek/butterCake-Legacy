@@ -1,0 +1,122 @@
+// GRID
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+// GRID SYSTEM
+$grid_name: 'row'; // Name
+$grid_col: 12; // Columns
+$grid_gutter: $main-padding; // Path: ./vars/variables
+$grid_col_name: 'col-';
+$grid_auto: 'column';
+
+
+
+
+
+//  ANY SCREEN SIZES
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// SMALL
+$small-name: $grid_col_name+'sm-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
+
+// MEDUIM
+$meduim-name: $grid_col_name+'md-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
+
+// LARGE
+$large-name: $grid_col_name+'lg-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
+
+// XL
+$xl-name: $grid_col_name+'xl-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
+
+
+
+
+// DO NOT EDIT BELOW - 'DEVELOPER NOTE'
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.#{$grid_name} {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+
+}
+
+// AUTO GRID
+.#{$grid_name} .#{$grid_auto} {
+    flex-grow: 1;
+}
+
+.#{$grid_name}{
+    &.no-gutters{
+        &> div{
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
+}
+
+
+.#{$grid_name} [class*="#{$grid_col_name}"] {
+    max-width: 100%;
+    width: 100%;
+    padding-left: $grid_gutter;
+    padding-right: $grid_gutter;
+   
+}
+
+
+
+@for $i from 1 through $grid_col {
+    .#{$grid_col_name}#{$i} {
+        flex-basis: percentage($i / $grid_col);
+        max-width: percentage($i / $grid_col);
+        
+    }
+}
+
+
+// SMALL
+@media(min-width: $small-media) {
+    @for $i from 1 through $grid_col {
+        .#{$small-name}#{$i} {
+            flex-basis: percentage($i / $grid_col);
+            max-width: percentage($i / $grid_col);
+        }
+    }
+}
+
+
+
+// MEDUIM
+@media(min-width: $meduim-media) {
+    @for $i from 1 through $grid_col {
+        .#{$meduim-name}#{$i} {
+            flex-basis: percentage($i / $grid_col);
+            max-width: percentage($i / $grid_col);
+        }
+    }
+}
+
+
+
+// LARGE
+@media(min-width: $large-media) {
+    @for $i from 1 through $grid_col {
+        .#{$large-name}#{$i} {
+            flex-basis: percentage($i / $grid_col);
+            max-width: percentage($i / $grid_col);
+        }
+    }
+}
+
+
+// Xl
+@media(min-width: $xl-media) {
+    @for $i from 1 through $grid_col {
+        .#{$xl-name}#{$i} {
+            flex-basis: percentage($i / $grid_col);
+            max-width: percentage($i / $grid_col);
+        }
+    }
+}

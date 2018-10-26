@@ -1,0 +1,125 @@
+// FONT FAMILY
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700');
+
+
+// MAIN COLORS
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// $color-primary: #FFAC2F;
+// $color-primary: #FF9900;
+$color-primary: #FFAA23;
+$color-secondary: #9abc24;
+$color-dark: #1c1b19;
+$color-light: #f4f5f6;
+$color-white: white;
+
+// EXTRA COLORS
+$dark: #253035;
+$success: #4CAF50;
+$info: #17a2b8;
+$warning: #ffbb00;
+$danger: #fd4828;
+
+
+// BACKGROUND & TEXT COLORS
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+$colors: ('primary': $color-primary,
+'secondary': $color-secondary,
+'light': $color-light,
+'dark': $color-dark,
+'white': $color-white,
+'success': $success,
+'info': $info,
+'warning': $warning,
+'danger': $danger,
+);
+
+
+// BUTTON COLORS
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// PRIMARY COLOR & BUTTON HOVER COLOR
+$btn-color: $color-white;
+$btn-hover: #555;
+
+// BUTTON COLORS
+$btn-colors: ('primary': $color-primary,
+'secondary': $color-secondary,
+'light': $color-light,
+'dark': $dark,
+'success': $success,
+'info': $info,
+'warning': $warning,
+'danger': $danger,
+);
+
+
+
+
+// TYPOGRAPHY
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// FONT DEFAULTS
+$line-height: 1.25;
+$font-size-base: 16px;
+$font-margin-base: 5px;
+$font-weight-base: 300;
+$font-weight-bold: bold;
+$font-family-base: 'Roboto',
+sans-serif;
+
+// FONT SIZES
+$h1: 46px;
+$h2: 36px;
+$h3: 28px;
+$h4: 22px;
+$h5: 18px;
+$h6: 16px;
+
+
+
+
+// GRID
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// SMALL
+$small-media: '590px'; // EDITABLE
+
+// MEDUIM
+$meduim-media: '790px'; // EDITABLE
+
+// LARGE
+$large-media: '1160px'; // EDITABLE
+
+// XL
+$xl-media: '1260px'; // EDITABLE
+
+
+// UTILITIES
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// CONTAINER
+$container: 1150px;
+$container-fluid: 100%;
+
+
+// TRANSITION
+$transition: 0.120s;
+
+// DARK
+$darkPercent: 15%;
+
+// MAIN PADDING
+$main-padding: 10px;
+
+// MARGIN
+$margin-base: 5px;
+
+// BORDER RADIUS
+$border-radius: 5px;
+$btn-radius: true;
+$card-radius: false;
+
+// SHADOW
+$box-shadow: 0 0 5px 0 lighten(gray, 15%);
