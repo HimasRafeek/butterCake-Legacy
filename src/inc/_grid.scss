@@ -37,13 +37,16 @@ $xl-name: $grid_col_name+'xl-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
 .#{$grid_name} {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
     max-width: 100%;
+    width: 100%;
+    
 
 }
 
 // AUTO GRID
 .#{$grid_name} .#{$grid_auto} {
+    max-width: 100%;
+    flex-basis: 0;
     flex-grow: 1;
 }
 
@@ -58,8 +61,9 @@ $xl-name: $grid_col_name+'xl-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
 
 
 .#{$grid_name} [class*="#{$grid_col_name}"] {
-    max-width: 100%;
+    position: relative;
     width: 100%;
+    min-height: 1px;
     padding-left: $grid_gutter;
     padding-right: $grid_gutter;
    

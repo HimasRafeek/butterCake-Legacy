@@ -7,8 +7,11 @@
     font-size: 16px;
     padding: 4px 8px;
     margin-left: 5px;
-    border-radius: 5px;
     user-select: none;
+
+    @if $btn-radius {
+        border-radius: $border-radius;
+    }
 }
 
 .badge-lg{

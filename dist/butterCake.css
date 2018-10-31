@@ -1309,10 +1309,13 @@ p {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  width: 100%;
-  max-width: 100%; }
+  max-width: 100%;
+  width: 100%; }
 
 .row .column {
+  max-width: 100%;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1; }
@@ -1322,8 +1325,9 @@ p {
   padding-right: 0 !important; }
 
 .row [class*="col-"] {
-  max-width: 100%;
+  position: relative;
   width: 100%;
+  min-height: 1px;
   padding-left: 10px;
   padding-right: 10px; }
 
@@ -1831,6 +1835,9 @@ p {
 .jumbotron.fluid {
   max-width: 100% !important; }
 
+form {
+  width: 100%; }
+
 .input {
   display: block;
   max-width: 100%;
@@ -2055,11 +2062,11 @@ pre {
   font-size: 16px;
   padding: 4px 8px;
   margin-left: 5px;
-  border-radius: 5px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none; }
+  user-select: none;
+  border-radius: 5px; }
 
 .badge-lg {
   font-size: 18px;
