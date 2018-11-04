@@ -2,7 +2,7 @@
 
 
 
-### _Butter Cake is an open source CSS framework based on Flexbox, Giving Developer's Flexibility & less Classes to create components and included 100+ helper Classes to get the task done easily without writing too many lines of css._
+### _Butter Cake is an open source CSS framework based on Flexbox, Giving Developers Flexibility & less Classes to create components and included 100+ helper Classes to get the task done easily without writing too many lines of css._
 
 
 ## _Requirements_
