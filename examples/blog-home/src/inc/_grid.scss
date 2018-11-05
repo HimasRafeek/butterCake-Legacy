@@ -19,8 +19,8 @@ $grid_auto: 'column';
 // SMALL
 $small-name: $grid_col_name+'sm-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
 
-// MEDUIM
-$meduim-name: $grid_col_name+'md-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
+// MEDIUM
+$medium-name: $grid_col_name+'md-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
 
 // LARGE
 $large-name: $grid_col_name+'lg-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
@@ -88,10 +88,10 @@ $xl-name: $grid_col_name+'xl-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
 
 
 
-// MEDUIM
-@media(min-width: $meduim-media) {
+// MEDIUM
+@media(min-width: $medium-media) {
     @for $i from 1 through $grid_col {
-        .#{$meduim-name}#{$i} {
+        .#{$medium-name}#{$i} {
             flex-basis: percentage($i / $grid_col);
             max-width: percentage($i / $grid_col);
         }
