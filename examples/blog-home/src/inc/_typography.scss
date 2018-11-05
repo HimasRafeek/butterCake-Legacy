@@ -1,0 +1,43 @@
+// TYPOGRAPHY
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+    font-weight: $font-weight-base;
+    margin: 0;
+    margin-bottom: $font-margin-base * 3;
+}
+
+
+h1 {
+    font-size: $h1;
+}
+
+h2 {
+    font-size: $h2;
+}
+
+h3 {
+    font-size: $h3;
+}
+
+h4 {
+    font-size: $h4;
+}
+
+h5 {
+    font-size: $h5;
+}
+
+h6 {
+    font-size: $h6;
+}
+
+p {
+    font-size: $font-size-base;
+}

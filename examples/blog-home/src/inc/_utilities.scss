@@ -1,0 +1,459 @@
+// UTILITIES
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+// FORM
+
+select{
+    color: gray !important;
+
+    option:not([disabled]){
+        color: $dark;
+    }
+}
+
+
+.disabled,
+[disabled]{
+    user-select: none !important;
+    pointer-events: none !important;
+    opacity: 0.5;
+}
+
+
+// DISPLAY
+.d-none {
+    display: none !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.d-inline{
+    display: inline !important;
+}
+
+.d-inline-block{
+    display: inline-block !important;
+}
+
+// FLEXBOX
+[class*="flex"],
+.d-flex {
+    display: flex !important;
+}
+
+.flex-column {
+    flex-direction: column !important;
+}
+
+.flex-row {
+    flex-direction: row !important
+}
+
+// JUSTIFY
+.flex-justify-start {
+    justify-content: flex-start !important;
+}
+
+.flex-justify-center {
+    justify-content: center !important;
+}
+
+.flex-justify-end {
+    justify-content: flex-end !important;
+}
+
+.flex-justify-between{
+    justify-content: space-between !important;
+}
+
+.flex-justify-around {
+    justify-content: space-around !important;
+}
+
+.flex-justify-evenly {
+    justify-content: space-evenly !important;
+}
+
+.flex-justify-baseline {
+    justify-content: baseline !important;
+}
+
+// ALIGN
+.flex-align-start {
+    align-items: flex-start !important;
+}
+
+.flex-align-center {
+    align-items: center !important;
+}
+
+.flex-align-end {
+    align-items: flex-end !important;
+}
+
+.flex-align-stretch {
+    align-items: stretch !important
+}
+
+// FLEX BOTH
+.flex-center-center {
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+
+// FLOAT
+.float-left{
+    float: left !important;
+}
+
+.float-right{
+    float: right !important;
+}
+
+.clearfix{
+    clear: both;
+    float: none !important;
+}
+
+
+// BACKGROUND COLOR
+@each $color,
+$value in $colors {
+    .bg-#{$color} {
+        background-color: $value !important;
+    }
+}
+
+
+
+
+// FONT COLOR
+@each $color,
+$value in $colors {
+    .text-#{$color} {
+        color: $value !important;
+    }
+}
+
+
+// WIDTH
+.w-100 {
+    width: 100% !important;
+}
+
+// PADDING
+.p-0 {
+    padding: 0 !important;
+}
+
+.pt-0 {
+    padding-top: 0 !important;
+}
+
+.pb-0 {
+    padding-bottom: 0 !important;
+}
+
+.pl-0 {
+    padding-left: 0 !important;
+}
+
+.pr-0 {
+    padding-right: 0 !important;
+}
+
+@for $num from 1 to 11 {
+
+    .p-#{$num} {
+        padding: $main-padding * $num !important;
+    }
+
+    .py-#{$num} {
+        padding-top: $main-padding * $num !important;
+        padding-bottom: $main-padding * $num !important;
+    }
+
+    .px-#{$num} {
+        padding-left: $main-padding * $num !important;
+        padding-right: $main-padding * $num !important;
+    }
+
+    .pl-#{$num} {
+        padding-left: $main-padding * $num !important;
+    }
+
+    .pr-#{$num} {
+        padding-right: $main-padding * $num !important;
+    }
+
+
+    .pt-#{$num} {
+        padding-top: $main-padding * $num !important;
+    }
+
+
+    .pb-#{$num} {
+        padding-bottom: $main-padding * $num !important;
+    }
+
+
+
+}
+
+
+
+
+// MARGIN
+.mx-auto {
+    margin: 0 auto !important;
+}
+
+.m-0 {
+    margin: 0 !important;
+}
+
+.ml-auto {
+    margin-left: auto !important;
+}
+
+.mr-auto {
+    margin-right: auto !important;
+}
+
+.mt-0 {
+    margin-top: 0 !important;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.ml-0 {
+    margin-left: 0 !important;
+}
+
+.mr-0 {
+    margin-right: 0 !important;
+}
+
+@for $num from 1 to 11 {
+
+    .m-#{$num} {
+        margin: $main-padding * $num !important;
+    }
+
+    .my-#{$num} {
+        margin-top: $main-padding * $num !important;
+        margin-bottom: $main-padding * $num !important;
+    }
+
+    .mx-#{$num} {
+        margin-left: $main-padding * $num !important;
+        margin-right: $main-padding * $num !important;
+    }
+
+    .ml-#{$num} {
+        margin-left: $main-padding * $num !important;
+    }
+
+    .mr-#{$num} {
+        margin-right: $main-padding * $num !important;
+    }
+
+
+    .mt-#{$num} {
+        margin-top: $main-padding * $num !important;
+    }
+
+
+    .mb-#{$num} {
+        margin-bottom: $main-padding * $num !important;
+    }
+
+
+
+}
+
+
+// FONT SIZES
+.display-1{
+    font-size: 80px;
+}
+
+.display-2{
+    font-size: 70px;
+}
+
+.display-3{
+    font-size: 60px;
+}
+
+.display-4{
+    font-size: 50px;
+}
+
+
+// FONT WEIGHTS
+.font-normal {
+    font-weight: normal !important;
+}
+
+.font-bold {
+    font-weight: bold !important;
+}
+
+.weight-100 {
+    font-weight: 100 !important;
+}
+
+.weight-200 {
+    font-weight: 200 !important;
+}
+
+.weight-300 {
+    font-weight: 300 !important;
+}
+
+.weight-400 {
+    font-weight: 400 !important;
+}
+
+.weight-500 {
+    font-weight: 500 !important;
+}
+
+
+.weight-600 {
+    font-weight: 600 !important;
+}
+
+
+.weight-700 {
+    font-weight: 700 !important;
+}
+
+.weight-800 {
+    font-weight: 800 !important;
+}
+
+.weight-900 {
+    font-weight: 900 !important;
+}
+
+
+// FONT HELPERS
+.text-center {
+    text-align: center !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.uppercase {
+    text-transform: uppercase !important;
+}
+
+.lowercase {
+    text-transform: lowercase !important;
+}
+
+.capitalize {
+    text-transform: capitalize !important;
+}
+
+
+// BORDER
+.border-none {
+    border: none !important;
+}
+
+.border-top-none {
+    border-top: none;
+}
+
+.border-bottom-none {
+    border-bottom: none;
+}
+
+.border-left-none {
+    border-left: none;
+}
+
+.border-right-none {
+    border-right: none;
+}
+
+
+
+// BORDER RADIUS
+.radius-none {
+    border-radius: 0 !important;
+}
+
+
+// BOX SHADOW
+.shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    &:hover {
+        box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
+    }
+}
+
+.shadow-none {
+    box-shadow: none !important;
+}
+
+// LIST
+.list-unstyled{
+    padding: 0;
+    margin: 0;
+
+    li{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+// IMAGES
+.img-fluid{
+    width: 100%;
+}
+
+.img-rounded{
+    border-radius: 5px;
+}
+
+.img-cirle{
+    border-radius: 50%;
+}
+
+.img-cover{
+    object-fit: cover;
+}
+
+.img-contain {
+    object-fit: contain;
+}
+
+// BACKGROUND IMAGES
+.bg-cover{
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.bg-fixed {
+    background-attachment: fixed;
+}
