@@ -1,4 +1,4 @@
-![](https://getbuttercake.com/assets/images/banner.jpeg)
+![](https://getbuttercake.com/assets/images/banner.jpg)
 
 
 
