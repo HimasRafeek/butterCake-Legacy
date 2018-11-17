@@ -1,11 +1,9 @@
-![](https://getbuttercake.com/assets/images/banner.jpg)
+![](https://getbuttercake.com/assets/images/banner.jpeg)
 
 
 
 ### _Butter Cake is an open source CSS framework based on Flexbox, Giving Developers Flexibility & less Classes to create components and included 100+ helper Classes to get the task done easily without writing too many lines of css._
 
-### Send your feedback to
-_contact@himasrafeek.com_
 
 ## _Requirements_
   - Jquery
