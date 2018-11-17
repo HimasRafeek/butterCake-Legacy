@@ -1,0 +1,394 @@
+// NAVBAR
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+// TODO: Expanded
+
+// BODY NO SCROLL
+.noScroll {
+    overflow: hidden !important;
+}
+
+
+.fixed-top {
+    width: 100%;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+}
+
+.navbar>.container,
+.navbar>.container-fluid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: $main-padding;
+}
+
+.brand {
+    display: inline-block;
+    margin-right: 16px;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+
+.navbar .toggler {
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: auto;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    @if $radius {
+        border-radius: $border-radius;
+    }
+
+    &:hover {
+        background: $color-light;
+    }
+}
+
+// MENU
+.menu-box {
+    display: none;
+    align-items: center;
+    flex-basis: 100%;
+
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+
+        &>li {
+            margin: 0 5px;
+
+            & > a{
+                display: inline-block;
+            }
+        }
+
+        li {
+            list-style: none;
+            padding: 0;
+        }
+
+
+    }
+}
+
+.navbar.expanded .toggler {
+    display: none !important;
+}
+
+.navbar.expanded .menu-box {
+    display: flex !important;
+}
+
+.navbar.expanded .menu {
+    flex-direction: row;
+}
+
+.navbar.expanded>.container,
+.navbar.expanded>.container-fluid {
+    flex-wrap: nowrap;
+}
+
+
+
+// RESPONSIVE CODES | TOGGLE BAR
+@media (min-width: $small-media) {
+    .navbar.expand-sm .toggler {
+        display: none;
+    }
+
+    .navbar.expand-sm .menu-box {
+        display: flex !important;
+    }
+
+
+
+    .navbar.expand-sm .menu {
+        flex-direction: row;
+    }
+
+    .navbar.expand-sm>.container,
+    .navbar.expand-sm>.container-fluid {
+        flex-wrap: nowrap;
+    }
+
+
+}
+
+
+@media (min-width: $medium-media) {
+    .navbar.expand-md .toggler {
+        display: none;
+    }
+
+    .navbar.expand-md .menu-box {
+        display: flex !important;
+    }
+
+
+
+    .navbar.expand-md .menu {
+        flex-direction: row;
+    }
+
+    .navbar.expand-md>.container,
+    .navbar.expand-md>.container-fluid {
+        flex-wrap: nowrap;
+    }
+
+
+}
+
+
+@media (min-width: $large-media) {
+    .navbar.expand-lg .toggler {
+        display: none;
+    }
+
+    .navbar.expand-lg .menu-box {
+        display: flex !important;
+    }
+
+    .navbar.expand-lg .menu {
+        flex-direction: row;
+    }
+
+    .navbar.expand-lg>.container,
+    .navbar.expand-lg>.container-fluid {
+        flex-wrap: nowrap;
+    }
+
+
+}
+
+
+@media (min-width: $xl-media) {
+    .navbar.expand-xl .toggler {
+        display: none;
+    }
+
+    .navbar.expand-xl .menu-box {
+        display: flex !important;
+    }
+
+    .navbar.expand-xl .menu {
+        flex-direction: row;
+    }
+
+    .navbar.expand-xl>.container,
+    .navbar.expand-xl>.container-fluid {
+        flex-wrap: nowrap;
+    }
+
+
+}
+
+
+
+.navbar{
+    .dropdown{
+        .dropdown-menu{
+                top: 200%;
+                animation:  dropdown1 0.220s forwards ease-in-out;
+
+        }
+    }
+}
+
+.default-nav {
+
+    &.bg-light{
+        .brand {
+            a {
+                font-size: $h3;
+                color: $color-dark;
+            }
+        }
+
+        .menu {
+            a {
+                color: $color-dark;
+                &:hover {
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+    .brand {
+        padding-right: 10px;
+        a {
+            font-weight: 400;
+            font-size: $h3;
+            color: $color-white;
+        }
+    }
+
+    .menu {
+       & >li > a {
+            color: $color-white;
+            padding: 10px 5px;
+
+            &:hover {
+                color: $color-dark;
+            }
+        }
+        
+
+        .active {
+            &>a {
+                color: $color-dark;
+            }
+        }
+    }
+
+    &.bg-primary .sideNavbar {
+        background-color: $color-primary;
+    }
+
+    &.bg-secondary .sideNavbar {
+        background-color: $color-secondary;
+    }
+
+    &.bg-success .sideNavbar {
+        background-color: $success;
+    }
+
+    &.bg-info .sideNavbar {
+        background-color: $info;
+    }
+
+    &.bg-warning .sideNavbar {
+        background-color: $warning;
+    }
+
+    &.bg-danger .sideNavbar {
+        background-color: $danger;
+    }
+
+    &.bg-dark .sideNavbar {
+        background-color: $color-dark;
+    }
+
+    &.bg-light .sideNavbar {
+        background-color: $color-light;
+    }
+    
+
+}
+
+
+// SIDE BAR ON MOBILE
+.sideNavbar {
+    transition: all 0.5s !important;
+    display: block !important;
+    max-width: 300px;
+    width: 100%;
+    min-height: 100vh;
+    overflow-y: auto;
+
+    position: fixed;
+    top: 0;
+    height: 100%;
+    left: -100%;
+    z-index: 10000;
+
+    .menu {
+        flex-direction: column;
+        li {
+            position: relative;
+            width: 100%;
+            a {
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+
+
+
+    .dropdown {
+        &>.dropdown-menu {
+            position: unset !important;
+            background: white;
+            max-width: 100% !important;
+            min-width: 100% !important;
+            margin-top: 0 !important;
+            border-radius: 0 !important;
+            border: none;
+        }
+    }
+
+    &.toggled {
+        left: 0;
+    }
+}
+
+@keyframes dropdown1 {
+    0%{
+        opacity: 0;
+        top: 300%;
+    }
+    100%{
+        opacity: 1;
+        top: 200%;
+    }
+}
+
+
+
+
+// MOBILE SIDEBAR TOGGLER
+.toggled~.shadow {
+    width: 100%;
+    min-height: 100vh;
+    background: rgba(black, 0.5);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 500;
+}
+
+.menu-close {
+    display: none;
+}
+
+.sideNavbar .menu-close {
+    display: block !important;
+    background: $color-dark;
+    color: $color-white;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    &:hover {
+        background: $btn-hover;
+        color: white;
+    }
+}

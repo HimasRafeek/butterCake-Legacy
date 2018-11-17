@@ -1,0 +1,76 @@
+// FORM
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+form{
+    width: 100%;
+}
+
+.input{
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    min-height: 40px;
+    padding: 10px 10px;
+    background-color: white;
+    outline: none;
+    border: 1px solid silver;
+    @if $radius {
+        border-radius: $border-radius;
+    }
+    
+    &:focus{
+        border-color: $color-primary;
+        box-shadow: 0 0 0 2px rgba($color-primary,0.5);
+    }
+}
+
+select {
+
+    option:not([disabled]) {
+        color: $dark;
+    }
+
+    option[disabled] {
+        color: $gray;
+    }
+}
+
+
+textarea.input{
+    min-height: 150px !important;
+}
+
+textarea{
+    resize: vertical;
+}
+
+label{
+    display: inline-block;
+    margin-bottom: $margin-base * 2;
+}
+
+.group{
+    padding: $main-padding 0;
+}
+
+.input-group {
+    display: flex;
+}
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    label{
+        margin: 0;
+        margin-left: 10px;
+    }
+}
+
+[type="radio"],
+[type="checkbox"]{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: -1px;
+}

@@ -1,0 +1,28 @@
+// ALERTS
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.alert{
+    display: block;
+    text-align: left;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 15px;
+    
+    @if $radius {
+        border-radius: $border-radius;
+    }
+}
+
+
+@each $color,$value in $colors {
+    @if ($color !='white') and ($color !='light') {
+        
+        .alert.#{$color}{
+            background: rgba($value,0.1);
+            color: darken($value,5%);
+            border: 1px solid lighten($value,5%);
+            border-left: 4px solid $value;
+        }
+        
+    }
+}

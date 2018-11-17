@@ -1,0 +1,35 @@
+// CARDS
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.card {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    background-clip: border-box;
+    word-wrap: break-word;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, .125);
+    @if $radius {
+        border-radius: $border-radius;
+    }
+    
+    .card-header{
+        background-color: $color-light;
+        padding: 10px 15px;
+        .card-title {
+           margin: 0; 
+        }
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .card-footer {
+        background-color: $color-light;
+        padding: 10px 15px;
+    }
+
+}
+

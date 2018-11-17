@@ -1,0 +1,99 @@
+// DROPDOWN
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.dropdown {
+    position: relative;
+    
+    &.menu-showing>.dropdown-menu {
+        display: flex !important;
+    }
+    
+    &>a {
+        i {
+            display: inline;
+            margin-left: 10px;
+        }
+    }
+    
+    li{
+        list-style: none;
+        margin: 0;
+    }
+    
+    &[class*="btn"]>.dropdown-menu {
+        top: 100% !important;
+    }
+    
+    
+    &>.dropdown-menu {
+        box-shadow: 0 2px 5px 0 #555;
+        display: none;
+        flex-direction: column;
+        min-width: 150px;
+        background: white;
+        padding-left: 0;
+
+        position: absolute;
+        left: 0;
+        top: 100%;
+        z-index: 1000;
+
+        border: 1px solid darken($color-light, 10%);
+
+        @if $radius {
+            border-radius: $border-radius;
+        }
+
+        a {
+            display: block;
+            color: #333;
+            text-align: left;
+            white-space: nowrap;
+            padding: 10px 15px;
+
+            &:hover {
+                color: $color-dark;
+                background: darken($color-light,10%);
+            }
+        }
+
+        .inner-dropdown {
+            .dropdown-menu {
+                top: 0;
+                margin-top: 0 !important;
+            }
+
+            &.dropdown-right {
+                &>.dropdown-menu {
+                    left: 100%;
+                }
+            }
+
+            &.dropdown-left {
+                &>.dropdown-menu {
+                    left: -100%;
+                }
+            }
+
+            @media(max-width: 768px) {
+                .dropdown-menu {
+                    top: 100% !important;
+                }
+
+                &.dropdown-right {
+                    &>.dropdown-menu {
+                        left: 0 !important;
+                    }
+                }
+
+                &.dropdown-left {
+                    &>.dropdown-menu {
+                        left: 0 !important;
+                    }
+                }
+            }
+        }
+    }
+
+
+}

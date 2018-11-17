@@ -1,0 +1,53 @@
+// TABLE
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.table-fluid {
+    max-width: 100%;
+    width: 100%;
+    overflow-x: auto;
+
+    tr,
+    td,
+    table {
+        white-space: nowrap;
+    }
+}
+
+table {
+    max-width: 100%;
+    width: 100%;
+}
+
+thead{
+    background-color: $color-light;
+    th {
+        padding: 15px !important;
+    }
+}
+
+table,
+th,
+td {
+    border-collapse: collapse;
+}
+
+th {
+    font-weight: 500;
+}
+
+table tr {
+    border-bottom: 1px solid silver;
+
+}
+
+th,
+td {
+    padding: 10px 15px;
+    text-align: left;
+}
+
+.table-striped {
+    tr:nth-child(even) {
+        background-color: $color-light;
+    }
+}

@@ -1,0 +1,82 @@
+// TABS
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.tab-nav{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-bottom: 1px solid darken($color-light, 10%);
+    
+    
+    .tab-link{
+        all: unset;
+        display: block;
+        color: $color-primary;
+        padding: 10px 15px;
+        margin-bottom: -1px;;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border: 1px solid transparent;
+        border-bottom: none;
+        cursor: pointer;
+        &:hover{
+            color: $color-dark;
+            border-color: darken($color-light, 10%);
+        }
+
+        &.active{
+            color: $color-dark;
+            background-color: white;
+            border-color: darken($color-light, 10%);
+
+        }
+    }
+}
+
+.tab-container{
+    padding: 15px 0;
+}
+
+
+.tab-content {
+    display: none;
+    padding: 6px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+    &.active {
+        display: block !important;
+    }
+
+    .tab-close{
+        cursor: pointer;
+        opacity: 0.5;
+        font-size: 16px;
+
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
+
+
+@-webkit-keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

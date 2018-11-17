@@ -1,0 +1,37 @@
+// TABLE
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.badge{
+    display: inline-block;
+    background-color: $color-light;
+    font-size: 16px;
+    padding: 4px 8px;
+    margin-left: 5px;
+    user-select: none;
+
+    @if $radius {
+        border-radius: $border-radius;
+    }
+}
+
+.badge-lg{
+    font-size: 18px;
+    padding: 5px 15px;
+}
+
+.badge-sm {
+    font-size: 12px;
+}
+
+.badge.rounded{
+    border-radius: 35px;
+}
+
+
+@each $color,
+$value in $colors {
+    .badge.#{$color} {
+        background-color: $value !important;
+        color: $color-white;
+    }
+}

@@ -1,0 +1,18 @@
+.breadcrumb {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    background-color: $color-light;
+
+    li {
+        list-style: none;
+        display: inline;
+    }
+
+    li+li:before {
+        padding: 8px;
+        color: black;
+        content: $breadcrumb-divider;
+    }
+
+}

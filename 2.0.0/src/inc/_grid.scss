@@ -1,0 +1,134 @@
+// GRID
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+// GRID SYSTEM
+$grid_name: 'row'; // Name
+$grid_col: 12; // Columns
+$grid_gutter: $main-padding; // Path: ./vars/variables
+$grid_col_name: 'col-'; // ex: col-md-12
+$grid_auto: 'column'; // Auto column
+
+
+
+
+
+//  ANY SCREEN SIZES
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// SMALL
+$small-name: $grid_col_name+'sm-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
+
+// MEDIUM
+$medium-name: $grid_col_name+'md-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
+
+// LARGE
+$large-name: $grid_col_name+'lg-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
+
+// XL
+$xl-name: $grid_col_name+'xl-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
+
+
+
+
+// DO NOT EDIT BELOW - 'DEVELOPER NOTE'
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.#{$grid_name} {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    width: 100%;
+
+
+}
+
+// AUTO GRID
+.#{$grid_name} .#{$grid_auto} {
+    max-width: 100%;
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.#{$grid_name} {
+    &.no-gutters {
+        &>div {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
+}
+
+
+.#{$grid_name} [class^="#{$grid_col_name}"] {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-left: $grid_gutter;
+    padding-right: $grid_gutter;
+
+}
+
+// OFFSET
+@for $i from 1 through $grid_col {
+
+    .offset-#{$i} {
+        margin-left: percentage($i / $grid_col);
+    }
+}
+
+
+// AUTO COL
+@for $i from 1 through $grid_col {
+    .#{$grid_col_name}#{$i} {
+        flex-basis: percentage($i / $grid_col);
+        max-width: percentage($i / $grid_col);
+
+    }
+
+}
+
+
+// SMALL
+@include min-breakpoint($small-media) {
+    @for $i from 1 through $grid_col {
+        .#{$small-name}#{$i} {
+            flex-basis: percentage($i / $grid_col);
+            max-width: percentage($i / $grid_col);
+        }
+    }
+}
+
+
+// MEDIUM
+@include min-breakpoint($medium-media){
+    @for $i from 1 through $grid_col {
+        .#{$medium-name}#{$i} {
+            flex-basis: percentage($i / $grid_col);
+            max-width: percentage($i / $grid_col);
+        }
+    }
+}
+
+
+
+// LARGE
+@include min-breakpoint($large-media){
+    @for $i from 1 through $grid_col {
+        .#{$large-name}#{$i} {
+            flex-basis: percentage($i / $grid_col);
+            max-width: percentage($i / $grid_col);
+        }
+    }
+}
+
+
+// Xl
+@include min-breakpoint($xl-media){
+    @for $i from 1 through $grid_col {
+        .#{$xl-name}#{$i} {
+            flex-basis: percentage($i / $grid_col);
+            max-width: percentage($i / $grid_col);
+        }
+    }
+}

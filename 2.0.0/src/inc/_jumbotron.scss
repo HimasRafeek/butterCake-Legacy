@@ -1,0 +1,15 @@
+// JUMBOTRON
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.jumbotron{
+    background-color: $color-light;
+    max-width: $container;
+    width: 100%;
+    padding: 100px 10px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.jumbotron.fluid{
+    max-width: 100% !important;
+}

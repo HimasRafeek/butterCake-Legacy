@@ -1,0 +1,59 @@
+/* Custom Css */
+
+    
+
+
+/* Breakpoints | Min Width */
+
+// Small 590px
+@include min-breakpoint($small-media){
+    // Your css here
+
+}
+
+// Medium 790px
+@include min-breakpoint($medium-media){
+    // Your css here
+
+}
+
+// Large 1160px
+@include min-breakpoint($large-media){
+    // Your css here
+
+}
+
+// Extra Large 1260px
+@include min-breakpoint($xl-media){
+    // Your css here
+    
+}
+
+
+
+
+/* Breakpoints | Max Width */
+
+// Small 590px
+@include max-breakpoint($small-media) {
+    // Your css here
+
+}
+
+// Medium 790px
+@include max-breakpoint($medium-media) {
+    // Your css here
+
+}
+
+// Large 1160px
+@include max-breakpoint($large-media) {
+    // Your css here
+
+}
+
+// Extra Large 1260px
+@include max-breakpoint($xl-media) {
+    // Your css here
+
+}

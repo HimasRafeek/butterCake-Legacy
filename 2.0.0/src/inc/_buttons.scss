@@ -1,0 +1,133 @@
+// BUTTONS
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+[class*="btn-"] {
+    display: inline-block;
+    padding: 8px 20px !important;
+    text-align: center;
+    font-weight: $font-weight-base;
+    background: none;
+    border: none;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    @if $radius {
+        border-radius: $border-radius;
+    }
+
+    &.rounded {
+        border-radius: 30px !important;
+    }
+
+
+}
+
+
+
+// REGULAR BUTTON
+@each $color,
+$value in $btn-colors {
+
+    // Regular Button
+    .btn-#{$color} {
+        @include button($value, $color-white);
+    }
+
+    // Regular Outline Button
+    .btn-#{$color}.outline {
+        color: darken($value, 10%) !important;
+        background-color: transparent;
+
+        &:focus{
+            color: white !important;
+        }
+    }
+
+
+
+    // Light Button
+    @if $color=='light' {
+        .btn-#{$color} {
+            background-color: $value;
+            color: $color-dark !important;
+
+            &:focus,
+            &:active,
+            &:hover {
+                color: black !important;
+            }
+        }
+
+        // Outline
+        .btn-#{$color}.outline {
+            color: $color-dark !important;
+            background-color: transparent;
+
+            &:focus,
+            &:active,
+            &:hover{
+                 color: $color-dark !important;
+            }
+        }
+    }
+
+}
+
+
+
+
+// LARGE BUTTON
+.btn-lg {
+    padding: 12px 30px !important;
+    font-size: 18px;
+}
+
+// SMALL BUTTON
+.btn-sm {
+    padding: 8px 15px !important;
+    font-size: 14px;
+}
+
+// BLOCK BUTTON
+.block{
+    display: block !important;
+    width: 100% !important;
+    
+     + .block {
+        margin-top: 5px;
+    }
+}
+
+// BUTTON GROUP
+.button-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    + .button-group{
+        margin-top: 5px;
+    }
+
+    [class*="btn-"] {
+        margin: 0 !important;
+        border-radius: 0;
+    }
+
+    [class*="btn-"]:first-child {
+        @if $radius {
+            border-radius: $border-radius;
+            border-radius: 5px 0px 0px 5px !important;
+        }
+
+    }
+
+    [class*="btn-"]:last-child {
+        @if $radius {
+            border-radius: 0px 5px 5px 0px !important;
+        }
+    }
+
+}
