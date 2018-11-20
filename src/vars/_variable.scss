@@ -1,23 +1,23 @@
-// FONT FAMILY
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700');
-
-
 // MAIN COLORS
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 
-$color-primary: #ffaa23;
-$color-secondary: #9abc24;
+$color-primary: #7971aa;
+$color-secondary: #a59ec8;
+
 $color-dark: #1c1b19;
 $color-light: #f4f5f6;
 $color-white: white;
 
 // EXTRA COLORS
 $dark: #253035;
-$success: #4CAF50;
+$success: #00C851;
 $info: #17a2b8;
-$warning: #ffbb00;
-$danger: #fd4828;
+$warning: #ffbb33;
+$danger: #ff4444;
+$gray: gray;
+$muted: #949494;
+
 
 
 // BACKGROUND & TEXT COLORS
@@ -27,11 +27,13 @@ $colors: ('primary': $color-primary,
 'secondary': $color-secondary,
 'light': $color-light,
 'dark': $color-dark,
+'gray': $gray,
 'white': $color-white,
 'success': $success,
 'info': $info,
 'warning': $warning,
 'danger': $danger,
+'muted': $muted
 );
 
 
@@ -47,6 +49,7 @@ $btn-colors: ('primary': $color-primary,
 'secondary': $color-secondary,
 'light': $color-light,
 'dark': $dark,
+'gray': $gray,
 'success': $success,
 'info': $info,
 'warning': $warning,
@@ -63,10 +66,9 @@ $btn-colors: ('primary': $color-primary,
 $line-height: 1.25;
 $font-size-base: 16px;
 $font-margin-base: 5px;
-$font-weight-base: 300;
+$font-weight-base: 400;
 $font-weight-bold: bold;
-$font-family-base: 'Roboto',
-sans-serif;
+$font-family-base: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 
 // FONT SIZES
 $h1: 46px;
@@ -116,9 +118,11 @@ $main-padding: 10px;
 $margin-base: 5px;
 
 // BORDER RADIUS
-$border-radius: 5px;
-$btn-radius: true;
-$card-radius: false;
+$border-radius: 4px;
+$radius: true;
 
 // SHADOW
 $box-shadow: 0 0 5px 0 lighten(gray, 15%);
+
+// BREAD CRUMB DIVIDER
+$breadcrumb-divider: quote("/");

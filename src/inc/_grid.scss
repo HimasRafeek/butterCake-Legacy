@@ -6,8 +6,8 @@
 $grid_name: 'row'; // Name
 $grid_col: 12; // Columns
 $grid_gutter: $main-padding; // Path: ./vars/variables
-$grid_col_name: 'col-';
-$grid_auto: 'column';
+$grid_col_name: 'col-'; // ex: col-md-12
+$grid_auto: 'column'; // Auto column
 
 
 
@@ -39,7 +39,7 @@ $xl-name: $grid_col_name+'xl-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
     flex-wrap: wrap;
     max-width: 100%;
     width: 100%;
-    
+
 
 }
 
@@ -50,9 +50,9 @@ $xl-name: $grid_col_name+'xl-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
     flex-grow: 1;
 }
 
-.#{$grid_name}{
-    &.no-gutters{
-        &> div{
+.#{$grid_name} {
+    &.no-gutters {
+        &>div {
             padding-left: 0 !important;
             padding-right: 0 !important;
         }
@@ -60,28 +60,37 @@ $xl-name: $grid_col_name+'xl-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
 }
 
 
-.#{$grid_name} [class*="#{$grid_col_name}"] {
+.#{$grid_name} [class^="#{$grid_col_name}"] {
     position: relative;
     width: 100%;
     min-height: 1px;
     padding-left: $grid_gutter;
     padding-right: $grid_gutter;
-   
+
 }
 
-
-
+// OFFSET
 @for $i from 1 through $grid_col {
-    .#{$grid_col_name}#{$i} {
-        flex-basis: percentage($i / $grid_col);
-        max-width: percentage($i / $grid_col);
-        
+
+    .offset-#{$i} {
+        margin-left: percentage($i / $grid_col);
     }
 }
 
 
+// AUTO COL
+@for $i from 1 through $grid_col {
+    .#{$grid_col_name}#{$i} {
+        flex-basis: percentage($i / $grid_col);
+        max-width: percentage($i / $grid_col);
+
+    }
+
+}
+
+
 // SMALL
-@media(min-width: $small-media) {
+@include min-breakpoint($small-media) {
     @for $i from 1 through $grid_col {
         .#{$small-name}#{$i} {
             flex-basis: percentage($i / $grid_col);
@@ -91,9 +100,8 @@ $xl-name: $grid_col_name+'xl-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
 }
 
 
-
 // MEDIUM
-@media(min-width: $medium-media) {
+@include min-breakpoint($medium-media){
     @for $i from 1 through $grid_col {
         .#{$medium-name}#{$i} {
             flex-basis: percentage($i / $grid_col);
@@ -105,7 +113,7 @@ $xl-name: $grid_col_name+'xl-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
 
 
 // LARGE
-@media(min-width: $large-media) {
+@include min-breakpoint($large-media){
     @for $i from 1 through $grid_col {
         .#{$large-name}#{$i} {
             flex-basis: percentage($i / $grid_col);
@@ -116,7 +124,7 @@ $xl-name: $grid_col_name+'xl-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
 
 
 // Xl
-@media(min-width: $xl-media) {
+@include min-breakpoint($xl-media){
     @for $i from 1 through $grid_col {
         .#{$xl-name}#{$i} {
             flex-basis: percentage($i / $grid_col);

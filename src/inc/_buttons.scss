@@ -1,7 +1,7 @@
 // BUTTONS
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-[class*="btn"] {
+[class*="btn-"] {
     display: inline-block;
     padding: 8px 20px !important;
     text-align: center;
@@ -13,7 +13,7 @@
     cursor: pointer;
     user-select: none;
     appearance: none;
-    @if $btn-radius {
+    @if $radius {
         border-radius: $border-radius;
     }
 
@@ -39,6 +39,10 @@ $value in $btn-colors {
     .btn-#{$color}.outline {
         color: darken($value, 10%) !important;
         background-color: transparent;
+
+        &:focus{
+            color: white !important;
+        }
     }
 
 
@@ -58,9 +62,11 @@ $value in $btn-colors {
 
         // Outline
         .btn-#{$color}.outline {
-            color: darken($value, 50%);
+            color: $color-dark !important;
             background-color: transparent;
 
+            &:focus,
+            &:active,
             &:hover{
                  color: $color-dark !important;
             }
@@ -84,31 +90,43 @@ $value in $btn-colors {
     font-size: 14px;
 }
 
+// BLOCK BUTTON
+.block{
+    display: block !important;
+    width: 100% !important;
+    
+     + .block {
+        margin-top: 5px;
+    }
+}
+
 // BUTTON GROUP
-.btn-group {
+.button-group {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
 
-    [class*="btn"] {
-        margin: 0 !important;
-        border-radius: 0;
-        border-right: 1px solid rgba(white,0.5);
+    + .button-group{
+        margin-top: 5px;
     }
 
-    [class*="btn"]:first-child {
-        @if $btn-radius {
+    [class*="btn-"] {
+        margin: 0 !important;
+        border-radius: 0;
+    }
+
+    [class*="btn-"]:first-child {
+        @if $radius {
             border-radius: $border-radius;
             border-radius: 5px 0px 0px 5px !important;
         }
 
     }
 
-    [class*="btn"]:last-child {
-        @if $btn-radius {
+    [class*="btn-"]:last-child {
+        @if $radius {
             border-radius: 0px 5px 5px 0px !important;
-            border-right: 0;
         }
     }
 

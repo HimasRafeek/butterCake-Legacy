@@ -2,6 +2,10 @@
   transition: $transition !important;
 }
 
+i {
+  transition: all 0s !important;
+}
+
 *,
 ::after,
 ::before {
@@ -13,6 +17,7 @@
 html {
   line-height: $line-height;
   -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
 
 
@@ -23,8 +28,8 @@ body {
 }
 
 html,
-body{
-  color: #666;
+body {
+  color: #333;
 }
 
 
@@ -39,10 +44,13 @@ hr {
 
 
 pre {
-  font-family: monospace, monospace;
+  font-family: monospace;
   font-size: $font-margin-base;
 }
 
+figure {
+  margin: 0;
+}
 
 
 a {
@@ -73,7 +81,7 @@ strong {
 ol ol ul,
 ol ul ul,
 ul ol ul,
-ul ul ul{
+ul ul ul {
   font-size: 100%;
 }
 
@@ -116,8 +124,8 @@ img {
 }
 
 
-fieldset{
-    border: none;
+fieldset {
+  border: none;
 }
 
 
@@ -128,7 +136,7 @@ select,
 textarea {
   font-family: inherit;
   font-size: 100%;
-  line-height: $font-size-base;
+  line-height: $line-height;
   margin: 0;
 }
 

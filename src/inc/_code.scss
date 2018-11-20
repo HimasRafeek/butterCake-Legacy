@@ -3,7 +3,7 @@
 
 .code-wrap{
     overflow-x: auto;
-
+    
     code{
         padding: 10px 15px;
     }
@@ -12,23 +12,23 @@
 code {
     background-color: $color-light;
     color: $danger;
-    margin: 0 5px;
     padding: 4px 8px;
-    white-space: nowrap;
+    word-wrap: break-word;
     overflow-x: auto;
-    @if $btn-radius {
+    line-height: 1.50;
+    @if $radius {
         border-radius: $border-radius;
     }
 }
 
 
 pre {
-    background: $color-light;
     font-size: 14px;
-    border-left: 5px solid $color-primary;
+    padding: 10px 25px;
+    background: #eee;
     overflow-y: hidden;
 
-    @if $btn-radius {
+    @if $radius {
         border-radius: $border-radius;
     }
 
@@ -36,6 +36,5 @@ pre {
         display: block;
         padding: 15px;
         white-space: pre;
-        border-radius: 0;
     }
 }

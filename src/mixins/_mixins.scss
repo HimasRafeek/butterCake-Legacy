@@ -4,7 +4,7 @@
 
 // REGULAR BUTTON
 @mixin button($color, $textColor) {
-    border: 1px solid $color;
+    border: 1px solid $color !important;
     color: $textColor !important;
     background-color: $color;
 
@@ -18,7 +18,7 @@
 
     &:focus,
     &:active {
-        background-color: $color !important;
+        background-color: darken($color, 10%) !important;
         box-shadow: 0 0 0 2px rgba($color,0.5);
     }
 
@@ -32,3 +32,14 @@
 }
 
 
+@mixin max-breakpoint($sm : 0) {
+    @media(max-width: $sm){
+        @content;
+    }
+}
+
+@mixin min-breakpoint($sm : 0) {
+    @media(min-width: $sm) {
+        @content;
+    }
+}

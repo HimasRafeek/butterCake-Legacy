@@ -2,11 +2,11 @@
  * ----------------------------------------------------------------------------------------
  *  Author        : Himas Rafeek
  *  Framework     : Butter Cake
- *  Description   : A Buttery Smooth Modern CSS framework
- *  Version       : 1.0.0
+ *  Description   : A Modern CSS framework built with flexbox
+ *  Version       : 2.0
  *  Copyright     : 2018
  *  Github        : https://github.com/HimasRafeek/butterCake
- *  Author URI    : https://himasrafeek.com/contact
+ *  URI           : https://getButterCake.com
  *  Licence       : MIT - https://github.com/HimasRafeek/butterCake/blob/master/LICENSE
  * ----------------------------------------------------------------------------------------
  * ========================================================================================s
@@ -19,9 +19,10 @@
 
 
 @import 'inc/reset';
-@import 'inc/utilities';
 @import 'inc/typography';
+@import 'inc/utilities';
 @import 'inc/navbar';
+@import 'inc/dropdown';
 @import 'inc/grid';
 @import 'inc/buttons';
 @import 'inc/jumbotron';
@@ -34,3 +35,12 @@
 @import 'inc/alerts';
 @import 'inc/badges';
 @import 'inc/modal';
+@import 'inc/tabs';
+@import 'inc/accordian';
+@import 'inc/breadcrumb';
+
+
+// CUSTOM CSS
+// uncomment to include your custom css
+
+// @import 'inc/custom';

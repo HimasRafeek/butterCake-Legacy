@@ -13,59 +13,65 @@
         'xl': 1250
     }
 
-    if ($('.expand-sm').length) {
-        $('.navbar').attr('data-toggle', breakPoint.sm);
-    } else if ($('.expand-md').length) {
-        $('.navbar').attr('data-toggle', breakPoint.md);
-    } else if ($('.expand-lg').length) {
-        $('.navbar').attr('data-toggle', breakPoint.lg);
-    } else if ($('.expand-xl').length) {
-        $('.navbar').attr('data-toggle', breakPoint.xl);
-    }
+    // NAVBAR RESPONSIVE BREAKING POINTS
+    // 
+    $('.navbar').each(function () {
 
-    let $id = $('.navbar .toggler').attr('data-nav');
-    function toggler($width) {
-        let $toggleWidth = $('.navbar').attr('data-toggle');
-        if ($width < $toggleWidth) {
-            return true;
-        } else {
-            return false;
+        if ($(this).hasClass('expand-sm')) {
+            $(this).attr('data-toggle', breakPoint.sm);
+        } else if ($(this).hasClass('expand-md')) {
+            $(this).attr('data-toggle', breakPoint.md);
+        } else if ($(this).hasClass('expand-lg')) {
+            $(this).attr('data-toggle', breakPoint.lg);
+        } else if ($(this).hasClass('expand-xl')) {
+            $(this).attr('data-toggle', breakPoint.xl);
+        } else if ($(this).hasClass('expanded')) {
+            $(this).attr('data-toggle', 'null');
+        }else{
+            $(this).attr('data-toggle', 'none');
         }
+        sideBar();
+    });
+
+    // SIDEBAR 
+    function sideBar() {
+        let $width = $(window).width();
+        $('.navbar').each(function () {
+            let $toggleWidth = $(this).attr('data-toggle');
+            if ($toggleWidth !== undefined) {
+                if ($toggleWidth !== 'null' || $toggleWidth === 'none') {
+                    if ($width > $toggleWidth) {
+                        $(this).find('.menu-box').removeClass('sideNavbar toggled');
+                    } else {
+                        $(this).find('.menu-box').addClass('sideNavbar');
+                    }
+                }
+            }
+            
+        });
     }
 
-    let $width = $(window).width();
-    let isOk = toggler($width);
-    if (!isOk) {
-        $($id).removeClass('sideNavbar toggled');
-    } else {
-        $($id).addClass('sideNavbar');
-    }
 
+    // ON RESIZE 
     $(window).on('resize', function () {
-        let $width = $(window).width();
-        let isOk = toggler($width);
-        if (!isOk) {
-            $($id).removeClass('sideNavbar toggled');
-        } else {
-            $($id).addClass('sideNavbar');
-        }
+        sideBar();
     });
 
+    // TOGGLER CLICK
     $toggler.on('click', function () {
-        let $width = $(window).width();
-        let isOk = toggler($width);
-        if (isOk) {
-            $body.toggleClass('noScroll');
-            $($id).toggleClass('toggled');
-        }
+        $id = $(this).attr('data-nav');
+        $body.toggleClass('noScroll');
+        $($id).toggleClass('toggled');
     });
 
+    // MENU CLOSE
     $('.menu-close').on('click', function () {
         $body.removeClass('noScroll');
         $($id).removeClass('toggled');
     });
 
 
+    // SHADOW CLICK
     $('.shadow').click(function (e) {
         if (!$(e.target).is($id)) {
             $body.removeClass('noScroll');
@@ -87,9 +93,8 @@
     });
 
 
+
     // MODAL
-
-
     $('.modal-open').on('click', function () {
         let target = $(this).attr('data-modal');
         $('#' + target).removeClass('modal-exit');
@@ -98,6 +103,7 @@
     });
 
 
+    // MODAL CLOSE
     $('.modal-close').on('click', function () {
         let target = $(this).attr('data-modal');
         $('#' + target).removeClass('modal-show');
@@ -107,9 +113,10 @@
                 $body.removeClass('noScroll');
             }, 500);
         }
-
     });
 
+
+    // CLICK EVENT OUTSIDE MODAL
     $('.modal').on('click', function (e) {
         if ($(e.target).is('.modal')) {
             $('.modal').removeClass('modal-show');
@@ -117,6 +124,55 @@
         }
     });
 
+
+
+    // TAB
+    $('.tab-link').on('click', function () {
+        $target = $(this).attr('data-tab');
+        $mainParent = $(this).closest('.tabs');
+
+        $mainParent.find('.tab-nav .tab-link').removeClass('active');
+        $("[data-tab='" + $target + "']").addClass('active');
+
+        $mainParent.find('.tab-content').removeClass('active');
+        $('#' + $target).addClass('active');
+
+    });
+
+    // TAB CLOSE
+    $('.tab-close').on('click', function () {
+        $(this).closest('.tab-content').removeClass('active');
+    });
+
+
+    // ACCORDIAN
+    $('.accordion').each(function () {
+
+        if ($(this).hasClass('active')) {
+            var panel = $(this).next('.panel');
+            $(this).next('.panel').css('max-height', panel[0].scrollHeight + "px");
+        }
+
+        
+        
+        $('.accordion').on('click', function () {
+            
+            $('.accordion').next('.panel').css('max-height', 0);
+            $('.accordion').removeClass('active');
+
+            panel = $(this).next('.panel');
+            $(this).addClass('active');
+            if (parseFloat($(this).next('.panel').css('max-height'))) {
+                $(this).next('.panel').css('max-height', 0);
+                $(this).removeClass('active');
+            } else {
+                $(this).next('.panel').css('max-height', panel[0].scrollHeight + "px");
+            }
+        });
+    });
+
+
+    
 
 
 }(jQuery))

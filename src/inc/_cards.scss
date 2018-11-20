@@ -8,8 +8,9 @@
     background-color: #fff;
     background-clip: border-box;
     word-wrap: break-word;
+    overflow: hidden;
     border: 1px solid rgba(0, 0, 0, .125);
-    @if $btn-radius {
+    @if $radius {
         border-radius: $border-radius;
     }
     

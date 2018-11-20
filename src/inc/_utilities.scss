@@ -2,15 +2,6 @@
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 
-// FORM
-
-select{
-    color: gray !important;
-
-    option:not([disabled]){
-        color: $dark;
-    }
-}
 
 
 .disabled,
@@ -53,48 +44,48 @@ select{
 }
 
 // JUSTIFY
-.flex-justify-start {
+.fj-start {
     justify-content: flex-start !important;
 }
 
-.flex-justify-center {
+.fj-center {
     justify-content: center !important;
 }
 
-.flex-justify-end {
+.fj-end {
     justify-content: flex-end !important;
 }
 
-.flex-justify-between{
+.fj-between{
     justify-content: space-between !important;
 }
 
-.flex-justify-around {
+.fj-around {
     justify-content: space-around !important;
 }
 
-.flex-justify-evenly {
+.fj-evenly {
     justify-content: space-evenly !important;
 }
 
-.flex-justify-baseline {
+.fj-baseline {
     justify-content: baseline !important;
 }
 
 // ALIGN
-.flex-align-start {
+.fa-start {
     align-items: flex-start !important;
 }
 
-.flex-align-center {
+.fa-center {
     align-items: center !important;
 }
 
-.flex-align-end {
+.fa-end {
     align-items: flex-end !important;
 }
 
-.flex-align-stretch {
+.fa-stretch {
     align-items: stretch !important
 }
 
@@ -128,7 +119,9 @@ $value in $colors {
     }
 }
 
-
+.bg-none{
+    background: none !important;
+}
 
 
 // FONT COLOR
@@ -148,6 +141,16 @@ $value in $colors {
 // PADDING
 .p-0 {
     padding: 0 !important;
+}
+
+.px-0{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.py-0 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
 }
 
 .pt-0 {
@@ -216,6 +219,16 @@ $value in $colors {
     margin: 0 !important;
 }
 
+.mx-0 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.my-0 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
 .ml-auto {
     margin-left: auto !important;
 }
@@ -277,6 +290,7 @@ $value in $colors {
 
 
 }
+
 
 
 // FONT SIZES
@@ -372,24 +386,24 @@ $value in $colors {
 
 
 // BORDER
-.border-none {
+.b-none {
     border: none !important;
 }
 
-.border-top-none {
-    border-top: none;
+.bt-none {
+    border-top: none !important;
 }
 
-.border-bottom-none {
-    border-bottom: none;
+.bb-none {
+    border-bottom: none !important;
 }
 
-.border-left-none {
-    border-left: none;
+.bl-none {
+    border-left: none !important;
 }
 
-.border-right-none {
-    border-right: none;
+.br-none {
+    border-right: none !important;
 }
 
 
@@ -450,6 +464,12 @@ $value in $colors {
 .bg-cover{
     background-position: center center;
     background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-contain {
+    background-position: center center;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 

@@ -9,7 +9,7 @@
     margin-left: 5px;
     user-select: none;
 
-    @if $btn-radius {
+    @if $radius {
         border-radius: $border-radius;
     }
 }

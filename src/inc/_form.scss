@@ -11,16 +11,30 @@ form{
     width: 100%;
     min-height: 40px;
     padding: 10px 10px;
+    background-color: white;
     outline: none;
     border: 1px solid silver;
-    @if $btn-radius {
+    @if $radius {
         border-radius: $border-radius;
     }
     
     &:focus{
         border-color: $color-primary;
+        box-shadow: 0 0 0 2px rgba($color-primary,0.5);
     }
 }
+
+select {
+
+    option:not([disabled]) {
+        color: $dark;
+    }
+
+    option[disabled] {
+        color: $gray;
+    }
+}
+
 
 textarea.input{
     min-height: 150px !important;
@@ -36,7 +50,7 @@ label{
 }
 
 .group{
-    padding: $main-padding;
+    padding: $main-padding 0;
 }
 
 .input-group {
