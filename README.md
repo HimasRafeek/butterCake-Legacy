@@ -7,15 +7,6 @@
 ## Checkout the official website.
 # [getButterCake.com](https://getbuttercake.com/)
 
-.
-+-- _dist
-|   +-- butterCake.css
-+-- _js
-|   +-- butterCake.js
-+-- _src
-|   +-- 
-|   +-- post.html
-
 
 ##### Butter Cake is built using SASS, [Used Prepos](https://prepros.io/) to compile
 
