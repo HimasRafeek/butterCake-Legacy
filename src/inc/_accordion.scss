@@ -1,0 +1,54 @@
+// TABS
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.accordion {
+    transition: 0.4s;
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+
+.accordion-container {
+    &.default {
+        
+        .accordion {
+            padding: 15px;
+            background-color: $color-light;
+        }
+
+        .active,
+        .accordion:hover {
+            background-color: darken($color-light, 15%);
+        }
+
+        .accordion:after {
+            content: '\002B';
+            color: #777;
+            font-weight: bold;
+            float: right;
+            font-size: 20px;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2212";
+        }
+
+        .panel-box {
+            border: 1px solid $color-light;
+            padding: 15px;
+        }
+    }
+
+    .panel {
+        transition: max-height 0.2s ease-out;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+
+}
