@@ -5,7 +5,7 @@
 ### Butter Cake is a lightweight CSS framework which helps web developers create responsive, flexible mobile first web applications in an easy way, and built using Sass.
 
 ## Checkout the official website.
-# [getButterCake.com](https://getbuttercake.com/)
+### [getButterCake.com](https://getbuttercake.com/?ref=readme)
 
 
 ##### Butter Cake is built using SASS, [Used Prepos](https://prepros.io/) to compile
