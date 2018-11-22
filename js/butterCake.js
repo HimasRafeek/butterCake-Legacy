@@ -31,6 +31,8 @@
             $(this).attr('data-toggle', 'none');
         }
         sideBar();
+        $(this).find('.container').append('<div class="shadow"></div>');
+        $(this).find('.container-fluid').append('<div class="shadow"></div>');
     });
 
     // SIDEBAR 
@@ -153,8 +155,6 @@
             $(this).next('.panel').css('max-height', panel[0].scrollHeight + "px");
         }
 
-        
-        
         $('.accordion').on('click', function () {
             
             $('.accordion').next('.panel').css('max-height', 0);
