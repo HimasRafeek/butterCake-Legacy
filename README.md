@@ -11,11 +11,6 @@
 
 ##### Butter Cake is built using SASS, [Used Prepos](https://prepros.io/) to compile
 
-#
-[![ko-fi](https://www.ko-fi.com/img/donate_sm.png)](https://ko-fi.com/S6S1KATV)
-
-
-**Thank you!**
 
 ## Contributors
 
