@@ -3,7 +3,8 @@
 [![Backers on Open Collective](https://opencollective.com/butterCake/backers/badge.svg)](#backers)
  [![Sponsors on Open Collective](https://opencollective.com/butterCake/sponsors/badge.svg)](#sponsors) 
 
-### Butter Cake is an open source and lightweight modular toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass variables and mixins, responsive grid system, extensive prebuilt components, Ready for the action!!
+### Build responsive, mobile-first projects on the web with lightweight and easy front-end component library.
+### Butter Cake is an open source and lightweight modular toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass variables and mixins, responsive grid system, extensive prebuilt components.
 
 
 ## Checkout the official website.
