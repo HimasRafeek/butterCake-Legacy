@@ -74,7 +74,7 @@
 
 
     // SHADOW CLICK
-    $('.shadow').click(function (e) {
+    $('.navbar .shadow').click(function (e) {
         if (!$(e.target).is($id)) {
             $body.removeClass('noScroll');
             $($id).removeClass('toggled');
