@@ -26,13 +26,6 @@
 This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
 <a href="https://github.com/HimasRafeek/butterCake/graphs/contributors"><img src="https://opencollective.com/butterCake/contributors.svg?width=890&button=false" /></a>
 
-## Thanks
-
-<a href="https://www.browserstack.com/">
-  <img src="https://live.browserstack.com/images/opensource/browserstack-logo.svg" alt="BrowserStack Logo" width="192" height="42">
-</a>
-
-Thanks to [BrowserStack](https://www.browserstack.com/) for providing the infrastructure that allows us to test in real browsers!
 
 
 ## Backers
@@ -57,5 +50,13 @@ Support this project by becoming a sponsor. Your logo will show up here with a l
 <a href="https://opencollective.com/butterCake/sponsor/8/website" target="_blank"><img src="https://opencollective.com/butterCake/sponsor/8/avatar.svg"></a>
 <a href="https://opencollective.com/butterCake/sponsor/9/website" target="_blank"><img src="https://opencollective.com/butterCake/sponsor/9/avatar.svg"></a>
 
-<hr>
 ##### Butter Cake is built using SASS, [Used Prepos](https://prepros.io/) to compile
+
+## Thanks
+
+<a href="https://www.browserstack.com/">
+  <img src="https://live.browserstack.com/images/opensource/browserstack-logo.svg" alt="BrowserStack Logo" width="192" height="42">
+</a>
+
+Thanks to [BrowserStack](https://www.browserstack.com/) for providing the infrastructure that allows us to test in real browsers!
+
