@@ -26,6 +26,13 @@
 This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
 <a href="https://github.com/HimasRafeek/butterCake/graphs/contributors"><img src="https://opencollective.com/butterCake/contributors.svg?width=890&button=false" /></a>
 
+## Thanks
+
+<a href="https://www.browserstack.com/">
+  <img src="https://live.browserstack.com/images/opensource/browserstack-logo.svg" alt="BrowserStack Logo" width="192" height="42">
+</a>
+
+Thanks to [BrowserStack](https://www.browserstack.com/) for providing the infrastructure that allows us to test in real browsers!
 
 
 ## Backers
