@@ -1,10 +1,11 @@
 [![](https://getbuttercake.com/assets/images/banner.jpg)](#banner)
 
-[![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=himasrafeek1:TTiAhLKzB4zVJ7dpmHby)](https://www.browserstack.com/automate/public-build/himasrafeek1:TTiAhLKzB4zVJ7dpmHby)
+[![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=TTiAhLKzB4zVJ7dpmHby)](https://www.browserstack.com/automate/public-build/TTiAhLKzB4zVJ7dpmHby)
 
+![GitHub](https://img.shields.io/github/license/himasrafeek/butterCake.svg)
 [![Releases](https://img.shields.io/github/release/himasrafeek/butterCake.svg)](#releases)
-[![Website](https://img.shields.io/website/https/getbuttercake.com.svg)(#backers)](#website)
-
+[![Website](https://img.shields.io/website/https/getbuttercake.com.svg)](#website)
+![GitHub issues](https://img.shields.io/github/issues-raw/himasrafeek/butterCake.svg)
 
 [![Backers on Open Collective](https://opencollective.com/butterCake/backers/badge.svg)](#backers)
 [![Sponsors on Open Collective](https://opencollective.com/butterCake/sponsors/badge.svg)](#sponsors) 
