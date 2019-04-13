@@ -12,11 +12,11 @@
 ### Butter Cake is an open source and lightweight modular toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass variables and mixins, responsive grid system, extensive prebuilt components.
 
 
-#### Checkout the official website. [getButterCake.com](https://getbuttercake.com/?ref=readme)
+#### Checkout the official website. [getButterCake.com](https://getbuttercake.com/)
 
 
 ### Why You  should use ~ Butter Cake Framework ~
-<blockquote style="color: #00C851; font-size: 18px;">
+<blockquote>
 
  ✈️ light weight 42KB\
  🗃 Modular Components\
