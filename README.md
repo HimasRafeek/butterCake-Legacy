@@ -1,7 +1,5 @@
 [![](https://getbuttercake.com/assets/images/banner.jpg)](#banner)
 
-[![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=TTiAhLKzB4zVJ7dpmHby)](https://www.browserstack.com/automate/public-build/TTiAhLKzB4zVJ7dpmHby)
-
 ![GitHub](https://img.shields.io/github/license/himasrafeek/butterCake.svg)
 [![Releases](https://img.shields.io/github/release/himasrafeek/butterCake.svg)](#releases)
 [![Website](https://img.shields.io/website/https/getbuttercake.com.svg)](#website)
