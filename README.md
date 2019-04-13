@@ -1,5 +1,7 @@
 [![](https://getbuttercake.com/assets/images/banner.jpg)](#banner)
 
+[![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=himasrafeek1:TTiAhLKzB4zVJ7dpmHby)](https://www.browserstack.com/automate/public-build/<badge_key>)
+
 [![Backers on Open Collective](https://opencollective.com/butterCake/backers/badge.svg)](#backers)
  [![Sponsors on Open Collective](https://opencollective.com/butterCake/sponsors/badge.svg)](#sponsors) 
 
