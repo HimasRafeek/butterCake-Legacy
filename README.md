@@ -2,8 +2,8 @@
 
 [![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=himasrafeek1:TTiAhLKzB4zVJ7dpmHby)](https://www.browserstack.com/automate/public-build/himasrafeek1:TTiAhLKzB4zVJ7dpmHby)
 
-[![Release](https://img.shields.io/github/release/himasrafeek/butterCake.svg)]
-[![Website](https://img.shields.io/website/https/getbuttercake.com.svg)]
+(https://img.shields.io/github/release/himasrafeek/butterCake.svg)
+(https://img.shields.io/website/https/getbuttercake.com.svg)
 
 
 [![Backers on Open Collective](https://opencollective.com/butterCake/backers/badge.svg)](#backers)
