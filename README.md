@@ -2,12 +2,12 @@
 
 [![BrowserStack Status](https://www.browserstack.com/automate/badge.svg?badge_key=himasrafeek1:TTiAhLKzB4zVJ7dpmHby)](https://www.browserstack.com/automate/public-build/himasrafeek1:TTiAhLKzB4zVJ7dpmHby)
 
-[![Relase] (https://img.shields.io/github/release/himasrafeek/butterCake.svg)]
-[![Relase] (https://img.shields.io/website/https/getbuttercake.com.svg)]
+[![Release](https://img.shields.io/github/release/himasrafeek/butterCake.svg)]
+[![Website](https://img.shields.io/website/https/getbuttercake.com.svg)]
 
 
 [![Backers on Open Collective](https://opencollective.com/butterCake/backers/badge.svg)](#backers)
- [![Sponsors on Open Collective](https://opencollective.com/butterCake/sponsors/badge.svg)](#sponsors) 
+[![Sponsors on Open Collective](https://opencollective.com/butterCake/sponsors/badge.svg)](#sponsors) 
 
 ### Build responsive, mobile-first projects on the web with light weight and easy Front End Framework. 
 ### Butter Cake is an open source and lightweight modular toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass variables and mixins, responsive grid system, extensive prebuilt components.
