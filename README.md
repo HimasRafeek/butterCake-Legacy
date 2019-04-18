@@ -66,4 +66,6 @@ Support this project by becoming a sponsor. Your logo will show up here with a l
 Thanks to [BrowserStack](https://www.browserstack.com/) for providing the infrastructure that allows us to test in real browsers!
 
 ## Support?
-<a href="https://www.patreon.com/bePatron?u=3868721" data-patreon-widget-type="become-patron-button">Become a Patron!</a>
+<a href="https://www.patreon.com/bePatron?u=3868721" data-patreon-widget-type="become-patron-button">
+ <img src="https://camo.githubusercontent.com/c11c9bdf1f6c2a1d80afb11859984a61f0fadfa6/68747470733a2f2f63352e70617472656f6e2e636f6d2f65787465726e616c2f6c6f676f2f6265636f6d655f615f706174726f6e5f627574746f6e4032782e706e67">
+</a>
