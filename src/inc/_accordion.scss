@@ -9,11 +9,9 @@
     cursor: pointer;
 }
 
-
-
 .accordion-container {
     &.default {
-        
+
         .accordion {
             padding: 15px;
             background-color: $color-light;

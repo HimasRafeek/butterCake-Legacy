@@ -1,37 +1,95 @@
-// TABLE
+// BADGES
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.badge{
+.badge {
     display: inline-block;
     background-color: $color-light;
     font-size: 16px;
     padding: 4px 8px;
-    margin-left: 5px;
     user-select: none;
-
+    text-align: center;
+    
     @if $radius {
         border-radius: $border-radius;
     }
+
+    &.badge-icon {
+        width: 40px;
+        height: 40px;
+        vertical-align: middle;
+        text-align: center;
+        border-radius: 50%;
+
+        >* {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+
 }
 
-.badge-lg{
+.badge-lg {
     font-size: 18px;
     padding: 5px 15px;
+
+    &.badge-icon {
+        width: 50px;
+        height: 50px;
+    }
+
 }
 
 .badge-sm {
     font-size: 12px;
+
+    &.badge-icon {
+        width: 30px;
+        height: 30px;
+    }
 }
 
-.badge.rounded{
+.badge.rounded {
     border-radius: 35px;
 }
 
 
+// GENERATES DIFFERENT BADGE COLORS
 @each $color,
 $value in $colors {
     .badge.#{$color} {
         background-color: $value !important;
         color: $color-white;
+
+        &>* {
+            color: $color-white;
+        }
+    }
+
+    .badge.#{$color}.outline {
+        background-color: transparent !important;
+        color: $value;
+        border: 1px solid $value;
+
+        &>* {
+            color: $value;
+        }
+    }
+
+    a.badge.#{$color}:hover {
+        background-color: darken($value, 10%) !important;
+        color: $color-white;
+    }
+
+    a.badge.#{$color}.outline:hover {
+        background-color: $value !important;
+        color: $color-white !important;
+
+        &>* {
+            color: $color-white !important;
+        }
     }
 }

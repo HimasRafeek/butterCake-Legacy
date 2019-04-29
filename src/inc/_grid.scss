@@ -5,11 +5,9 @@
 // GRID SYSTEM
 $grid_name: 'row'; // Name
 $grid_col: 12; // Columns
-$grid_gutter: $main-padding; // Path: ./vars/variables
+$grid_gutter: $default-padding; // Path: ./vars/variables
 $grid_col_name: 'col-'; // ex: col-md-12
 $grid_auto: 'column'; // Auto column
-
-
 
 
 
@@ -31,25 +29,33 @@ $xl-name: $grid_col_name+'xl-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
 
 
 
-// DO NOT EDIT BELOW - 'DEVELOPER NOTE'
+// DO NOT EDIT BELOW WITHOUT PROPER KNOWLEDGE- 'DEVELOPER NOTE'
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+/*
+* * .row
+*/
 
 .#{$grid_name} {
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;
     width: 100%;
-
-
 }
 
 // AUTO GRID
+/*
+* * .column
+*/
 .#{$grid_name} .#{$grid_auto} {
     max-width: 100%;
     flex-basis: 0;
     flex-grow: 1;
 }
 
+/*
+* * .row.no-gutters
+*/
 .#{$grid_name} {
     &.no-gutters {
         &>div {
@@ -60,6 +66,9 @@ $xl-name: $grid_col_name+'xl-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
 }
 
 
+/*
+* * .row > .col-*
+*/
 .#{$grid_name} [class^="#{$grid_col_name}"] {
     position: relative;
     width: 100%;
@@ -101,7 +110,7 @@ $xl-name: $grid_col_name+'xl-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
 
 
 // MEDIUM
-@include min-breakpoint($medium-media){
+@include min-breakpoint($medium-media) {
     @for $i from 1 through $grid_col {
         .#{$medium-name}#{$i} {
             flex-basis: percentage($i / $grid_col);
@@ -113,7 +122,7 @@ $xl-name: $grid_col_name+'xl-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
 
 
 // LARGE
-@include min-breakpoint($large-media){
+@include min-breakpoint($large-media) {
     @for $i from 1 through $grid_col {
         .#{$large-name}#{$i} {
             flex-basis: percentage($i / $grid_col);
@@ -124,7 +133,7 @@ $xl-name: $grid_col_name+'xl-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
 
 
 // Xl
-@include min-breakpoint($xl-media){
+@include min-breakpoint($xl-media) {
     @for $i from 1 through $grid_col {
         .#{$xl-name}#{$i} {
             flex-basis: percentage($i / $grid_col);

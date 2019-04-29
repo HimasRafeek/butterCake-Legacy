@@ -14,8 +14,20 @@
 }
 
 table {
-    max-width: 100%;
-    width: 100%;
+   border-collapse: collapse;
+   border-spacing: 0;
+   width: 100%;
+   display: table;
+
+   td,
+   th,
+   td,
+   th {
+       padding: 10px 15px;
+       display: table-cell;
+       text-align: left;
+       vertical-align: top;
+   }
 }
 
 thead{
@@ -23,12 +35,6 @@ thead{
     th {
         padding: 15px !important;
     }
-}
-
-table,
-th,
-td {
-    border-collapse: collapse;
 }
 
 th {
@@ -40,11 +46,6 @@ table tr {
 
 }
 
-th,
-td {
-    padding: 10px 15px;
-    text-align: left;
-}
 
 .table-striped {
     tr:nth-child(even) {

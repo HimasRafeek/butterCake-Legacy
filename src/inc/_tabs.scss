@@ -1,32 +1,33 @@
 // TABS
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.tab-nav{
+.tab-nav.default {
     position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: flex-start;
     border-bottom: 1px solid darken($color-light, 10%);
-    
-    
-    .tab-link{
+
+
+    .tab-link {
         all: unset;
         display: block;
         color: $color-primary;
         padding: 10px 15px;
-        margin-bottom: -1px;;
+        margin-bottom: -1px;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
         border: 1px solid transparent;
         border-bottom: none;
         cursor: pointer;
-        &:hover{
+
+        &:hover {
             color: $color-dark;
             border-color: darken($color-light, 10%);
         }
 
-        &.active{
+        &.active {
             color: $color-dark;
             background-color: white;
             border-color: darken($color-light, 10%);
@@ -35,7 +36,7 @@
     }
 }
 
-.tab-container{
+.tab-container {
     padding: 15px 0;
 }
 
@@ -45,16 +46,17 @@
     padding: 6px 12px;
     -webkit-animation: fadeEffect 1s;
     animation: fadeEffect 1s;
+
     &.active {
         display: block !important;
     }
 
-    .tab-close{
+    .tab-close {
         cursor: pointer;
         opacity: 0.5;
         font-size: 16px;
 
-        &:hover{
+        &:hover {
             opacity: 1;
         }
     }

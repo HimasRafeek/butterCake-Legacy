@@ -1,10 +1,10 @@
 // CODE
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.code-wrap{
+.code-wrap {
     overflow-x: auto;
-    
-    code{
+
+    code {
         padding: 10px 15px;
     }
 }
@@ -16,6 +16,7 @@ code {
     word-wrap: break-word;
     overflow-x: auto;
     line-height: 1.50;
+
     @if $radius {
         border-radius: $border-radius;
     }

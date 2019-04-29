@@ -1,16 +1,21 @@
+@charset "utf-8";
+
+/*! getButterCake.com v2.5.0 | MIT License | https://github.com/HimasRafeek/butterCake */
+
 /* ========================================================================================
  * ----------------------------------------------------------------------------------------
  *  Author        : Himas Rafeek
  *  Framework     : Butter Cake
  *  Description   : A Modern CSS framework built with flexbox
- *  Version       : 2.0
- *  Copyright     : 2018
+ *  Version       : 2.5.0
+ *  Copyright     : 2018 - 2019
  *  Github        : https://github.com/HimasRafeek/butterCake
  *  URI           : https://getButterCake.com
  *  Licence       : MIT - https://github.com/HimasRafeek/butterCake/blob/master/LICENSE
  * ----------------------------------------------------------------------------------------
- * ========================================================================================s
+ * ========================================================================================
  */
+ 
 
 
 //  DO NOT REMOVE THIS
@@ -18,15 +23,16 @@
 @import 'mixins/mixins';
 
 
+@import 'inc/root';
 @import 'inc/reset';
 @import 'inc/typography';
-@import 'inc/utilities';
-@import 'inc/navbar';
-@import 'inc/dropdown';
+@import 'inc/containers';
 @import 'inc/grid';
+@import 'inc/navbar';
 @import 'inc/buttons';
 @import 'inc/jumbotron';
 @import 'inc/form';
+@import 'inc/dropdown';
 @import 'inc/cards';
 @import 'inc/list';
 @import 'inc/blockquote';
@@ -38,9 +44,12 @@
 @import 'inc/tabs';
 @import 'inc/accordion';
 @import 'inc/breadcrumb';
+@import 'inc/progressbar';
+@import 'inc/tooltip';
+@import 'inc/utilities';
+
 
 
 // CUSTOM CSS
-// uncomment to include your custom css
 
-// @import 'custom';
+@import 'custom';

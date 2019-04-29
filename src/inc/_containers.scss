@@ -1,0 +1,35 @@
+// CONTAINERS
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// CONTAINER REGULAR
+.container {
+  margin: 0 auto;
+  padding-left: $default-padding;
+  padding-right: $default-padding;
+
+  /* Breakpoints | Min Width */
+
+  // Small 590px
+  @include min-breakpoint($small-media) {
+    max-width: calc(100% - 50px);
+  }
+
+  // Medium 790px
+  @include min-breakpoint($medium-media) {
+    max-width: calc(100% - 100px);
+  }
+
+  // Large 1160px
+  @include min-breakpoint($large-media) {
+    max-width: $container;
+  }
+
+}
+
+// CONTAINER FLUID
+.container-fluid {
+  max-width: $container-fluid;
+  padding-left: $default-padding;
+  padding-right: $default-padding;
+}
+

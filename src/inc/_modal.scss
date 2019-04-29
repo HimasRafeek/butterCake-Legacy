@@ -7,35 +7,27 @@
     width: 100%;
     height: 100%;
     min-height: 100vh;
+    max-height: 100vh;
     padding: 80px 15px;
-    
     position: fixed;
-    top: -150%;
+    top: 0;
     left: 0;
-    z-index: -1;
-    
+    pointer-events: none;
+    z-index: -10;
+
     opacity: 0;
     overflow-y: auto !important;
-    
-    
-    .modal-container{
+
+
+    .modal-container {
         position: relative;
         margin: 0 auto;
-        z-index: 1250;
+        z-index: 1350;
     }
 
 }
 
-@keyframes modalbg{
-    0%{
-    background: rgba(black, 0);
-    }
-   
-    100%{
-    background: rgba(black, 0.5);
 
-    }
-}
 
 .modal-title {
     margin: 0;
@@ -50,11 +42,11 @@
     justify-content: space-between;
     background: $color-light;
     padding: 10px 15px;
-    
+
     .modal-close {
         padding: 10px;
         cursor: pointer;
-        
+
         &:hover {
             opacity: 0.5;
         }
@@ -63,7 +55,7 @@
 
 
 .modal-container {
-    
+    display: none;
     max-width: 580px;
     width: 100%;
     height: auto;
@@ -94,17 +86,47 @@
 }
 
 .modal.modal-show {
-    top: 0 !important;
     opacity: 1 !important;
-    z-index: 1100 !important;
+    z-index: 1250 !important;
     animation: modalbg 1s ease-in forwards;
+    pointer-events: initial !important;
+    .modal-container{
+        display: block !important;
 
+        &.animation-added {
+            animation: animateUp 0.5s forwards;
+        }
+    }
 
 }
 
 
 .modal-exit {
-    top: -100% !important;
+    top: 0 !important;
     opacity: 0;
     z-index: -1;
+}
+
+// MODAL BACKGROUND
+@keyframes modalbg {
+    0% {
+        background: rgba(black, 0);
+    }
+
+    100% {
+        background: rgba(black, 0.5);
+
+    }
+}
+
+// MODAL CONTAINER ANIMATION ON SHOWING
+@keyframes animateUp {
+    0% {
+        transform: translateY(-50px)
+    }
+
+    100% {
+        transform: translateY(0px)
+
+    }
 }

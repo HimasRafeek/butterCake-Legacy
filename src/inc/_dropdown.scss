@@ -3,63 +3,64 @@
 
 .dropdown {
     position: relative;
-    
+
     &.menu-showing>.dropdown-menu {
         display: flex !important;
     }
-    
-    &>a {
-        i {
-            display: inline;
-            margin-left: 10px;
-        }
-    }
-    
-    li{
+
+    li {
         list-style: none;
         margin: 0;
     }
-    
-    &[class*="btn"]>.dropdown-menu {
+
+    &.btn>.dropdown-menu {
         top: 100% !important;
     }
-    
-    
+
+
     &>.dropdown-menu {
-        box-shadow: 0 2px 5px 0 #555;
+        border: 1px solid #ccc;
         display: none;
         flex-direction: column;
         min-width: 150px;
+        width: 100%;
         background: white;
-        padding-left: 0;
-
+        padding: 5px 0;
         position: absolute;
-        left: 0;
+        right: 0;
         top: 100%;
+        animation: dropdown 0.220s forwards ease-in-out;
         z-index: 1000;
 
-        border: 1px solid darken($color-light, 10%);
 
         @if $radius {
             border-radius: $border-radius;
         }
 
+
         a {
             display: block;
             color: #333;
             text-align: left;
-            white-space: nowrap;
+            // white-space: nowrap;
             padding: 10px 15px;
 
+            &.active,
+            &.is-active,
             &:hover {
-                color: $color-dark;
-                background: darken($color-light,10%);
+                color: $color-white;
+                background: $color-primary;
             }
+        }
+
+        .menu-hiding{
+            animation: dropdownHiding 0.220s forwards ease-in-out;
         }
 
         .inner-dropdown {
             .dropdown-menu {
                 top: 0;
+                animation: dropdownInner 0.220s forwards ease-in-out;
                 margin-top: 0 !important;
             }
 
@@ -95,5 +96,62 @@
         }
     }
 
+    &.carret:after,
+    &>button:after,
+    &>div:not(.dropdown-menu):after,
+    &>a:after {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: 10px;
+        vertical-align: 4px;
+        content: " ";
+        border-top: 5px solid;
+        border-right: 5px solid transparent;
+        border-bottom: 0;
+        border-left: 5px solid transparent;
+    }
 
+}
+
+// DROPDOWN ANIMATION
+@keyframes dropdown {
+    0% {
+        opacity: 0;
+        top: 50%
+    }
+
+    100% {
+        opacity: 1;
+        top: 100%;
+    }
+}
+
+
+// DROPDOWN ANIMATION INSIDE DROPDOWN
+@keyframes dropdownInner {
+    0% {
+        opacity: 0;
+        top: -10%
+    }
+
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+
+
+// DROPDOWN HIDING ANIMATION
+@keyframes dropdownHiding {
+    0% {
+        opacity: 0;
+        top: 0
+    }
+
+    100% {
+        opacity: 1;
+        top: -10%;
+    }
 }

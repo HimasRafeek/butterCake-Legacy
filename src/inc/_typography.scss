@@ -7,11 +7,10 @@ h3,
 h4,
 h5,
 h6,
-p{
-    color: #333;
+p {
     font-weight: $font-weight-base;
-    margin: 0;
-    margin-bottom: $font-margin-base * 3;
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 
@@ -50,7 +49,7 @@ p {
 }
 
 .mark,
-mark{
+mark {
     padding: 2px 4px;
     background-color: $color-secondary;
 }

@@ -1,14 +1,18 @@
-(function ($) {
+(function ($, window) {
 
 
     // BODY
-    $body = $('body,html');
+    $body = $('body , html');
 
-    // NAVBAR
-    let $toggler = $('.navbar .toggler');
-    let breakPoint = {
+    
+    /**
+     * NAVBAR
+     * ––––––––––––––––––––––––––––––––––––––––––––––––––
+     */
+    var $toggler = $('.navbar .toggler');
+    var breakPoint = {
         'sm': 580,
-        'md': 768,
+        'md': 780,
         'lg': 1150,
         'xl': 1250
     }
@@ -27,29 +31,29 @@
             $(this).attr('data-toggle', breakPoint.xl);
         } else if ($(this).hasClass('expanded')) {
             $(this).attr('data-toggle', 'null');
-        }else{
+        } else {
             $(this).attr('data-toggle', 'none');
         }
         sideBar();
-        $(this).find('.container').append('<div class="shadow"></div>');
-        $(this).find('.container-fluid').append('<div class="shadow"></div>');
+        $(this).find('.container').append('<div class="shadow-fixed"></div>');
+        $(this).find('.container-fluid').append('<div class="shadow-fixed"></div>');
     });
 
     // SIDEBAR 
     function sideBar() {
-        let $width = $(window).width();
+        var $width = $(window).width() + 15;
         $('.navbar').each(function () {
-            let $toggleWidth = $(this).attr('data-toggle');
+            var $toggleWidth = $(this).attr('data-toggle');
             if ($toggleWidth !== undefined) {
                 if ($toggleWidth !== 'null' || $toggleWidth === 'none') {
-                    if ($width > $toggleWidth) {
+                    if ($width >= $toggleWidth) {
                         $(this).find('.menu-box').removeClass('sideNavbar toggled');
                     } else {
                         $(this).find('.menu-box').addClass('sideNavbar');
                     }
                 }
             }
-            
+
         });
     }
 
@@ -74,7 +78,7 @@
 
 
     // SHADOW CLICK
-    $('.navbar .shadow').click(function (e) {
+    $('.navbar .shadow-fixed').click(function (e) {
         if (!$(e.target).is($id)) {
             $body.removeClass('noScroll');
             $($id).removeClass('toggled');
@@ -82,12 +86,26 @@
     });
 
 
-    // DROP DOWN
-    let $dropdown = $('.dropdown');
+    /**
+     * DROPDOWN
+     * ––––––––––––––––––––––––––––––––––––––––––––––––––
+     */
+    var $dropdown = $('.dropdown');
+    $('.dropdown > a').on('click', function (e) {
+        e.preventDefault();
+    })
+
     $dropdown.on('click', function (event) {
         event.stopPropagation();
-        $(this).toggleClass('menu-showing')
+        $(this).siblings('.dropdown').removeClass('menu-showing');
+        $(this).toggleClass('menu-showing');
     });
+
+    $dropdown.on('mouseleave', function (event) {
+        event.stopPropagation();
+        $(this).removeClass('menu-showing');
+    });
+
     $body.on('click', function (e) {
         if (!$(e.target).is('.dropdown')) {
             $('.dropdown').removeClass('menu-showing');
@@ -96,39 +114,101 @@
 
 
 
-    // MODAL
-    $('.modal-open').on('click', function () {
-        let target = $(this).attr('data-modal');
-        $('#' + target).removeClass('modal-exit');
-        $('#' + target).addClass('modal-show');
-        $body.addClass('noScroll');
-    });
+    /**
+     * MODAL
+     * ––––––––––––––––––––––––––––––––––––––––––––––––––
+     */
 
+    // MODAL ANIMATIONS
+    function animateModal($modal) {
+        var animate = $modal.find('.modal-container').attr('data-modal-animate');
+        if (typeof animate !== typeof undefined && animate !== false) {
+            animate = animate.split(',');
+            return animate;
+        } else {
+            $modal.find('.modal-container').addClass('animation-added');
+            return ['', ''];
+        }
+    }
+
+    // MODAL OPEN
+    function modalOpen($modal){
+        $modal.removeClass('modal-exit').addClass('modal-show');
+        $modal.find('.modal-container').addClass('animated ' + animateModal($modal)[0]);
+        $body.addClass('noScroll');
+        setTimeout(function () {
+            $modal.find('.modal-container').removeClass('animated ' + animateModal($modal)[0]);
+        }, 1000);
+    }
 
     // MODAL CLOSE
-    $('.modal-close').on('click', function () {
-        let target = $(this).attr('data-modal');
-        $('#' + target).removeClass('modal-show');
-        $('#' + target).addClass('modal-exit');
-        if ($('.modal-show').length === 0) {
+    function modalClose($modal){
+        $modal.find('.modal-container').addClass('animated ' + animateModal($modal)[1]);
+        if (animateModal($modal)[1] === '') {
+            $modal.find('.modal-container').removeClass('animated ' + animateModal($modal)[1]);
+            $modal.removeClass('modal-show').addClass('modal-exit');
+        } else {
             setTimeout(function () {
-                $body.removeClass('noScroll');
-            }, 500);
+                $modal.find('.modal-container').removeClass('animated ' + animateModal($modal)[1]);
+                $modal.removeClass('modal-show').addClass('modal-exit');
+                if ($('.modal-show').length === 0) {
+                    $body.removeClass('noScroll');
+                }
+            }, 1000);
         }
+    }
+
+    // MODAL OPEN ON CLICK
+    $('.modal-open').on('click', function (e) {
+        e.preventDefault();
+        var target = $(this).attr('data-modal');
+        $modal = $('#' + target);
+        modalOpen($modal);
     });
+
+
+    // MODAL CLOSE ON CLICK
+    $('.modal-close').on('click', function (e) {
+        e.preventDefault();
+        var target = $(this).attr('data-modal');
+        $modal = $('#' + target);
+        modalClose($modal)
+    });
+
+    // MODAL PLUGIN
+    $.fn.BCModal = function () {
+        var $target = $(this);
+
+        function open() {
+            modalOpen($target);
+        }
+
+        function close() {
+            modalClose($target);
+        }
+
+        return {
+            open: open,
+            close: close
+        }
+
+    };
 
 
     // CLICK EVENT OUTSIDE MODAL
     $('.modal').on('click', function (e) {
         if ($(e.target).is('.modal')) {
-            $('.modal').removeClass('modal-show');
-            $body.removeClass('noScroll');
+            $modal = $('.modal.modal-show');
+            modalClose($modal);
         }
     });
 
 
 
-    // TAB
+    /**
+     * TAB
+     * ––––––––––––––––––––––––––––––––––––––––––––––––––
+     */
     $('.tab-link').on('click', function () {
         $target = $(this).attr('data-tab');
         $mainParent = $(this).closest('.tabs');
@@ -147,7 +227,10 @@
     });
 
 
-    // ACCORDIAN
+    /**
+     * ACCORDION
+     * ––––––––––––––––––––––––––––––––––––––––––––––––––
+     */
     $('.accordion').each(function () {
 
         if ($(this).hasClass('active')) {
@@ -156,7 +239,7 @@
         }
 
         $('.accordion').on('click', function () {
-            
+
             $('.accordion').next('.panel').css('max-height', 0);
             $('.accordion').removeClass('active');
 
@@ -172,7 +255,16 @@
     });
 
 
-    
+    /**
+     * ALERT
+     * ––––––––––––––––––––––––––––––––––––––––––––––––––
+     */
+    $('.alert .alert-close').on('click', function () {
+        var $this = $(this);
+        $this.parent('.dismissable').fadeOut('fast', function () {
+            $this.parent('.dismissable').remove();
+        })
+    })
 
 
-}(jQuery))
+}(jQuery, window))

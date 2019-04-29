@@ -1,43 +1,56 @@
 // MIXINS
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-
 // REGULAR BUTTON
 @mixin button($color, $textColor) {
     border: 1px solid $color !important;
     color: $textColor !important;
     background-color: $color;
 
-    &:focus,
-    &:active,
-    &:hover {
-        color: $textColor !important;
-        background-color: darken($color, 10%) !important;
-        border-color: darken($color, 10%) !important;
-    }
+    // Light Button
+    @if $color !='light'OR $color !='white' {
 
-    &:focus,
-    &:active {
-        background-color: darken($color, 10%) !important;
-        box-shadow: 0 0 0 2px rgba($color,0.5);
-    }
+        
+        &.active,
+        &:focus,
+        &:hover {
+            color: $textColor !important;
+            background-color: darken($color, 10%) !important;
+            border-color: darken($color, 10%) !important;
+        }
+        
+        &.active,
+        &:focus,
+        &:active{
+            box-shadow: 0 0 0 2px rgba($color, 0.5) !important;
+        }
+    
 
-    &.outline{
-        &:hover{
+    &.outline {
+        &:hover {
             color: $textColor !important;
             border-color: $color !important;
             background-color: $color !important;
         }
+
+        &:focus,
+        &:active {
+            background-color: darken($color, 10%) !important;
+        }
     }
+
+    }
+
 }
 
-
+// MAXIMUM BREAK POINT
 @mixin max-breakpoint($sm : 0) {
-    @media(max-width: $sm){
+    @media(max-width: $sm) {
         @content;
     }
 }
 
+// MINIMUM BREAK POINT
 @mixin min-breakpoint($sm : 0) {
     @media(min-width: $sm) {
         @content;

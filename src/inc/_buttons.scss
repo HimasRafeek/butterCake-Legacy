@@ -1,7 +1,7 @@
 // BUTTONS
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-[class*="btn-"] {
+.btn {
     display: inline-block;
     padding: 8px 20px;
     text-align: center;
@@ -9,16 +9,20 @@
     background: none;
     border: none;
     text-decoration: none;
-    outline: none;
     cursor: pointer;
     user-select: none;
     appearance: none;
+
     @if $radius {
         border-radius: $border-radius;
     }
 
     &.rounded {
-        border-radius: 30px !important;
+        border-radius: 35px !important;
+    }
+
+    &:focus{
+        outline: none;
     }
 
 
@@ -29,46 +33,49 @@
 // REGULAR BUTTON
 @each $color,
 $value in $btn-colors {
-
+    
     // Regular Button
-    .btn-#{$color} {
+    .btn.#{$color} {
         @include button($value, $color-white);
     }
 
-    // Regular Outline Button
-    .btn-#{$color}.outline {
-        color: darken($value, 10%) !important;
-        background-color: transparent;
-
-        &:focus{
-            color: white !important;
-        }
-    }
-
-
-
     // Light Button
-    @if $color=='light' {
-        .btn-#{$color} {
+    @if $color=='light' OR $color=='white' {
+        .btn.#{$color} {
             background-color: $value;
             color: $color-dark !important;
 
             &:focus,
             &:active,
             &:hover {
-                color: black !important;
+                color:$color-dark !important;
+                background-color: darken($value, 10%) !important;
             }
         }
 
         // Outline
-        .btn-#{$color}.outline {
+        .btn.#{$color}.outline {
             color: $color-dark !important;
             background-color: transparent;
 
             &:focus,
             &:active,
-            &:hover{
-                 color: $color-dark !important;
+            &:hover {
+                color: $color-dark !important;
+                background-color: darken($value , 10%) !important;
+            }
+        }
+    }
+
+    @else{
+        // Regular Outline Button
+        .btn.#{$color}.outline {
+            color: $value !important;
+            background-image: none;
+            background-color: transparent;
+
+            &:focus {
+                color: white !important;
             }
         }
     }
@@ -91,43 +98,86 @@ $value in $btn-colors {
 }
 
 // BLOCK BUTTON
-.block{
+.block {
     display: block !important;
     width: 100% !important;
-    
-     + .block {
+
+    +.block {
         margin-top: 5px;
     }
 }
 
 // BUTTON GROUP
-.button-group {
+.btn-group {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
 
-    + .button-group{
+    &+.btn-group {
         margin-top: 5px;
     }
 
-    [class*="btn-"] {
+    &>.dropdown>.btn,
+    &>.btn {
         margin: 0 !important;
         border-radius: 0;
     }
 
-    [class*="btn-"]:first-child {
-        @if $radius {
-            border-radius: $border-radius;
-            border-radius: 5px 0px 0px 5px !important;
-        }
+    &>.dropdown>.btn,
+    &>.btn {
+        position: relative;
 
-    }
-
-    [class*="btn-"]:last-child {
-        @if $radius {
-            border-radius: 0px 5px 5px 0px !important;
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            z-index: 1;
         }
     }
 
+    &>.dropdown:first-child>.btn,
+    &>.btn:first-child {
+        @if $radius {
+            border-radius: 4px 0px 0px 4px;
+        }
+    }
+
+    &>.dropdown:last-child>.btn,
+    &>.btn:last-child {
+        @if $radius {
+            border-radius: 0px 4px 4px 0px;
+        }
+    }
+
+    &.stacked-group {
+        display: inline-flex;
+        flex-direction: column;
+
+
+        &>.dropdown>.btn,
+        &>.btn {
+            margin: 0 !important;
+            border-radius: 0;
+            flex: 0 1 auto;
+            width: 100%;
+        }
+
+
+        &>.dropdown:first-child>.btn,
+        &>.btn:first-child {
+            @if $radius {
+                border-radius: 4px 4px 0px 0px;
+            }
+        }
+
+        &>.dropdown:last-child>.btn,
+        &>.btn:last-child {
+            @if $radius {
+                border-radius: 0px 0 4px 4px;
+            }
+        }
+
+    }
 }

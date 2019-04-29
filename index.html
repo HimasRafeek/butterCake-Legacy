@@ -1,26 +1,85 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- BUTTER CAKE CSS -->
-    <link rel="stylesheet" href="dist/css/butterCake.css">
+  <title>Butter Cake v2.5.0 - Starter Kit</title>
 
-    <title>Hello, world!</title>
+  <!-- FONT AWESOME 4.7.0 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- BUTTER CAKE CSS 2.5.0 -->
+  <link rel="stylesheet" href="dist/css/butterCake.min.css">
+
 </head>
+
 <body>
-    
-    <script>
-        // similar behavior as an HTTP redirect
-// window.location.replace("https://getbuttercake.com/");
 
-    </script>
-    &#x1F47C;
+  <!-- NAVBAR -->
+  <nav class="navbar expand-md default-nav bg-primary">
+    <div class="container">
 
-    <!-- jQuery first, then Butter Cake JS -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="dist/js/butterCake.js"></script>
+      <!-- LOGO -->
+      <div class="brand">
+        <a href="#">Butter Cake</a>
+      </div>
+
+      <!-- NAVBAR MENU-->
+      <div class="menu-box" id="mainNav">
+
+        <!-- CLOSE BUTTON | MOBILE-->
+        <div class="menu-close"><i class="fa fa-close"></i></div>
+
+        <!-- MENU -->
+        <ul class="menu ml-auto">
+          <li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
+
+          <!-- DROPDOWN MENU -->
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link">Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="">Service 01</a></li>
+              <li><a href="">Service 02</a></li>
+              <li><a href="">Service 03</a></li>
+              <li><a href="">Service 04</a></li>
+              <li><a href="">Service 05</a></li>
+            </ul>
+          </li>
+          
+          <li class="nav-item"><a href="#" class="nav-link">Portfolio</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+
+      </div>
+
+      <!-- TOGGLER | MOBILE -->
+      <button class="toggler bg-secondary text-white " data-nav="#mainNav"><i class="fa fa-bars"></i></button>
+
+    </div>
+  </nav>
+
+  <!-- HERO BANNER -->
+  <section class="main-hero">
+    <div class="jumbotron fluid">
+      <div class="container text-center">
+        <h1 class="display-4 weight-100 text-primary"><b>Butter Cake</b> Starter Kit</h1>
+        <h4>A Modern CSS framework built with flexbox</h4>
+        <a href="https://getbuttercake.com/?ref=starterKit" target="_blank" class="btn primary btn-lg mt-1">Get Started</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- JQUERY 3.3.1 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- BUTTER CAKE JS 2.5.0 -->
+  <script src="dist/js/slideDown-navbar.js"></script>
+  <script src="dist/js/dropdown.js"></script>
+
 </body>
+
 </html>

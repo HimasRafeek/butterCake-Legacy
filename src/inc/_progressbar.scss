@@ -1,0 +1,51 @@
+// PROGRESS BAR
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.progress {
+    display: flex;
+    height: 18px;
+    overflow: hidden;
+    font-size: 12px;
+    background-color: #ccc;
+
+    @if $radius {
+        border-radius: $border-radius;
+    }
+
+    .progress-bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #fff;
+        text-align: center;
+        transition: width .6s ease;
+
+        &.striped {
+            background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+            background-size: 16px 16px;
+        }
+
+        &.animated-stripe {
+            animation: progress-bar-stripes 1s linear infinite;
+        }
+    }
+
+
+    @each $color,
+    $value in $colors {
+        &.#{$color} .progress-bar {
+            background-color: $value !important;
+        }
+    }
+
+}
+
+@keyframes progress-bar-stripes {
+    0% {
+        background-position: 0 16px;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}

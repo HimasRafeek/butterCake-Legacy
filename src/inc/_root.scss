@@ -1,0 +1,17 @@
+// ROOT
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+:root {
+
+    @each $color,
+    $value in $colors {
+        --#{$color}: #{$value};
+    }
+
+
+    --bp-sm: #{$small-media};
+    --bp-medium: #{$medium-media};
+    --bp-large: #{$large-media};
+    --bp-xl: #{$xl-media};
+
+}

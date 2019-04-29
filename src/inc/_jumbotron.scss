@@ -1,7 +1,7 @@
 // JUMBOTRON
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.jumbotron{
+.jumbotron {
     background-color: $color-light;
     max-width: $container;
     width: 100%;
@@ -10,6 +10,6 @@
     box-sizing: border-box;
 }
 
-.jumbotron.fluid{
+.jumbotron.fluid {
     max-width: 100% !important;
 }
