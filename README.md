@@ -26,6 +26,8 @@
 
 [![Awesome Css](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
+> ***Releasing - Version 2.5.0 Before (May, 15th, 2019) a lot of new stuffs!! 🔥***
+
 ![GitHub](https://img.shields.io/github/license/himasrafeek/butterCake.svg)
 [![Releases](https://img.shields.io/github/release/himasrafeek/butterCake.svg)](#releases)
 [![Website](https://img.shields.io/website/https/getbuttercake.com.svg)](#website)
