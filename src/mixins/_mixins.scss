@@ -3,12 +3,12 @@
 
 // REGULAR BUTTON
 @mixin button($color, $textColor) {
-    border: 1px solid $color !important;
+    border: 1px solid $color;
     color: $textColor !important;
     background-color: $color;
 
     // Light Button
-    @if $color !='light'OR $color !='white' {
+    @if $color !=$color-light OR $color !=$color-white {
 
         
         &.active,
@@ -33,12 +33,17 @@
             background-color: $color !important;
         }
 
-        &:focus,
-        &:active {
-            background-color: darken($color, 10%) !important;
+            &:focus,
+            &:active {
+                background-color: darken($color, 20%) !important;
+            }
         }
+
     }
 
+    // Light Button
+    @if $color == $color-light OR $color == $color-white{
+        border-color: rgba(0, 0, 0, 0.125) !important;
     }
 
 }
