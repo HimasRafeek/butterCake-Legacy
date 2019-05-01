@@ -69,7 +69,7 @@ $xl-name: $grid_col_name+'xl-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
 /*
 * * .row > .col-*
 */
-.#{$grid_name} [class^="#{$grid_col_name}"] {
+.#{$grid_name} > [class*="#{$grid_col_name}"] {
     position: relative;
     width: 100%;
     min-height: 1px;
