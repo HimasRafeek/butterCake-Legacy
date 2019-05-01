@@ -16,6 +16,7 @@
     .card-header {
         background-color: $color-light;
         padding: 10px 15px;
+        border-bottom: 1px solid rgba(0, 0, 0, .125);
 
         .card-title {
             margin: 0;
@@ -29,6 +30,7 @@
     .card-footer {
         background-color: $color-light;
         padding: 10px 15px;
+        border-top: 1px solid rgba(0, 0, 0, .125);
     }
 
 }
