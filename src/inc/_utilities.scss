@@ -7,6 +7,10 @@
     opacity: 0.5;
 }
 
+.overflow-unset {
+    overflow: unset !important;
+}
+
 
 // DISPLAY
 .d-none {
@@ -423,6 +427,14 @@ $value in $colors {
     }
 }
 
+.shadow-1 {
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, .1);
+
+    &:hover {
+        box-shadow: 0 10px 16px rgba(0, 0, 0, .13), 0 6px 6px rgba(0, 0, 0, .19);
+    }
+}
+
 .shadow-none {
     box-shadow: none !important;
 }
@@ -448,7 +460,7 @@ $value in $colors {
     border-radius: 5px;
 }
 
-.img-cirle {
+.img-circle {
     border-radius: 50%;
 }
 
