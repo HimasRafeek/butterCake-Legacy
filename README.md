@@ -107,6 +107,20 @@ Butter Cake/
 - [Badges](https://getbuttercake.com/docs/badges/)
 - ETC.....
 
+## ***Get Started***
+
+#### CSS (jsdelivr)
+```html
+<!-- BUTTER CAKE CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/himasrafeek/butterCake@2.5.0/dist/css/butterCake.min.css">
+```
+
+#### JS (jsdelivr)
+```html
+<!-- BUTTER CAKE JS -->
+<script src="https://cdn.jsdelivr.net/gh/himasrafeek/butterCake@2.5.0/dist/js/butterCake.min.js"></script>
+```
+
 
 ## Browser Support
 Butter Cake uses [autoprefixer](https://github.com/postcss/autoprefixer) to make (most) Flexbox features compatible with earlier browser versions. According to Can I use, Butter Cake is compatible with recent versions of:
