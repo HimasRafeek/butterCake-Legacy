@@ -1,0 +1,30 @@
+{
+  "name": "buttercake",
+  "version": "2.5.0",
+  "description": "Butter Cake is an open source and lightweight modular toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass(SCSS) variables and mixins, responsive grid system, extensive prebuilt components.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HimasRafeek/butterCake.git"
+  },
+  "keywords": [
+    "butter",
+    "cake",
+    "buttercake",
+    "css",
+    "css",
+    "framework",
+    "front",
+    "end",
+    "framework"
+  ],
+  "author": "Himas Rafeek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HimasRafeek/butterCake/issues"
+  },
+  "homepage": "https://github.com/HimasRafeek/butterCake#readme"
+}

@@ -109,6 +109,11 @@ Butter Cake/
 
 ## ***Get Started***
 
+#### NPM
+```
+npm i buttercake
+```
+
 #### CSS (jsdelivr)
 ```html
 <!-- BUTTER CAKE CSS -->
