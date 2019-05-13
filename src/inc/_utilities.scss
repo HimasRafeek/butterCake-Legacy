@@ -472,6 +472,11 @@ $value in $colors {
     object-fit: contain;
 }
 
+// ROUNDED
+.rounded {
+    border-radius: 35px !important;
+}
+
 // BACKGROUND IMAGES
 .bg-cover {
     background-position: center center;
