@@ -17,10 +17,6 @@
         border-radius: $border-radius;
     }
 
-    &.rounded {
-        border-radius: 35px !important;
-    }
-
     &:focus{
         outline: none;
     }
