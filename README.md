@@ -26,6 +26,7 @@
 
 [![Awesome Css](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
+[![](https://data.jsdelivr.com/v1/package/gh/himasrafeek/butterCake/badge)](https://www.jsdelivr.com/package/gh/himasrafeek/butterCake)
 ![GitHub](https://img.shields.io/github/license/himasrafeek/butterCake.svg)
 [![Releases](https://img.shields.io/github/release/himasrafeek/butterCake.svg)](#releases)
 [![Website](https://img.shields.io/website/https/getbuttercake.com.svg)](#website)
