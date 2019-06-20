@@ -9,11 +9,13 @@ form {
     display: block;
     max-width: 100%;
     width: 100%;
-    min-height: 40px;
+    min-height: 45px;
+    height: 45px;
     padding: 10px 10px;
     background-color: white;
     outline: none;
-    border: 1px solid silver;
+    border: 1px solid darken($color-light, 10%);
+    transition: $transition;
 
     @if $radius {
         border-radius: $border-radius;
@@ -22,10 +24,52 @@ form {
     &:focus {
         border-color: $color-primary;
         box-shadow: 0 0 0 2px rgba($color-primary, 0.5);
+
+        &~.append-icon,
+        &~.pre-append-icon {
+            i {
+                color: $color-primary !important;
+            }
+        }
+    }
+
+    @each $bg,
+    $value in $colors {
+
+        &.#{$bg} {
+            border: 1px solid $value;
+
+            &:focus {
+                border-color: $value;
+                box-shadow: 0 0 0 2px rgba($value, 0.5);
+
+                &~.append-icon,
+                &~.pre-append-icon {
+                    i {
+                        color: $value !important;
+                    }
+                }
+
+            }
+        }
     }
 }
 
 select {
+    appearance: none;
+    padding-right: 10px;
+    appearance: none;
+    position: relative;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' height='10px' width='15px'%3E%3Ctext x='0' y='10' fill='gray'%3E%E2%96%BE%3C/text%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: right center;
+    background-clip: border-box;
+
+    &::-ms-expand {
+        display: none;
+    }
 
     option:not([disabled]) {
         color: $color-dark;
@@ -35,9 +79,30 @@ select {
         color: $gray;
     }
 
-    &[multiple]{
+    &[multiple] {
         overflow-y: auto;
+        min-height: 125px;
+        background-image: none !important;
+
+        option {
+            padding: 5px;
+
+            &:checked {
+                background: $color-primary !important;
+            }
+        }
+
+        &:checked {
+            background: $color-primary !important;
+        }
+
+
     }
+
+    &.input {
+        padding: 10px 8px;
+    }
+
 }
 
 
@@ -57,26 +122,100 @@ label {
 
 .group {
     padding: $default-padding 0;
+
+    .message,
+    .success-message,
+    .error-message {
+        display: block;
+        font-size: 12px;
+        padding-top: 4px;
+        padding-left: 4px;
+        font-weight: bold;
+    }
+
+    .error-message {
+        color: $danger;
+    }
+
+    .success-message {
+        color: $success;
+    }
+
+    @each $bg,
+    $value in $colors {
+
+        .is-#{$bg},
+        &.is-#{$bg} {
+
+            .append-icon,
+            .pre-append-icon {
+                i {
+                    transition: $transition;
+                    color: $value;
+                }
+            }
+
+            .input {
+                background: rgba($value, 0.1);
+                color: darken($value, 10%) !important;
+                border-color: $value;
+
+                &:focus {
+                    background: white;
+                    color: black !important;
+                }
+            }
+        }
+    }
 }
 
 .input-group {
     display: flex;
+    position: relative;
 
-    .input{
-        @if $radius {
-            border-radius: 0;
-            border-top-left-radius: $border-radius;
-            border-bottom-left-radius: $border-radius;
+    &.input-addon {
+        padding: 0 !important;
+
+        .pre-append-icon {
+            position: absolute;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transition: $transition;
         }
+
+        .append-icon {
+            position: absolute;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 100%;
+            top: 0;
+            right: 0;
+            transition: $transition;
+        }
+
+
+        &.input-addon-both input {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        &.input-addon-left input {
+            padding-left: 40px;
+        }
+
+        &.input-addon-right input {
+            padding-right: 40px;
+        }
+
     }
 
-    .btn{
-        @if $radius {
-            border-radius: 0;
-            border-top-right-radius: $border-radius;
-            border-bottom-right-radius: $border-radius;
-        }
-    }
 }
 
 .radio-group,
@@ -112,6 +251,7 @@ label {
         &:checked~label::before {
             color: #fff;
             background-color: $color-primary;
+            transition: $transition;
         }
     }
 
@@ -132,9 +272,16 @@ label {
         &:checked~label::after {
             background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
         }
+
+        &:checked:focus~label::before {
+            box-shadow: 0 0 0 1px #fff, 0 0 2px 4px rgba($color-primary, .25);
+        }
     }
 
+
     label {
+        transition: $transition;
+
         &::before {
             content: "";
             position: absolute;
@@ -178,6 +325,7 @@ label {
         }
 
         &:focus~label::before {
+            transition: $transition;
             box-shadow: 0 0 0 1px #fff, 0 0 2px 4px rgba($color-primary, .25);
         }
     }
