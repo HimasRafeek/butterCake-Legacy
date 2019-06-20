@@ -1,0 +1,95 @@
+// CHIPS
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.chip {
+  display: inline-flex;
+  background: $color-light;
+  border-radius: 35px;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 90%;
+  height: 30px;
+  margin: 2px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  white-space: nowrap;
+  padding: 5px 10px;
+
+  &.dismissable{
+    padding: 5px 4px 5px 8px !important;
+  }
+
+  &.with-avatar {
+    padding: 5px 10px 5px 0 !important;
+
+    &.dismissable {
+      padding: 5px 4px 5px 0 !important;
+    }
+
+    &.avatar-zoomed {
+      margin: 8px 2px 8px 9px;
+
+      .chip-img {
+        transform: scale(1.4);
+        font-size: 80%;
+        margin-right: 10px;
+      }
+
+    }
+  }
+
+
+  .btn-clear-chip {
+    border-radius: 50%;
+    transform: scale(.75);
+    background: white;
+    min-width: 25px;
+    min-height: 25px;
+    margin-left: 5px;
+    color: $color-dark;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .chip-img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    margin-right: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 90%;
+    font-weight: 500;
+  }
+
+  @each $color,
+  $value in $colors {
+    &.#{$color} {
+      background-color: $value;
+      color: white;
+
+      .chip-img {
+        border: 2px solid white;
+        background-color: $value;
+
+      }
+
+      img.chip-img {
+        border: 2px solid $value;
+      }
+
+      .btn-clear-chip:hover {
+        background: darken($value, 10%);
+        color: white;
+      }
+    }
+  }
+
+}
