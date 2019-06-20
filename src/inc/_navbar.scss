@@ -32,6 +32,10 @@
     justify-content: space-between;
     padding: 0 $default-padding;
 
+    * {
+        transition: $transition;
+    }
+
     /*
     * * Container and Container fluid 
     */
@@ -48,7 +52,9 @@
     * * Navbar Brand | Logo
     */
     .brand {
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
         margin-right: 16px;
         line-height: inherit;
         white-space: nowrap;
@@ -120,19 +126,8 @@
         }
 
         &:hover {
-            background: $color-light;
-        }
-
-        &.bg-primary {
-            &:hover {
-                background: darken($color-primary, 10%) !important;
-            }
-        }
-
-        &.bg-secondary {
-            &:hover {
-                background: darken($color-secondary, 10%) !important;
-            }
+            color: white;
+            background: darken($color-primary, 10%) !important;
         }
     }
 
@@ -174,7 +169,7 @@
         .menu {
             .nav-link {
                 color: $color-secondary;
-                padding: 20px 15px;
+                padding: 20px 25px;
 
                 &:focus,
                 &:hover {
@@ -200,39 +195,66 @@
         * * Primary Navbar Styles
         */
 
-        &.bg-primary {
-            .brand {
-                a {
-                    color: $color-white;
+        @each $bg,
+        $value in $colors {
 
-                    &:hover {
-                        color: lighten($color-primary, 15%) !important;
-                    }
-                }
-            }
 
-            .menu {
-                .nav-link {
-                    color: $color-white;
 
-                    &:focus,
-                    &:hover {
+            &.bg-#{$bg} {
+
+                background: $value;
+
+                .brand {
+                    a {
                         color: $color-white;
-                        background-color: darken($color-primary, 10%);
+
+                        &:hover {
+                            color: darken($value, 15%) !important;
+                        }
                     }
                 }
 
-                .active {
+                .menu-close {
+                    background: darken($value, 15%);
+
+                    &:hover {
+                        background: darken($value, 20%);
+                    }
+
+                }
+
+                .menu {
                     .nav-link {
                         color: $color-white;
-                        background-color: darken($color-primary, 10%);
+
+                        &:focus,
+                        &:hover {
+                            color: $color-white;
+                            background-color: darken($value, 10%);
+                        }
+                    }
+
+                    .active {
+                        .nav-link {
+                            color: $color-white;
+                            background-color: darken($value, 10%);
+                        }
                     }
                 }
-            }
 
-            .slidedown,
-            .sideNavbar {
-                background-color: $color-primary !important;
+                .toggler {
+                    background-color: darken($value, 5%) !important;
+
+                    &:hover {
+                        background: darken($value, 10%) !important;
+                    }
+                }
+
+                .slidedown,
+                .sideNavbar {
+                    background-color: $value !important;
+                }
+
             }
 
         }
@@ -276,118 +298,37 @@
 */
 
 // RESPONSIVE CODES | TOGGLE BAR
-@media (min-width: $small-media) {
-    .navbar.expand-sm {
 
-        // TOGGLER
-        .toggler {
-            display: none;
-        }
+@each $size,
+$breakpoint in $grid-array {
+    @media (min-width: $breakpoint) {
+        .navbar.expand#{$size} {
 
-        // MENU BOX
-        .menu-box {
-            display: flex !important;
-        }
+            // TOGGLER
+            .toggler {
+                display: none;
+            }
 
-        // MENU
-        .menu {
-            flex-direction: row;
-        }
+            // MENU BOX
+            .menu-box {
+                display: flex !important;
+            }
 
-        // CONTAINER
-        &>.container,
-        &>.container-fluid {
-            flex-wrap: nowrap;
-        }
-    }
+            // MENU
+            .menu {
+                flex-direction: row;
+            }
 
-}
-
-
-@media (min-width: $medium-media) {
-    .navbar.expand-md {
-
-        // TOGGLER
-        .toggler {
-            display: none;
-        }
-
-        // MENU BOX
-        .menu-box {
-            display: flex !important;
-        }
-
-        // MENU
-        .menu {
-            flex-direction: row;
-        }
-
-        // CONTAINER
-        &>.container,
-        &>.container-fluid {
-            flex-wrap: nowrap;
-        }
-    }
-
-
-}
-
-
-@media (min-width: $large-media) {
-    .navbar.expand-lg {
-
-        // TOGGLER
-        .toggler {
-            display: none;
-        }
-
-        // MENU BOX
-        .menu-box {
-            display: flex !important;
-        }
-
-        // MENU
-        .menu {
-            flex-direction: row;
-        }
-
-        // CONTAINER
-        &>.container,
-        &>.container-fluid {
-            flex-wrap: nowrap;
+            // CONTAINER
+            &>.container,
+            &>.container-fluid {
+                flex-wrap: nowrap;
+            }
         }
 
     }
-
 }
 
-
-@media (min-width: $xl-media) {
-    .navbar.expand-xl {
-
-        // TOGGLER
-        .toggler {
-            display: none;
-        }
-
-        // MENU BOX
-        .menu-box {
-            display: flex !important;
-        }
-
-        // MENU
-        .menu {
-            flex-direction: row;
-        }
-
-        // CONTAINER
-        &>.container,
-        &>.container-fluid {
-            flex-wrap: nowrap;
-        }
-    }
-
-}
 
 
 /*
@@ -407,6 +348,7 @@
     height: 100%;
     left: -100%;
     z-index: 1250;
+    padding-bottom: 50px;
 
     // MENU
     .menu {
@@ -445,12 +387,6 @@
             margin-top: 0 !important;
             border-radius: 0 !important;
             border: none;
-
-            li {
-                a {
-                    text-align: center;
-                }
-            }
         }
     }
 
@@ -506,11 +442,11 @@
         flex-direction: column !important;
         width: 100%;
 
-        .nav-item{
+        .nav-item {
             width: 100%;
             text-align: center;
 
-            .nav-link{
+            .nav-link {
                 width: 100%;
             }
         }
