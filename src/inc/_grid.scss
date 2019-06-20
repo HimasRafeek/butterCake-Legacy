@@ -6,27 +6,8 @@
 $grid_name: 'row'; // Name
 $grid_col: 12; // Columns
 $grid_gutter: $default-padding; // Path: ./vars/variables
-$grid_col_name: 'col-'; // ex: col-md-12
+$grid_col_name: 'col'; // ex: col-md-12
 $grid_auto: 'column'; // Auto column
-
-
-
-//  ANY SCREEN SIZES
-// ––––––––––––––––––––––––––––––––––––––––––––––––––
-
-// SMALL
-$small-name: $grid_col_name+'sm-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
-
-// MEDIUM
-$medium-name: $grid_col_name+'md-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
-
-// LARGE
-$large-name: $grid_col_name+'lg-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
-
-// XL
-$xl-name: $grid_col_name+'xl-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
-
-
 
 
 // DO NOT EDIT BELOW WITHOUT PROPER KNOWLEDGE- 'DEVELOPER NOTE'
@@ -69,7 +50,7 @@ $xl-name: $grid_col_name+'xl-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
 /*
 * * .row > .col-*
 */
-.#{$grid_name} > [class*="#{$grid_col_name}"] {
+.#{$grid_name}>[class*="#{$grid_col_name}"] {
     position: relative;
     width: 100%;
     min-height: 1px;
@@ -89,55 +70,39 @@ $xl-name: $grid_col_name+'xl-'; // DO NOT EDIT THIS - 'DEVELOPER NOTE'
 
 // AUTO COL
 @for $i from 1 through $grid_col {
-    .#{$grid_col_name}#{$i} {
+    .#{$grid_col_name}-#{$i} {
         flex-basis: percentage($i / $grid_col);
         max-width: percentage($i / $grid_col);
-
     }
 
 }
 
-
-// SMALL
-@include min-breakpoint($small-media) {
-    @for $i from 1 through $grid_col {
-        .#{$small-name}#{$i} {
-            flex-basis: percentage($i / $grid_col);
-            max-width: percentage($i / $grid_col);
-        }
-    }
+// ORDER
+@for $i from 1 through 10 {
+    @include order($i, '');
 }
 
 
-// MEDIUM
-@include min-breakpoint($medium-media) {
-    @for $i from 1 through $grid_col {
-        .#{$medium-name}#{$i} {
-            flex-basis: percentage($i / $grid_col);
-            max-width: percentage($i / $grid_col);
+// GRID LOOP
+@each $size,
+$breakpoint in $grid-array {
+    @media (min-width: $breakpoint) {
+
+        @for $i from 1 through $grid_col {
+            .#{$grid_col_name+$size}-#{$i} {
+                flex-basis: percentage($i / $grid_col);
+                max-width: percentage($i / $grid_col);
+            }
         }
-    }
-}
 
+        // DISPLAY PROPERTIES
+        @include display($size);
 
-
-// LARGE
-@include min-breakpoint($large-media) {
-    @for $i from 1 through $grid_col {
-        .#{$large-name}#{$i} {
-            flex-basis: percentage($i / $grid_col);
-            max-width: percentage($i / $grid_col);
+        // Z - ORDER
+        @for $i from 1 through 10 {
+            @include order($i, $size);
         }
-    }
-}
 
-
-// Xl
-@include min-breakpoint($xl-media) {
-    @for $i from 1 through $grid_col {
-        .#{$xl-name}#{$i} {
-            flex-basis: percentage($i / $grid_col);
-            max-width: percentage($i / $grid_col);
-        }
     }
+
 }
