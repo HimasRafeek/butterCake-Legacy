@@ -8,13 +8,15 @@
     word-wrap: break-word;
     overflow: hidden;
     border: 1px solid rgba(0, 0, 0, .125);
+    display: flex;
+    flex-direction: column;
 
     @if $radius {
         border-radius: $border-radius;
     }
 
     .card-header {
-        background-color: $color-light;
+        background-color: white;
         padding: 10px 15px;
         border-bottom: 1px solid rgba(0, 0, 0, .125);
 
@@ -24,11 +26,13 @@
     }
 
     .card-body {
+        flex: 1 1 auto;
         padding: 15px;
+        background-color: white;
     }
 
     .card-footer {
-        background-color: $color-light;
+        background-color: white;
         padding: 10px 15px;
         border-top: 1px solid rgba(0, 0, 0, .125);
     }
