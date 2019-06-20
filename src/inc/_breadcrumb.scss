@@ -1,6 +1,9 @@
+// BREADCRUMB
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
 .breadcrumb {
     list-style: none;
-    padding: 10px;
+    padding: 15px 20px;
     margin: 0;
     background-color: $color-light;
 
@@ -13,6 +16,42 @@
         padding: 8px;
         color: black;
         content: $breadcrumb-divider;
+        font-family: fontAwesome;
+    }
+
+    @each $color,
+    $value in $colors {
+        @if ($color !='white') and ($color !='light') {
+            &.#{$color} {
+                background: $value;
+                color: white;
+
+                a {
+                    color: white;
+                }
+
+                li+li:before {
+                    color: white;
+                }
+            }
+        }
+
+        @if ($color=='light') {
+
+            &.#{$color} {
+                background: $value;
+                color: black;
+
+                a {
+                    color: white;
+                }
+
+                li+li:before {
+                    color: black;
+                }
+            }
+
+        }
     }
 
 }
