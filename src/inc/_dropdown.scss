@@ -4,6 +4,7 @@
 .dropdown {
     position: relative;
 
+    &:hover>.dropdown-menu,
     &.menu-showing>.dropdown-menu {
         display: flex !important;
     }
@@ -18,19 +19,48 @@
     }
 
 
+
+    // REGULAR DROPDOWN MENU
     &>.dropdown-menu {
-        border: 1px solid #ccc;
         display: none;
         flex-direction: column;
-        min-width: 150px;
+        min-width: 200px;
         width: 100%;
         background: white;
+        box-shadow: 0 2px 4px 0 rgba(17, 16, 15, .1), 0 2px 10px rgba(17, 16, 15, .1);
         padding: 5px 0;
         position: absolute;
         right: 0;
         top: 100%;
+        white-space: nowrap;
         animation: dropdown 0.220s forwards ease-in-out;
         z-index: 1000;
+
+        .dropdown-group {
+            border-bottom: 1px solid #e9ecef;
+
+            .dropdown-title {
+                display: block;
+                color: $color-secondary;
+                font-weight: bold;
+                border-bottom: 1px solid #e9ecef;
+                text-align: left;
+                white-space: nowrap;
+                padding: 10px 15px;
+            }
+
+            .inner-dropdown>a,
+            &>li>a,
+            &>a {
+                padding-left: 25px !important;
+            }
+        }
+
+        .dropdown-divider {
+            height: 0;
+            overflow: hidden;
+            border-top: 1px solid #e9ecef;
+        }
 
 
         @if $radius {
@@ -53,9 +83,10 @@
             }
         }
 
-        .menu-hiding{
+        .menu-hiding {
             animation: dropdownHiding 0.220s forwards ease-in-out;
         }
+
 
         .inner-dropdown {
             .dropdown-menu {
@@ -96,6 +127,34 @@
         }
     }
 
+    // BIG DROPDOWN MENU
+    &.dropdown-bigger {
+        position: static;
+
+        &>.dropdown-menu {
+            left: 0 !important;
+            width: 100%;
+            min-width: auto !important;
+            max-width: 100% !important;
+        }
+    }
+
+    &.dropdown-right {
+        &>.dropdown-menu {
+            right: 0;
+        }
+    }
+
+    &.dropdown-left {
+        &>.dropdown-menu {
+            left: 0;
+        }
+    }
+
+    &.no-carret:after {
+        display: none !important;
+    }
+
     &.carret:after,
     &>button:after,
     &>div:not(.dropdown-menu):after,
@@ -118,7 +177,7 @@
 @keyframes dropdown {
     0% {
         opacity: 0;
-        top: 50%
+        top: 80%
     }
 
     100% {
