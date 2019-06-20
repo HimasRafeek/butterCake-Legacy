@@ -10,7 +10,7 @@
     // Light Button
     @if $color !=$color-light OR $color !=$color-white {
 
-        
+
         &.active,
         &:focus,
         &:hover {
@@ -18,20 +18,21 @@
             background-color: darken($color, 10%) !important;
             border-color: darken($color, 10%) !important;
         }
-        
-        &.active,
+
         &:focus,
-        &:active{
+        &:active {
             box-shadow: 0 0 0 2px rgba($color, 0.5) !important;
         }
-    
 
-    &.outline {
-        &:hover {
-            color: $textColor !important;
-            border-color: $color !important;
-            background-color: $color !important;
-        }
+
+        &.outline {
+            border-width: 2px;
+
+            &:hover {
+                color: $textColor !important;
+                border-color: $color !important;
+                background-color: $color !important;
+            }
 
             &:focus,
             &:active {
@@ -42,11 +43,12 @@
     }
 
     // Light Button
-    @if $color == $color-light OR $color == $color-white{
+    @if $color==$color-light OR $color==$color-white {
         border-color: rgba(0, 0, 0, 0.125) !important;
     }
 
 }
+
 
 // MAXIMUM BREAK POINT
 @mixin max-breakpoint($sm : 0) {
@@ -59,5 +61,82 @@
 @mixin min-breakpoint($sm : 0) {
     @media(min-width: $sm) {
         @content;
+    }
+}
+
+
+// DISPLAY
+@mixin display($name) {
+
+    .d-none#{$name},
+    .hide#{$name} {
+        display: none !important;
+    }
+
+    .d-block#{$name} {
+        display: block !important;
+    }
+
+    .d-inline-block#{$name} {
+        display: inline-block !important;
+    }
+
+    .d-flex#{$name} {
+        display: flex !important;
+    }
+
+    .fa-center#{$name} {
+        align-items: center !important;
+    }
+
+    .fa-baseline#{$name} {
+        align-items: baseline !important
+    }
+
+    .fa-start#{$name} {
+        align-items: flex-start !important;
+    }
+
+    .fa-end#{$name} {
+        align-items: flex-end !important;
+    }
+
+    .fa-stretch#{$name} {
+        align-items: stretch !important;
+    }
+
+    .fa-end#{$name} {
+        align-items: flex-end !important;
+    }
+
+    .fj-center#{$name} {
+        justify-content: center !important;
+    }
+
+    .fj-baseline#{$name} {
+        justify-content: baseline !important;
+    }
+
+    .fj-start#{$name} {
+        justify-content: flex-start !important;
+    }
+
+    .fj-end#{$name} {
+        justify-content: flex-end !important;
+    }
+
+    .fj-between#{$name} {
+        justify-content: space-between !important;
+    }
+
+    .fj-around#{$name} {
+        justify-content: space-around !important;
+    }
+}
+
+// ORDER
+@mixin order($num, $name) {
+    .order#{$name}-#{$num} {
+        order: $num;
     }
 }
