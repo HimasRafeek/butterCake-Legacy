@@ -5,6 +5,10 @@
 </p>
 
 <h3 align="center">Butter Cake</h3>
+<p align="center">
+v2.5.5
+</p>
+
 
 <p align="center">
   A Modern Lightweight Front End CSS framework for faster and easier web development.
@@ -22,6 +26,9 @@
 <img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
 
 
+
+
+
 ## Status <img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
 
 [![Awesome Css](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
@@ -32,11 +39,34 @@
 [![Website](https://img.shields.io/website/https/getbuttercake.com.svg)](#website)
 ![GitHub issues](https://img.shields.io/github/issues-raw/himasrafeek/butterCake.svg)
 
-<img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
 
  Build responsive, mobile-first projects on the web with Butter Cake. 
 
  Butter Cake is an open source and lightweight modular toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass(SCSS) variables and mixins, responsive grid system, extensive prebuilt components.
+
+
+
+
+## ***Get Started*** <img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
+
+#### NPM
+```
+npm i buttercake
+```
+
+#### CSS (jsdelivr)
+```html
+<!-- BUTTER CAKE CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/buttercake@2.5.5/dist/css/butterCake.min.css">
+```
+
+#### JS (jsdelivr)
+```html
+<!-- BUTTER CAKE JS -->
+<script src="https://cdn.jsdelivr.net/npm/buttercake@2.5.5/dist/js/butterCake.min.js"></script>
+```
+
+<br>
 
 <img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
 
@@ -69,16 +99,17 @@ Butter Cake/
 ├── dist/
 │    │
 │    ├── css/
-│    │   ├── butterCake.min.css (59kb)
-│    │   └── butterCake.min.css.map (33kb)
+│    │   ├── butterCake.min.css (98kb)
+│    │   └── butterCake.min.css.map (52kb)
 │    │ 
 │    └── js/
 │        ├── butterCake.js (Non Minified) (9kb) - (Complete components Js)
-│        ├── butterCake.min.js (Minified) (4kb) - (Complete components Js)
+│        ├── butterCake.min.js (Minified) (5kb) - (Complete components Js)
 │        ├── alert.js 
 │        ├── accordion.js 
 │        ├── dropdown.js 
 │        ├── modal.js 
+│        ├── chips.js 
 │        ├── tabs.js 
 │        ├── side-navbar.js (Side Navbar)
 │        └── slideDown-navbar.js (Slide Down Navbar)
@@ -91,42 +122,61 @@ Butter Cake/
 ```
 
 
-## ***What's new in v2.5.0*** <img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
-- Root Variables
-- [Progress Bar](https://getbuttercake.com/docs/progress-bars/)
-- [Tool Tip](https://getbuttercake.com/docs/tool-tips/)
-- [Dissmisable Alerts](https://getbuttercake.com/docs/alerts/#alerts-Dismissable)
-- [Badge Icons](https://getbuttercake.com/docs/badges/#badge-icons)
-- [Custom Checkboxes and Radio Buttons](https://getbuttercake.com/docs/forms/#Custom-Checkbox)
-- [Custom Modal Animations](https://getbuttercake.com/docs/modals/#modal-with-animate) with [Animate.css](https://daneden.github.io/animate.css/)
+## ***What's new in v2.5.5*** <img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
+- Chips New Component - 😃 **NEW** 
+- Inputs addons (icons) - **NEW** 
+- Form Switches (Checkboxes) - **NEW**  
+- File picker button - **NEW**  
+- Button with loader - **NEW**  
+- Bigger Dropdown menu - **NEW**  
 
-## ***What's improved in v2.5.0*** <img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
-- [Navbar](https://getbuttercake.com/docs/navbars/)
-- [Dropdown](https://getbuttercake.com/docs/dropdowns/)
-- [Tabs](https://getbuttercake.com/docs/tabs/)
-- [Modal](https://getbuttercake.com/docs/modals/)
-- [Form Elements](https://getbuttercake.com/docs/forms/)
-- [Badges](https://getbuttercake.com/docs/badges/)
+<br>
+
+## ***What's improved in v2.5.5*** <img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
+
+- Forms elements - **Improved**
+- Tooltips - **Improved**
+- Badges - **Improved**
+- Table - **Improved**
+- Alerts - **Improved**
+- Cards - **Improved**
+- Modal - **Improved**
+
+<hr>
+
+- Dropdown More Styles added
+- Navbar More Styles added
+- Breadcrumb More Styles added 
+- Buttons More Styles added 
 - ETC.....
 
-## ***Get Started*** <img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
 
-#### NPM
-```
-npm i buttercake
+## ***Responsive Classes Added*** <img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
+
+```css
+.d-none-{ sm | md | lg | xl  }
+.hide-{ sm | md | lg | xl  }
+.d-block-{ sm | md | lg | xl  }
+.d-inline-block-{ sm | md | lg | xl  }
+.d-flex-{ sm | md | lg | xl  }
+.fa-center-{ sm | md | lg | xl  }
+.fa-baseline-{ sm | md | lg | xl  }
+.fa-start-{ sm | md | lg | xl  }
+.fa-end-{ sm | md | lg | xl  }
+.fa-stretch-{ sm | md | lg | xl  }
+.fa-end-{ sm | md | lg | xl  }
+.fj-center-{ sm | md | lg | xl  }
+.fj-baseline-{ sm | md | lg | xl  }
+.fj-start-{ sm | md | lg | xl  }
+.fj-end-{ sm | md | lg | xl  }
+.fj-between-{ sm | md | lg | xl  }
+.fj-around-{ sm | md | lg | xl  }
+.order-{ sm | md | lg | xl  }-{1 - 10}
 ```
 
-#### CSS (jsdelivr)
-```html
-<!-- BUTTER CAKE CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/himasrafeek/butterCake@2.5.0/dist/css/butterCake.min.css">
-```
 
-#### JS (jsdelivr)
-```html
-<!-- BUTTER CAKE JS -->
-<script src="https://cdn.jsdelivr.net/gh/himasrafeek/butterCake@2.5.0/dist/js/butterCake.min.js"></script>
-```
+
+
 
 
 ## Browser Support <img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
@@ -137,8 +187,6 @@ Butter Cake uses [autoprefixer](https://github.com/postcss/autoprefixer) to make
 - Edge
 - Safari
 - Opera
-
-Internet Explorer (10+) is only partially supported.
 
 
 ## Support the developement <img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
