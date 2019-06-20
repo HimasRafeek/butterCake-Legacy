@@ -1,22 +1,24 @@
 // ALERTS
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.alert{
+.alert {
     display: block;
     text-align: left;
     margin-top: 8px;
     margin-bottom: 8px;
     padding: 15px;
     position: relative;
+    overflow: hidden;
+
     @if $radius {
         border-radius: $border-radius;
     }
-    
-    &.dismissable{
+
+    &.dismissable {
         padding-right: 40px;
     }
-    
-    .alert-close{
+
+    .alert-close {
         position: absolute;
         top: 0;
         right: 0;
@@ -26,26 +28,42 @@
         justify-content: center;
         height: 100%;
         cursor: pointer;
-        
+
     }
 }
 
 
-@each $color,$value in $colors {
+@each $color,
+$value in $colors {
     @if ($color !='white') and ($color !='light') {
-        
-        .alert.#{$color}{
-            background: rgba($value,0.1);
-            color: darken($value,5%);
-            border: 1px solid lighten($value,10%);
 
-            .alert-close{
+        .alert.#{$color} {
+            background: $value;
+            color: white;
+
+            .alert-close {
                 &:hover {
-                    background: rgba($value, 1);
+                    background: darken($value, 10%);
                     color: white;
                 }
             }
         }
-        
+
+    }
+
+    @if ($color=='light') {
+
+        .alert.#{$color} {
+            background: $value;
+            color: black;
+
+            .alert-close {
+                &:hover {
+                    background: darken($value, 10%);
+                    color: black;
+                }
+            }
+        }
+
     }
 }
