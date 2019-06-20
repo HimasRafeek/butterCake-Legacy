@@ -11,6 +11,7 @@
         &::before,
         &::after {
             visibility: visible;
+            margin-top: 0 !important;
         }
     }
 }
@@ -24,8 +25,9 @@
     transform: translateX(-50%);
     border-width: 4px 6px 0 6px;
     border-style: solid;
-    border-color: rgba(0, 0, 0, 0.9) transparent transparent transparent;
+    border-color: $color-dark transparent transparent transparent;
     z-index: 100;
+    margin-top: 10px;
 }
 
 // CONTAINER
@@ -34,17 +36,17 @@
     position: absolute;
     left: 50%;
     top: -6px;
+    display: block;
     transform: translateX(-50%) translateY(-100%);
-    background: rgba(0, 0, 0, 0.9);
-    text-align: center;
+    background: $color-dark;
     color: #fff;
-    padding: 4px 2px;
+    padding: 10px;
     font-size: 12px;
-    min-width: 80px;
-    width: auto;
-    border-radius: 5px;
+    min-width: 150px;
     pointer-events: none;
-    white-space: nowrap;
+    margin-top: 10px;
+    border-radius: 4px;
+    transition: $transition;
 }
 
 [data-tip]::before,
