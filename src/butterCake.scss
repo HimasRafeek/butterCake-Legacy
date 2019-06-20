@@ -1,13 +1,13 @@
 @charset "utf-8";
 
-/*! getButterCake.com v2.5.0 | MIT License | https://github.com/HimasRafeek/butterCake */
+/*! getButterCake.com v2.5.5 | MIT License | https://github.com/HimasRafeek/butterCake */
 
 /* ========================================================================================
  * ----------------------------------------------------------------------------------------
  *  Author        : Himas Rafeek
  *  Framework     : Butter Cake
  *  Description   : A Modern CSS framework built with flexbox
- *  Version       : 2.5.0
+ *  Version       : 2.5.5
  *  Copyright     : 2018 - 2019
  *  Github        : https://github.com/HimasRafeek/butterCake
  *  URI           : https://getButterCake.com
@@ -46,10 +46,10 @@
 @import 'inc/breadcrumb';
 @import 'inc/progressbar';
 @import 'inc/tooltip';
+@import 'inc/chips';
 @import 'inc/utilities';
 
 
 
 // CUSTOM CSS
-
 @import 'custom';
