@@ -1,9 +1,10 @@
-/*! getButterCake.com v2.5.0 | MIT License | https://github.com/HimasRafeek/butterCake */
 (function ($, window) {
+
+    "use strict";
 
 
     // BODY
-    $body = $('body , html');
+    var $body = $('body , html');
 
     
     /**
@@ -66,7 +67,7 @@
 
     // TOGGLER CLICK
     $toggler.on('click', function () {
-        $id = $(this).attr('data-nav');
+        var $id = $(this).attr('data-nav');
         $body.toggleClass('noScroll');
         $($id).toggleClass('toggled');
     });
@@ -74,12 +75,13 @@
     // MENU CLOSE
     $('.menu-close').on('click', function () {
         $body.removeClass('noScroll');
-        $($id).removeClass('toggled');
+        $('.navbar .menu-box').removeClass('toggled');
     });
 
 
     // SHADOW CLICK
     $('.navbar .shadow-fixed').click(function (e) {
+        var $id = $(this).parents('.navbar').find('.toggler').attr('data-nav');
         if (!$(e.target).is($id)) {
             $body.removeClass('noScroll');
             $($id).removeClass('toggled');
@@ -148,12 +150,13 @@
         if (animateModal($modal)[1] === '') {
             $modal.find('.modal-container').removeClass('animated ' + animateModal($modal)[1]);
             $modal.removeClass('modal-show').addClass('modal-exit');
-            $body.removeClass('noScroll');
         } else {
             setTimeout(function () {
                 $modal.find('.modal-container').removeClass('animated ' + animateModal($modal)[1]);
                 $modal.removeClass('modal-show').addClass('modal-exit');
-                $body.removeClass('noScroll');
+                if ($('.modal-show').length === 0) {
+                    $body.removeClass('noScroll');
+                }
             }, 1000);
         }
     }
@@ -162,7 +165,7 @@
     $('.modal-open').on('click', function (e) {
         e.preventDefault();
         var target = $(this).attr('data-modal');
-        $modal = $('#' + target);
+        var $modal = $('#' + target);
         modalOpen($modal);
     });
 
@@ -171,7 +174,7 @@
     $('.modal-close').on('click', function (e) {
         e.preventDefault();
         var target = $(this).attr('data-modal');
-        $modal = $('#' + target);
+        var $modal = $('#' + target);
         modalClose($modal)
     });
 
@@ -198,7 +201,7 @@
     // CLICK EVENT OUTSIDE MODAL
     $('.modal').on('click', function (e) {
         if ($(e.target).is('.modal')) {
-            $modal = $('.modal.modal-show');
+            var $modal = $('.modal.modal-show');
             modalClose($modal);
         }
     });
@@ -210,8 +213,8 @@
      * ––––––––––––––––––––––––––––––––––––––––––––––––––
      */
     $('.tab-link').on('click', function () {
-        $target = $(this).attr('data-tab');
-        $mainParent = $(this).closest('.tabs');
+        var $target = $(this).attr('data-tab');
+        var $mainParent = $(this).closest('.tabs');
 
         $mainParent.find('.tab-nav .tab-link').removeClass('active');
         $("[data-tab='" + $target + "']").addClass('active');
@@ -263,6 +266,17 @@
         var $this = $(this);
         $this.parent('.dismissable').fadeOut('fast', function () {
             $this.parent('.dismissable').remove();
+        })
+    });
+
+    /**
+     * CHIPS
+     * ––––––––––––––––––––––––––––––––––––––––––––––––––
+     */
+    $('.chip .btn-clear-chip').on('click', function () {
+        var $this = $(this);
+        $this.closest('.chip').fadeOut('fast', function () {
+            $this.closest('.chip').remove();
         })
     })
 
