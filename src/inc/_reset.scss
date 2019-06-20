@@ -1,11 +1,10 @@
+// RESET
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
 i,
 i::after,
 i::before {
   transition: all 0s !important;
-}
-
-* {
-  transition: $transition;
 }
 
 *,
