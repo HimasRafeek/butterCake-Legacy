@@ -3,7 +3,7 @@
 
 .btn {
     display: inline-block;
-    padding: 8px 20px;
+    padding: 10px 20px;
     text-align: center;
     font-weight: $font-weight-base;
     background: none;
@@ -12,15 +12,51 @@
     cursor: pointer;
     user-select: none;
     appearance: none;
+    transition: $transition;
+
 
     @if $radius {
         border-radius: $border-radius;
     }
 
-    &:focus{
+    &:focus {
         outline: none;
     }
 
+    &.btn-choose-file {
+        position: relative;
+        user-select: none;
+
+        input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer !important;
+            z-index: 1;
+        }
+    }
+
+    &.btn-loading {
+        position: relative;
+        pointer-events: none !important;
+        user-select: none;
+        z-index: 1;
+
+        .loader {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: inherit;
+        }
+    }
 
 }
 
@@ -29,14 +65,14 @@
 // REGULAR BUTTON
 @each $color,
 $value in $btn-colors {
-    
+
     // Regular Button
     .btn.#{$color} {
         @include button($value, $color-white);
     }
 
     // Light Button
-    @if $color=='light' OR $color=='white' {
+    @if $color=='light'OR $color=='white' {
         .btn.#{$color} {
             background-color: $value;
             color: $color-dark !important;
@@ -44,7 +80,7 @@ $value in $btn-colors {
             &:focus,
             &:active,
             &:hover {
-                color:$color-dark !important;
+                color: $color-dark !important;
                 background-color: darken($value, 10%) !important;
             }
         }
@@ -53,22 +89,25 @@ $value in $btn-colors {
         .btn.#{$color}.outline {
             color: $color-dark !important;
             background-color: transparent;
+            box-shadow: none !important;
 
             &:focus,
             &:active,
             &:hover {
                 color: $color-dark !important;
-                background-color: darken($value , 10%) !important;
+                background-color: darken($value, 10%) !important;
             }
         }
     }
 
-    @else{
+    @else {
+
         // Regular Outline Button
         .btn.#{$color}.outline {
             color: $value !important;
             background-image: none;
             background-color: transparent;
+            box-shadow: none !important;
 
             &:focus {
                 color: white !important;
@@ -83,8 +122,8 @@ $value in $btn-colors {
 
 // LARGE BUTTON
 .btn-lg {
-    padding: 12px 30px !important;
-    font-size: 18px;
+    padding: 14px 30px !important;
+    font-size: 20px;
 }
 
 // SMALL BUTTON
