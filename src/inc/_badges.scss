@@ -5,10 +5,11 @@
     display: inline-block;
     background-color: $color-light;
     font-size: 16px;
-    padding: 4px 8px;
+    padding: 2px 6px;
     user-select: none;
     text-align: center;
-    
+    transition: $transition;
+
     @if $radius {
         border-radius: $border-radius;
     }
@@ -34,7 +35,7 @@
 
 .badge-lg {
     font-size: 18px;
-    padding: 5px 15px;
+    padding: 2px 8px;
 
     &.badge-icon {
         width: 50px;
@@ -45,6 +46,8 @@
 
 .badge-sm {
     font-size: 12px;
+    padding: 2px 4px;
+
 
     &.badge-icon {
         width: 30px;
