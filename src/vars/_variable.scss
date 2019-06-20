@@ -103,6 +103,12 @@ $large-media: '1160px'; // EDITABLE
 // XL
 $xl-media: '1260px'; // EDITABLE
 
+// GRID ARRAYS
+$grid-array: ('-sm': $small-media,
+  '-md': $medium-media,
+  '-lg': $large-media,
+  '-xl': $xl-media);
+
 
 // UTILITIES
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
