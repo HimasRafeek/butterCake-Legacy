@@ -45,6 +45,8 @@ v2.5.5
  Butter Cake is an open source and lightweight modular toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass(SCSS) variables and mixins, responsive grid system, extensive prebuilt components.
 
 
+## ***NOTE***
+#### Butter Cake v3.0 is Releasing soon - <a href="http://bit.ly/2m26LWK">Preview v3.0</a>
 
 
 ## ***Get Started*** <img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
