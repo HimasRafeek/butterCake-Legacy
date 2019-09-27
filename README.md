@@ -56,13 +56,13 @@ npm i buttercake
 #### CSS (jsdelivr)
 ```html
 <!-- BUTTER CAKE CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/buttercake@2.5.5/dist/css/butterCake.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/himasrafeek/butterCake@3.0.0/dist/css/butterCake.min.css">
 ```
 
 #### JS (jsdelivr)
 ```html
 <!-- BUTTER CAKE JS -->
-<script src="https://cdn.jsdelivr.net/npm/buttercake@2.5.5/dist/js/butterCake.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/himasrafeek/butterCake@3.0.0/dist/js/butterCake.min.js"></script>
 ```
 
 <br>
