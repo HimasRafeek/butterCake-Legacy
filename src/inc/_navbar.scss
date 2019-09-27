@@ -127,7 +127,7 @@
 
         &:hover {
             color: white;
-            background: darken($color-primary, 10%) !important;
+            background: darken($primary, 10%) !important;
         }
     }
 
@@ -138,7 +138,7 @@
     * * that applied by Butter Cake OR You can change the scss below
     */
     &.default-nav {
-        background-color: $color-white;
+        background-color: $white;
 
         /*
         * * Default Navbar Styles
@@ -154,10 +154,10 @@
                 display: block;
                 font-weight: 400;
                 font-size: $h3;
-                color: $color-primary;
+                color: $primary;
 
                 &:hover {
-                    color: darken($color-primary, 15%) !important;
+                    color: darken($primary, 15%) !important;
                 }
 
                 img {
@@ -168,27 +168,27 @@
 
         .menu {
             .nav-link {
-                color: $color-secondary;
+                color: $secondary;
                 padding: 20px 25px;
 
                 &:focus,
                 &:hover {
-                    color: $color-white;
-                    background-color: $color-primary;
+                    color: $white;
+                    background-color: $primary;
                 }
             }
 
             .active {
                 .nav-link {
-                    color: $color-white;
-                    background-color: $color-primary;
+                    color: $white;
+                    background-color: $primary;
                 }
             }
         }
 
         .slidedown,
         .sideNavbar {
-            background-color: $color-white !important;
+            background-color: $white !important;
         }
 
         /*
@@ -206,7 +206,7 @@
 
                 .brand {
                     a {
-                        color: $color-white;
+                        color: $white;
 
                         &:hover {
                             color: darken($value, 15%) !important;
@@ -225,18 +225,18 @@
 
                 .menu {
                     .nav-link {
-                        color: $color-white;
+                        color: $white;
 
                         &:focus,
                         &:hover {
-                            color: $color-white;
+                            color: $white;
                             background-color: darken($value, 10%);
                         }
                     }
 
                     .active {
                         .nav-link {
-                            color: $color-white;
+                            color: $white;
                             background-color: darken($value, 10%);
                         }
                     }
@@ -398,15 +398,15 @@ $breakpoint in $grid-array {
     // SIDEBAR MENU CLOSE
     .menu-close {
         display: block !important;
-        background: $color-secondary;
-        color: $color-white;
+        background: $secondary;
+        color: $white;
         text-align: center;
         padding: 10px;
         margin-bottom: 10px;
         cursor: pointer;
 
         &:hover {
-            background: $color-dark;
+            background: $dark;
         }
     }
 }

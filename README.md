@@ -6,7 +6,7 @@
 
 <h3 align="center">Butter Cake</h3>
 <p align="center">
-v2.5.5
+v3.0.0
 </p>
 
 
@@ -44,9 +44,6 @@ v2.5.5
 
  Butter Cake is an open source and lightweight modular toolkit for developing with HTML, CSS, and JS. Quickly prototype your ideas or build your entire app with our Sass(SCSS) variables and mixins, responsive grid system, extensive prebuilt components.
 
-
-## ***NOTE***
-#### Butter Cake v3.0 is Releasing soon - <a href="http://bit.ly/2m26LWK">Preview v3.0</a>
 
 
 ## ***Get Started*** <img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
@@ -124,17 +121,18 @@ Butter Cake/
 ```
 
 
-## ***What's new in v2.5.5*** <img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
-- Chips New Component - 😃 **NEW** 
+## ***What's new in v3.0.0*** <img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
+- New Form Elements - 😃 **NEW** 
 - Inputs addons (icons) - **NEW** 
 - Form Switches (Checkboxes) - **NEW**  
 - File picker button - **NEW**  
 - Button with loader - **NEW**  
-- Bigger Dropdown menu - **NEW**  
+- Bigger Dropdown menu - **NEW** 
+- Responsive Classes - **NEW**  
 
 <br>
 
-## ***What's improved in v2.5.5*** <img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
+## ***What's improved in v3.0.0*** <img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
 
 - Forms elements - **Improved**
 - Tooltips - **Improved**
@@ -174,6 +172,8 @@ Butter Cake/
 .fj-between-{ sm | md | lg | xl  }
 .fj-around-{ sm | md | lg | xl  }
 .order-{ sm | md | lg | xl  }-{1 - 10}
+.weight- (100 - 900){ sm | md | lg | xl  }
+.display- (1 - 4){ sm | md | lg | xl  }
 ```
 
 

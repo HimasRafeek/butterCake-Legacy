@@ -25,7 +25,7 @@
     transform: translateX(-50%);
     border-width: 4px 6px 0 6px;
     border-style: solid;
-    border-color: $color-dark transparent transparent transparent;
+    border-color: $dark transparent transparent transparent;
     z-index: 100;
     margin-top: 10px;
 }
@@ -38,7 +38,7 @@
     top: -6px;
     display: block;
     transform: translateX(-50%) translateY(-100%);
-    background: $color-dark;
+    background: $dark;
     color: #fff;
     padding: 10px;
     font-size: 12px;

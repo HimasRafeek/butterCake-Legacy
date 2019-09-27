@@ -2,7 +2,7 @@
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 .accordion {
-    transition: 0.4s;
+    transition:all 0.125s;
     width: 100%;
     border: none;
     outline: none;
@@ -14,12 +14,33 @@
 
         .accordion {
             padding: 15px;
-            background-color: $color-light;
+            background-color: $white;
+            border: 1px solid darken($light, 10%);
+
+            &:not(.active) {
+                margin-bottom: 5px;
+            }
+
+            &.active {
+                &:after {
+                    color: $white;
+                }
+            }
+
+            @if $radius {
+                border-radius: $border-radius;
+            }
         }
 
         .active,
         .accordion:hover {
-            background-color: darken($color-light, 15%);
+            border-color: $primary;
+            color: $white;
+            background: $primary;
+
+            &:after {
+                color: $white;
+            }
         }
 
         .accordion:after {
@@ -36,14 +57,20 @@
         }
 
         .panel-box {
-            border: 1px solid $color-light;
+            border: 1px solid darken($light, 10%);
             padding: 15px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            background-color: white;
+
+            @if $radius {
+                border-radius: $border-radius;
+            }
         }
     }
 
     .panel {
         transition: max-height 0.2s ease-out;
-        background-color: white;
         max-height: 0;
         overflow: hidden;
     }

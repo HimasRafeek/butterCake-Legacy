@@ -150,6 +150,7 @@
         if (animateModal($modal)[1] === '') {
             $modal.find('.modal-container').removeClass('animated ' + animateModal($modal)[1]);
             $modal.removeClass('modal-show').addClass('modal-exit');
+            $body.removeClass('noScroll');
         } else {
             setTimeout(function () {
                 $modal.find('.modal-container').removeClass('animated ' + animateModal($modal)[1]);

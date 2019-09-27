@@ -3,7 +3,7 @@
 
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 8px 20px;
     text-align: center;
     font-weight: $font-weight-base;
     background: none;
@@ -26,6 +26,7 @@
     &.btn-choose-file {
         position: relative;
         user-select: none;
+        overflow: hidden;
 
         input {
             position: absolute;
@@ -44,6 +45,7 @@
         pointer-events: none !important;
         user-select: none;
         z-index: 1;
+        overflow: hidden;
 
         .loader {
             position: absolute;
@@ -68,33 +70,33 @@ $value in $btn-colors {
 
     // Regular Button
     .btn.#{$color} {
-        @include button($value, $color-white);
+        @include button($value, $white);
     }
 
     // Light Button
     @if $color=='light'OR $color=='white' {
         .btn.#{$color} {
             background-color: $value;
-            color: $color-dark !important;
+            color: $dark !important;
 
             &:focus,
             &:active,
             &:hover {
-                color: $color-dark !important;
+                color: $dark !important;
                 background-color: darken($value, 10%) !important;
             }
         }
 
         // Outline
         .btn.#{$color}.outline {
-            color: $color-dark !important;
+            color: $dark !important;
             background-color: transparent;
             box-shadow: none !important;
 
             &:focus,
             &:active,
             &:hover {
-                color: $color-dark !important;
+                color: $dark !important;
                 background-color: darken($value, 10%) !important;
             }
         }

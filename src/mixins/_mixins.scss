@@ -8,7 +8,7 @@
     background-color: $color;
 
     // Light Button
-    @if $color !=$color-light OR $color !=$color-white {
+    @if $color !=$light OR $color !=$white {
 
 
         &.active,
@@ -43,8 +43,12 @@
     }
 
     // Light Button
-    @if $color==$color-light OR $color==$color-white {
+    @if $color==$light OR $color==$white {
         border-color: rgba(0, 0, 0, 0.125) !important;
+
+        &.active{
+            color: black !important;
+        }
     }
 
 }

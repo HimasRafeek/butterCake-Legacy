@@ -3,7 +3,7 @@
 
 .chip {
   display: inline-flex;
-  background: $color-light;
+  background: $light;
   border-radius: 35px;
   justify-content: flex-start;
   align-items: center;
@@ -47,7 +47,7 @@
     min-width: 25px;
     min-height: 25px;
     margin-left: 5px;
-    color: $color-dark;
+    color: $dark;
     display: inline-flex;
     align-items: center;
     justify-content: center;

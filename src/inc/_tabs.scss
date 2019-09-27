@@ -7,30 +7,56 @@
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: flex-start;
-    border-bottom: 1px solid darken($color-light, 10%);
+    border-bottom: 1px solid darken($light, 10%);
 
 
     .tab-link {
-        all: unset;
+        outline: none;
+        border: none;
+        background: white;
         display: block;
-        color: $color-primary;
-        padding: 10px 15px;
-        margin-bottom: -1px;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        border: 1px solid transparent;
-        border-bottom: none;
+        color: $primary;
+        padding: 10px 15px 20px 15px;
         cursor: pointer;
+        color: $dark;
+        position: relative;
 
         &:hover {
-            color: $color-dark;
-            border-color: darken($color-light, 10%);
+            color: $primary;
         }
 
         &.active {
-            color: $color-dark;
+            color: $primary;
             background-color: white;
-            border-color: darken($color-light, 10%);
+
+            &:before,
+            &:focus:before,
+            &:hover:before {
+                border-bottom: 11px solid darken($light, 15%);
+                border-left: 11px solid transparent;
+                border-right: 11px solid transparent;
+                content: "";
+                display: inline-block;
+                position: absolute;
+                right: 40%;
+                bottom: 0;
+                z-index: 1;
+            }
+
+            &:after,
+            &:focus:after,
+            &:hover:after {
+                border-bottom: 11px solid #fff;
+                border-left: 11px solid transparent;
+                border-right: 11px solid transparent;
+                content: "";
+                display: inline-block;
+                position: absolute;
+                right: 40%;
+                bottom: -1px;
+                z-index: 1;
+
+            }
 
         }
     }
@@ -44,7 +70,6 @@
 .tab-content {
     display: none;
     padding: 6px 12px;
-    -webkit-animation: fadeEffect 1s;
     animation: fadeEffect 1s;
 
     &.active {

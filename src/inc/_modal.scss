@@ -14,6 +14,7 @@
     left: 0;
     pointer-events: none;
     z-index: -10;
+    overflow-x: hidden;
 
 
     opacity: 0;
@@ -47,7 +48,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: $color-white;
+    background: $white;
     border-bottom: 1px solid #e9ecef;
     ;
     padding: 10px 15px;
@@ -89,9 +90,8 @@
 
     .modal-footer {
         padding: 10px 15px;
-        background: $color-white;
+        background: $white;
         border-top: 1px solid #e9ecef;
-        ;
     }
 
 }

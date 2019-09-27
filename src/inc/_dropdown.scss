@@ -41,7 +41,7 @@
 
             .dropdown-title {
                 display: block;
-                color: $color-secondary;
+                color: $secondary;
                 font-weight: bold;
                 border-bottom: 1px solid #e9ecef;
                 text-align: left;
@@ -78,8 +78,8 @@
             &.active,
             &.is-active,
             &:hover {
-                color: $color-white;
-                background: $color-primary;
+                color: $white;
+                background: $primary;
             }
         }
 
@@ -151,9 +151,6 @@
         }
     }
 
-    &.no-carret:after {
-        display: none !important;
-    }
 
     &.carret:after,
     &>button:after,

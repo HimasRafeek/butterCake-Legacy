@@ -30,7 +30,7 @@ table.table {
     }
 
     thead {
-        background-color: $color-light;
+        background-color: $light;
 
         th {
             padding: 15px !important;
@@ -43,7 +43,7 @@ table.table {
     }
 
     tr {
-        border-bottom: 1px solid darken($color-light, 10%);
+        border-bottom: 1px solid darken($light, 10%);
 
     }
 
@@ -53,6 +53,6 @@ table.table {
 
 .table-striped {
     tr:nth-child(even) {
-        background-color: $color-light;
+        background-color: $light;
     }
 }

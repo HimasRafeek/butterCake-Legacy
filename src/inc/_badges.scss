@@ -3,7 +3,7 @@
 
 .badge {
     display: inline-block;
-    background-color: $color-light;
+    background-color: $light;
     font-size: 16px;
     padding: 2px 6px;
     user-select: none;
@@ -65,10 +65,10 @@
 $value in $colors {
     .badge.#{$color} {
         background-color: $value !important;
-        color: $color-white;
+        color: $white;
 
         &>* {
-            color: $color-white;
+            color: $white;
         }
     }
 
@@ -84,15 +84,15 @@ $value in $colors {
 
     a.badge.#{$color}:hover {
         background-color: darken($value, 10%) !important;
-        color: $color-white;
+        color: $white;
     }
 
     a.badge.#{$color}.outline:hover {
         background-color: $value !important;
-        color: $color-white !important;
+        color: $white !important;
 
         &>* {
-            color: $color-white !important;
+            color: $white !important;
         }
     }
 }

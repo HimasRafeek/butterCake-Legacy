@@ -14,7 +14,7 @@ form {
     padding: 10px 10px;
     background-color: white;
     outline: none;
-    border: 1px solid darken($color-light, 10%);
+    border: 1px solid darken($light, 10%);
     transition: $transition;
 
     @if $radius {
@@ -22,13 +22,13 @@ form {
     }
 
     &:focus {
-        border-color: $color-primary;
-        box-shadow: 0 0 0 2px rgba($color-primary, 0.5);
+        border-color: $primary;
+        box-shadow: 0 0 0 2px rgba($primary, 0.5);
 
         &~.append-icon,
         &~.pre-append-icon {
             i {
-                color: $color-primary !important;
+                color: $primary !important;
             }
         }
     }
@@ -72,7 +72,7 @@ select {
     }
 
     option:not([disabled]) {
-        color: $color-dark;
+        color: $dark;
     }
 
     option[disabled] {
@@ -88,12 +88,12 @@ select {
             padding: 5px;
 
             &:checked {
-                background: $color-primary !important;
+                background: $primary !important;
             }
         }
 
         &:checked {
-            background: $color-primary !important;
+            background: $primary !important;
         }
 
 
@@ -250,7 +250,7 @@ label {
 
         &:checked~label::before {
             color: #fff;
-            background-color: $color-primary;
+            background-color: $primary;
             transition: $transition;
         }
     }
@@ -274,7 +274,7 @@ label {
         }
 
         &:checked:focus~label::before {
-            box-shadow: 0 0 0 1px #fff, 0 0 2px 4px rgba($color-primary, .25);
+            box-shadow: 0 0 0 1px #fff, 0 0 2px 4px rgba($primary, .25);
         }
     }
 
@@ -326,7 +326,7 @@ label {
 
         &:focus~label::before {
             transition: $transition;
-            box-shadow: 0 0 0 1px #fff, 0 0 2px 4px rgba($color-primary, .25);
+            box-shadow: 0 0 0 1px #fff, 0 0 2px 4px rgba($primary, .25);
         }
     }
 
@@ -383,9 +383,9 @@ label {
         -webkit-appearance: button;
         border: none;
         outline: none;
-        background-color: darken($color-light, 10%);
-        width: 60px;
-        height: 26px;
+        background-color: darken($light, 10%);
+        width: 50px;
+        height: 22px;
         border-radius: 3px;
         cursor: pointer;
         position: relative;
@@ -428,7 +428,7 @@ label {
 }
 
 .checkbox-toggle input[type='checkbox']:checked {
-    background-color: darken($color-light, 25%);
+    background-color: darken($light, 25%);
 }
 
 @each $bg,

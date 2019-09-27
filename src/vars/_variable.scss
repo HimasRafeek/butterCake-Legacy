@@ -1,12 +1,12 @@
 // MAIN COLORS
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-$color-primary: #5b3ff9;
-$color-secondary: #474747;
+$primary: #5b3ff9;
+$secondary: #5e564c;
 
-$color-dark: #1c1b19;
-$color-light: #f4f5f6;
-$color-white: white;
+$dark: #1c1b19;
+$light: #f4f5f6;
+$white: white;
 
 // EXTRA COLORS
 $success: #00C851;
@@ -14,53 +14,18 @@ $info: #17a2b8;
 $warning: #ffbb33;
 $danger: #ff4444;
 $gray: gray;
-$muted: #949494;
+$muted: #b1b1b1;
 
 
 // DEFAILT TEXT COLOR
 $default-text-color: #333;
 
 
-// BACKGROUND & TEXT COLORS
-// ––––––––––––––––––––––––––––––––––––––––––––––––––
-
-$colors: ('primary': $color-primary,
-'secondary': $color-secondary,
-'light': $color-light,
-'dark': $color-dark,
-'gray': $gray,
-'white': $color-white,
-'success': $success,
-'info': $info,
-'warning': $warning,
-'danger': $danger,
-'muted': $muted);
-
-
-// BUTTON COLORS
-// ––––––––––––––––––––––––––––––––––––––––––––––––––
-
-
-// BUTTON COLORS
-$btn-colors: ('primary': $color-primary,
-'secondary': $color-secondary,
-'light': $color-light,
-'white': $color-white,
-'dark': $color-dark,
-'gray': $gray,
-'success': $success,
-'info': $info,
-'warning': $warning,
-'danger': $danger,
-);
-
-
-
 // TYPOGRAPHY
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 // FONT DEFAULTS
-$line-height: 1.25;
+$line-height: 1.5;
 $font-size-base: 16px;
 $font-margin-base: 5px;
 $font-weight-base: 400;
@@ -103,11 +68,7 @@ $large-media: '1160px'; // EDITABLE
 // XL
 $xl-media: '1260px'; // EDITABLE
 
-// GRID ARRAYS
-$grid-array: ('-sm': $small-media,
-  '-md': $medium-media,
-  '-lg': $large-media,
-  '-xl': $xl-media);
+
 
 
 // UTILITIES
@@ -132,4 +93,50 @@ $radius: true;
 
 
 // BREAD CRUMB DIVIDER
-$breadcrumb-divider: quote("/");
+$breadcrumb-divider: quote("\f101");
+
+
+// OVERWRITE
+@import '../overwrite';
+
+
+// BACKGROUND & TEXT COLORS
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+$colors: ('primary': $primary,
+  'secondary': $secondary,
+  'light': $light,
+  'dark': $dark,
+  'gray': $gray,
+  'white': $white,
+  'success': $success,
+  'info': $info,
+  'warning': $warning,
+  'danger': $danger,
+  'muted': $muted);
+
+
+// BUTTON COLORS
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+// BUTTON COLORS
+$btn-colors: ('primary': $primary,
+  'secondary': $secondary,
+  'light': $light,
+  'white': $white,
+  'dark': $dark,
+  'gray': $gray,
+  'muted': $muted,
+  'success': $success,
+  'info': $info,
+  'warning': $warning,
+  'danger': $danger,
+);
+
+
+// GRID ARRAYS
+$grid-array: ('-sm': $small-media,
+  '-md': $medium-media,
+  '-lg': $large-media,
+  '-xl': $xl-media);
