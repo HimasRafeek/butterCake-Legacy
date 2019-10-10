@@ -23,13 +23,13 @@ v3.0.0
   <a href="https://getbuttercake.com/examples">Examples</a>
 </p>
 
-<img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
 
 
 
 
 
-## Status <img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
+
+## Status
 
 [![Awesome Css](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
@@ -46,7 +46,7 @@ v3.0.0
 
 
 
-## ***Get Started*** <img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
+## ***Get Started***
 
 #### NPM
 ```
@@ -65,14 +65,12 @@ npm i buttercake
 <script src="https://cdn.jsdelivr.net/npm/buttercake@3.0.0/dist/js/butterCake.min.js"></script>
 ```
 
-<br>
 
-<img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
 
 ### ***Butter Cake is constantly in development! Try it out now.***
-<img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
 
-## Documentation <img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
+
+## Documentation 
 
 Checkout the official website for the Documentation. [https://getbuttercake.com](https://getbuttercake.com/?ref=readme)
 
@@ -90,7 +88,7 @@ Checkout the official website for the Documentation. [https://getbuttercake.com]
 Can start a new project within seconds 😻!!
 
 
-## What's included <img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
+## What's included 
 
 ```
 Butter Cake/
@@ -121,7 +119,7 @@ Butter Cake/
 ```
 
 
-## ***What's new in v3.0.0*** <img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
+## ***What's new in v3.0.0*** 
 - New Form Elements - 😃 **NEW** 
 - Inputs addons (icons) - **NEW** 
 - Form Switches (Checkboxes) - **NEW**  
@@ -132,7 +130,7 @@ Butter Cake/
 
 <br>
 
-## ***What's improved in v3.0.0*** <img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
+## ***What's improved in v3.0.0*** 
 
 - Forms elements - **Improved**
 - Tooltips - **Improved**
@@ -151,7 +149,7 @@ Butter Cake/
 - ETC.....
 
 
-## ***Responsive Classes Added*** <img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
+## ***Responsive Classes Added*** 
 
 ```css
 .d-none-{ sm | md | lg | xl  }
@@ -181,7 +179,7 @@ Butter Cake/
 
 
 
-## Browser Support <img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
+## Browser Support 
 Butter Cake uses [autoprefixer](https://github.com/postcss/autoprefixer) to make (most) Flexbox features compatible with earlier browser versions. According to Can I use, Butter Cake is compatible with recent versions of:
 
 - Chrome
@@ -191,7 +189,7 @@ Butter Cake uses [autoprefixer](https://github.com/postcss/autoprefixer) to make
 - Opera
 
 
-## Support the developement <img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
+## Support the developement 
 <a href="https://www.patreon.com/bePatron?u=3868721"><img src="https://camo.githubusercontent.com/c11c9bdf1f6c2a1d80afb11859984a61f0fadfa6/68747470733a2f2f63352e70617472656f6e2e636f6d2f65787465726e616c2f6c6f676f2f6265636f6d655f615f706174726f6e5f627574746f6e4032782e706e67" width="200px"></a>
 
 <a href="http://bit.ly/2qwDHFX"><img src="https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg" width="200px"></a>
