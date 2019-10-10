@@ -75,7 +75,7 @@ npm i buttercake
 Checkout the official website for the Documentation. [https://getbuttercake.com](https://getbuttercake.com/?ref=readme)
 
 
-## Why You  should use - Butter Cake <img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
+## Why You  should use - Butter Cake 
 
  - ✈️ light weight 59kb (css) &amp; 4kb (js)
  - 🗃 Modular Components
