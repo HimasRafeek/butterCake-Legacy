@@ -196,5 +196,5 @@ Butter Cake uses [autoprefixer](https://github.com/postcss/autoprefixer) to make
 
 
 
-## Copyright and license <img src="https://getbuttercake.com/README/spacer.png" alt="Butter Cake logo" width="100%">
+## Copyright and license 
 Code copyright 2018 - 2019 Himas Rafeek. Code released under the [MIT license](https://github.com/HimasRafeek/butterCake/blob/master/LICENSE).
