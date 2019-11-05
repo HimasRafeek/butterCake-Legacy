@@ -119,36 +119,6 @@ Butter Cake/
 ```
 
 
-## ***What's new in v3.0.0*** 
-- New Form Elements - 😃 **NEW** 
-- Inputs addons (icons) - **NEW** 
-- Form Switches (Checkboxes) - **NEW**  
-- File picker button - **NEW**  
-- Button with loader - **NEW**  
-- Bigger Dropdown menu - **NEW** 
-- Responsive Classes - **NEW**  
-
-<br>
-
-## ***What's improved in v3.0.0*** 
-
-- Forms elements - **Improved**
-- Tooltips - **Improved**
-- Badges - **Improved**
-- Table - **Improved**
-- Alerts - **Improved**
-- Cards - **Improved**
-- Modal - **Improved**
-
-<hr>
-
-- Dropdown More Styles added
-- Navbar More Styles added
-- Breadcrumb More Styles added 
-- Buttons More Styles added 
-- ETC.....
-
-
 ## ***Responsive Classes Added*** 
 
 ```css
