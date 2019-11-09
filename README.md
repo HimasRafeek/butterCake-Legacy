@@ -85,68 +85,7 @@ Checkout the official website for the Documentation. [https://getbuttercake.com]
 
  > ***No need to setup development environment with Gulp etc... because Butter Cake uses [Prepros (FREE APP)](https://prepros.io/?ref=getbuttercake.com) to compile SASS(SCSS).***
 
-Can start a new project within seconds 😻!!
-
-
-## What's included 
-
-```
-Butter Cake/
-│
-├── dist/
-│    │
-│    ├── css/
-│    │   ├── butterCake.min.css (98kb)
-│    │   └── butterCake.min.css.map (52kb)
-│    │ 
-│    └── js/
-│        ├── butterCake.js (Non Minified) (9kb) - (Complete components Js)
-│        ├── butterCake.min.js (Minified) (5kb) - (Complete components Js)
-│        ├── alert.js 
-│        ├── accordion.js 
-│        ├── dropdown.js 
-│        ├── modal.js 
-│        ├── chips.js 
-│        ├── tabs.js 
-│        ├── side-navbar.js (Side Navbar)
-│        └── slideDown-navbar.js (Slide Down Navbar)
-│
-├── src/ (Includes SASS|SCSS Files)
-│
-├── prepros-6.config
-│
-└── index.html (Starter File)
-```
-
-
-## ***Responsive Classes Added*** 
-
-```css
-.d-none-{ sm | md | lg | xl  }
-.hide-{ sm | md | lg | xl  }
-.d-block-{ sm | md | lg | xl  }
-.d-inline-block-{ sm | md | lg | xl  }
-.d-flex-{ sm | md | lg | xl  }
-.fa-center-{ sm | md | lg | xl  }
-.fa-baseline-{ sm | md | lg | xl  }
-.fa-start-{ sm | md | lg | xl  }
-.fa-end-{ sm | md | lg | xl  }
-.fa-stretch-{ sm | md | lg | xl  }
-.fa-end-{ sm | md | lg | xl  }
-.fj-center-{ sm | md | lg | xl  }
-.fj-baseline-{ sm | md | lg | xl  }
-.fj-start-{ sm | md | lg | xl  }
-.fj-end-{ sm | md | lg | xl  }
-.fj-between-{ sm | md | lg | xl  }
-.fj-around-{ sm | md | lg | xl  }
-.order-{ sm | md | lg | xl  }-{1 - 10}
-.weight- (100 - 900){ sm | md | lg | xl  }
-.display- (1 - 4){ sm | md | lg | xl  }
-```
-
-
-
-
+#### Can start a new project within seconds 😻!!
 
 
 ## Browser Support 
