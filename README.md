@@ -88,8 +88,12 @@ Checkout the official website for the Documentation. [https://getbuttercake.com]
 #### Can start a new project within seconds 😻!!
 
 
-## Browser Support 
+## 🌐 Browser Support 
 Butter Cake uses [autoprefixer](https://github.com/postcss/autoprefixer) to make (most) Flexbox features compatible with earlier browser versions. According to Can I use, Butter Cake is compatible with recent versions of:
+
+<p align="center">
+ <img src="https://raw.githubusercontent.com/finnhvman/matter/master/docs/browsers.png" alt="Chrome, Firefox, Safari, Edge, Samsung Internet" width="520"><br/>
+</p>
 
 - Chrome
 - Firefox
