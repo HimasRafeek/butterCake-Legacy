@@ -41,20 +41,20 @@ v3.0.0
 
 
 
-##  ***Get Started***
+## ***Get Started***
 
-####  NPM
+#### NPM
 ```
 npm i buttercake
 ```
 
-####  CSS (jsdelivr)
+#### CSS (jsdelivr)
 ```html
 <!-- BUTTER CAKE CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/buttercake@3.0.0/dist/css/butterCake.min.css">
 ```
 
-####  JS (jsdelivr)
+#### JS (jsdelivr)
 ```html
 <!-- BUTTER CAKE JS -->
 <script src="https://cdn.jsdelivr.net/npm/buttercake@3.0.0/dist/js/butterCake.min.js"></script>
@@ -65,12 +65,12 @@ npm i buttercake
 ### ***Butter Cake is constantly in development! Try it out now.***
 
 
-##  Documentation 
+## Documentation 
 
 Checkout the official website for the Documentation. [https://getbuttercake.com](https://getbuttercake.com/?ref=readme)
 
 
-##  Why You  should use - Butter Cake 
+## Why You  should use - Butter Cake 
 
  - ✈️ light weight 59kb (css) &amp; 4kb (js)
  - 🗃 Modular Components
@@ -80,10 +80,10 @@ Checkout the official website for the Documentation. [https://getbuttercake.com]
 
  > ***No need to setup development environment with Gulp etc... because Butter Cake uses [Prepros (FREE APP)](https://prepros.io/?ref=getbuttercake.com) to compile SASS(SCSS).***
 
-####  Can start a new project within seconds 😻!!
+#### Can start a new project within seconds 😻!!
 
 
-##  🌐 Browser Support
+## 🌐 Browser Support
 
 Butter Cake uses [autoprefixer](https://github.com/postcss/autoprefixer) to make (most) Flexbox features compatible with earlier browser versions. According to Can I use, Butter Cake is compatible with recent versions of:
 
