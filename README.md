@@ -91,8 +91,9 @@ Butter Cake uses [autoprefixer](https://github.com/postcss/autoprefixer) to make
 
 - Chrome
 - Firefox
-- Edge
 - Safari
+- Edge
+- Samsung Browser
 - Opera
 
 
