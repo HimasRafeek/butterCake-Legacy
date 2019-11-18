@@ -24,11 +24,6 @@ v3.0.0
 </p>
 
 
-
-
-
-
-
 ## Status
 
 [![Awesome Css](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
@@ -91,9 +86,8 @@ Checkout the official website for the Documentation. [https://getbuttercake.com]
 ## 🌐 Browser Support 
 Butter Cake uses [autoprefixer](https://github.com/postcss/autoprefixer) to make (most) Flexbox features compatible with earlier browser versions. According to Can I use, Butter Cake is compatible with recent versions of:
 
-<p align="center">
- <img src="https://raw.githubusercontent.com/finnhvman/matter/master/docs/browsers.png" alt="Chrome, Firefox, Safari, Edge, Samsung Internet" width="520"><br/>
-</p>
+<img src="https://raw.githubusercontent.com/finnhvman/matter/master/docs/browsers.png" alt="Chrome, Firefox, Safari, Edge, Samsung Internet" width="520"><br/>
+
 
 - Chrome
 - Firefox
