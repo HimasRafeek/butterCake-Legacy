@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://getbuttercake.com/?ref=readmeHeader">
-    <img src="https://getbuttercake.com/images/logo.png" alt="Butter Cake logo" width="100%">
+    <img src="https://getbuttercake.com/images/logo-white.png" alt="Butter Cake logo" width="100%">
   </a>
 </p>
 
