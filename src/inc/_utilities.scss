@@ -142,6 +142,11 @@ $value in $colors {
     width: 100% !important;
 }
 
+// HEIGHT
+.h-100{
+    height: 100%;
+}
+
 // PADDING
 .p-0 {
     padding: 0 !important;
@@ -299,19 +304,19 @@ $value in $colors {
 
 // FONT SIZES
 .display-1 {
-    font-size: 80px;
+    font-size: $display-1;
 }
 
 .display-2 {
-    font-size: 70px;
+    font-size: $display-2;
 }
 
 .display-3 {
-    font-size: 60px;
+    font-size: $display-3;
 }
 
 .display-4 {
-    font-size: 50px;
+    font-size: $display-4;
 }
 
 

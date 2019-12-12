@@ -1,12 +1,5 @@
-(function ($, window) {
-
-  // BODY
-  $body = $('body , html');
-
-  /**
-   * DROPDOWN
-   * ––––––––––––––––––––––––––––––––––––––––––––––––––
-   */
+// DROPDOWN
+ButterCake.plugin('dropdown', function () {
   var $dropdown = $('.dropdown');
   $('.dropdown > a').on('click', function (e) {
     e.preventDefault();
@@ -23,10 +16,9 @@
     $(this).removeClass('menu-showing');
   });
 
-  $body.on('click', function (e) {
+  ButterCake.settings.body.on('click', function (e) {
     if (!$(e.target).is('.dropdown')) {
       $('.dropdown').removeClass('menu-showing');
     }
   });
-
-}(jQuery, window))
+}, true);

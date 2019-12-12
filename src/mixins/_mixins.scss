@@ -53,6 +53,69 @@
 
 }
 
+// MAKE BUTTONS
+@mixin makeButton {
+    // REGULAR BUTTON
+    @each $color,
+    $value in $btn-colors {
+
+        // Regular Button
+        .btn.#{$color} {
+            @include button($value, $white);
+        }
+
+        // Light Button
+        @if $color=='light'OR $color=='white' {
+            .btn.#{$color} {
+                background-color: $value;
+                color: $dark !important;
+                border-color: $value !important;
+
+                &:focus,
+                &:active,
+                &:hover {
+                    color: $dark !important;
+                    background-color: darken($value, 10%) !important;
+                    border-color: darken($value, 10%) !important;
+                }
+            }
+
+            // Outline
+            .btn.#{$color}.outline {
+                color: $dark !important;
+                background-color: transparent;
+                box-shadow: none !important;
+
+                &:focus,
+                &:active,
+                &:hover {
+                    color: $dark !important;
+                    background-color: darken($value, 10%) !important;
+                    border-color: darken($value, 10%) !important;
+                }
+            }
+        }
+
+        @else {
+
+            // Regular Outline Button
+            .btn.#{$color}.outline {
+                color: $value !important;
+                background-image: none;
+                background-color: transparent;
+                box-shadow: none !important;
+
+                &:focus {
+                    color: white !important;
+                    border-color: darken($value, 10%) !important;
+                }
+            }
+        }
+
+    }
+
+}
+
 
 // MAXIMUM BREAK POINT
 @mixin max-breakpoint($sm : 0) {

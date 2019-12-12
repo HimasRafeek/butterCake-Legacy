@@ -1,15 +1,5 @@
-(function ($, window) {
-
-
-  // BODY
-  $body = $('body , html');
-
-
-  /**
-   * MODAL
-   * ––––––––––––––––––––––––––––––––––––––––––––––––––
-   */
-
+ // MODAL
+ ButterCake.plugin('modal', function () {
   // MODAL ANIMATIONS
   function animateModal($modal) {
     var animate = $modal.find('.modal-container').attr('data-modal-animate');
@@ -26,7 +16,7 @@
   function modalOpen($modal) {
     $modal.removeClass('modal-exit').addClass('modal-show');
     $modal.find('.modal-container').addClass('animated ' + animateModal($modal)[0]);
-    $body.addClass('noScroll');
+    ButterCake.settings.body.addClass('noScroll');
     setTimeout(function () {
       $modal.find('.modal-container').removeClass('animated ' + animateModal($modal)[0]);
     }, 1000);
@@ -38,12 +28,14 @@
     if (animateModal($modal)[1] === '') {
       $modal.find('.modal-container').removeClass('animated ' + animateModal($modal)[1]);
       $modal.removeClass('modal-show').addClass('modal-exit');
-      $body.removeClass('noScroll');
+      ButterCake.settings.body.removeClass('noScroll');
     } else {
       setTimeout(function () {
         $modal.find('.modal-container').removeClass('animated ' + animateModal($modal)[1]);
         $modal.removeClass('modal-show').addClass('modal-exit');
-        $body.removeClass('noScroll');
+        if ($('.modal-show').length === 0) {
+          ButterCake.settings.body.removeClass('noScroll');
+        }
       }, 1000);
     }
   }
@@ -52,7 +44,7 @@
   $('.modal-open').on('click', function (e) {
     e.preventDefault();
     var target = $(this).attr('data-modal');
-    $modal = $('#' + target);
+    var $modal = $('#' + target);
     modalOpen($modal);
   });
 
@@ -61,16 +53,8 @@
   $('.modal-close').on('click', function (e) {
     e.preventDefault();
     var target = $(this).attr('data-modal');
-    $modal = $('#' + target);
-    modalClose($modal)
-  });
-
-  // CLICK EVENT OUTSIDE MODAL
-  $('.modal').on('click', function (e) {
-    if ($(e.target).is('.modal')) {
-      $modal = $('.modal.modal-show');
-      modalClose($modal);
-    }
+    var $modal = $('#' + target);
+    modalClose($modal);
   });
 
   // MODAL PLUGIN
@@ -92,4 +76,12 @@
 
   };
 
-}(jQuery, window))
+
+  // CLICK EVENT OUTSIDE MODAL
+  $('.modal').on('click', function (e) {
+    if ($(e.target).is('.modal')) {
+      var $modal = $('.modal.modal-show');
+      modalClose($modal);
+    }
+  });
+}, true);

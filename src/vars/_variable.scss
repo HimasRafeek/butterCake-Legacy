@@ -1,35 +1,35 @@
 // MAIN COLORS
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-$primary: #5b3ff9;
-$secondary: #5e564c;
+$primary: #5b3ff9 !default;
+$secondary: #363b4d !default;
 
-$dark: #1c1b19;
-$light: #f4f5f6;
-$white: white;
+$dark: #1c1b19 !default;
+$light: #f4f5f6 !default;
+$white: white !default;
 
 // EXTRA COLORS
-$success: #00C851;
-$info: #17a2b8;
-$warning: #ffbb33;
-$danger: #ff4444;
-$gray: gray;
-$muted: #b1b1b1;
+$success: #2ECC71 !default;
+$info: #17a2b8 !default;
+$warning: #F3BB45 !default;
+$danger: #E74C3C !default;
+$gray: gray !default;
+$muted: #9E9E9E !default;
 
 
 // DEFAILT TEXT COLOR
-$default-text-color: #333;
+$default-text-color: #333 !default;
 
 
 // TYPOGRAPHY
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 // FONT DEFAULTS
-$line-height: 1.5;
-$font-size-base: 16px;
-$font-margin-base: 5px;
-$font-weight-base: 400;
-$font-weight-bold: bold;
+$line-height: 1.5 !default;
+$font-size-base: 16px !default;
+$font-margin-base: 5px !default;
+$font-weight-base: 400 !default;
+$font-weight-bold: bold !default;
 
 // DEFAULT FONT
 $font-family-base: -apple-system,
@@ -41,15 +41,20 @@ Arial,
 sans-serif,
 "Apple Color Emoji",
 "Segoe UI Emoji",
-"Segoe UI Symbol";
+"Segoe UI Symbol" !default;
 
 // FONT SIZES
-$h1: 46px;
-$h2: 36px;
-$h3: 28px;
-$h4: 22px;
-$h5: 18px;
-$h6: 16px;
+$h1: 46px !default;
+$h2: 36px !default;
+$h3: 28px !default;
+$h4: 22px !default;
+$h5: 18px !default;
+$h6: 16px !default;
+
+$display-1: 80px !default;
+$display-2: 70px !default;
+$display-3: 60px !default;
+$display-4: 50px !default;
 
 
 
@@ -57,16 +62,16 @@ $h6: 16px;
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 // SMALL
-$small-media: '590px'; // EDITABLE
+$small-media: '590px' !default; // EDITABLE
 
 // MEDIUM
-$medium-media: '790px'; // EDITABLE
+$medium-media: '790px' !default; // EDITABLE
 
 // LARGE
-$large-media: '1160px'; // EDITABLE
+$large-media: '1160px' !default; // EDITABLE
 
 // XL
-$xl-media: '1260px'; // EDITABLE
+$xl-media: '1260px' !default; // EDITABLE
 
 
 
@@ -75,29 +80,39 @@ $xl-media: '1260px'; // EDITABLE
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 // CONTAINER
-$container: 1150px;
-$container-fluid: 100%;
+$container: 1150px !default;
+$container-fluid: 100% !default;
 
 
 // TRANSITION
-$transition: all 0.220s ease;
+$transition: all 0.220s ease !default;
 
 
 // DEFAULT PADDING
-$default-padding: 10px;
+$default-padding: 10px !default;
 
 
 // BORDER RADIUS
-$border-radius: 4px;
-$radius: true;
+$border-radius: 4px !default;
+$radius: true !default;
 
 
 // BREAD CRUMB DIVIDER
-$breadcrumb-divider: quote("\f101");
+$breadcrumb-divider: quote("\f101") !default;
+
+// GRID ARRAYS
+$grid-array: ('-sm': $small-media,
+  '-md': $medium-media,
+  '-lg': $large-media,
+  '-xl': $xl-media);
 
 
-// OVERWRITE
-@import '../overwrite';
+// GRID SYSTEM
+$grid_name: 'row' !default; // Name
+$grid_col: 12 !default; // Columns
+$grid_gutter: $default-padding !default; // Path: ./vars/variables
+$grid_col_name: 'col' !default; // ex: col-md-12
+$grid_auto: 'column' !default; // Auto column
 
 
 // BACKGROUND & TEXT COLORS
@@ -135,8 +150,3 @@ $btn-colors: ('primary': $primary,
 );
 
 
-// GRID ARRAYS
-$grid-array: ('-sm': $small-media,
-  '-md': $medium-media,
-  '-lg': $large-media,
-  '-xl': $xl-media);

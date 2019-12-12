@@ -3,6 +3,130 @@ $breakpoint in $grid-array {
   @media (min-width: $breakpoint) {
 
 
+    // DISPLAY
+    .d-none#{$size} {
+      display: none !important;
+    }
+
+    .d-block#{$size} {
+      display: block !important;
+    }
+
+    .d-inline-block#{$size} {
+      display: inline-block !important;
+    }
+
+    .d-flex#{$size} {
+      display: flex !important;
+    }
+
+    .fa-center#{$size} {
+      align-items: center !important;
+    }
+
+    .fa-baseline#{$size} {
+      align-items: baseline !important
+    }
+
+    .fa-start#{$size} {
+      align-items: flex-start !important;
+    }
+
+    .fa-end#{$size} {
+      align-items: flex-end !important;
+    }
+
+    .fa-stretch#{$size} {
+      align-items: stretch !important;
+    }
+
+    .fa-end#{$size} {
+      align-items: flex-end !important;
+    }
+
+    .fj-center#{$size} {
+      justify-content: center !important;
+    }
+
+    .fj-baseline#{$size} {
+      justify-content: baseline !important;
+    }
+
+    .fj-start#{$size} {
+      justify-content: flex-start !important;
+    }
+
+    .fj-end#{$size} {
+      justify-content: flex-end !important;
+    }
+
+    .fj-between#{$size} {
+      justify-content: space-between !important;
+    }
+
+    .fj-around#{$size} {
+      justify-content: space-around !important;
+    }
+    
+
+    // FONT HELPERS
+    .text-center#{$size} {
+      text-align: center !important;
+    }
+
+    .text-left#{$size} {
+      text-align: left !important;
+    }
+
+    .text-right#{$size} {
+      text-align: right !important;
+    }
+
+    // FONT SIZES
+    .display-1#{$size} {
+      font-size: 80px;
+    }
+
+    .display-2#{$size} {
+      font-size: 70px;
+    }
+
+    .display-3#{$size} {
+      font-size: 60px;
+    }
+
+    .display-4#{$size} {
+      font-size: 50px;
+    }
+    .h1#{$size} {
+      font-size: $h1;
+    }
+
+    .h2#{$size} {
+      font-size: $h2;
+    }
+
+    .h3#{$size} {
+      font-size: $h3;
+    }
+
+    .h4#{$size} {
+      font-size: $h4;
+    }
+
+    .h5#{$size} {
+      font-size: $h5;
+    }
+
+    .h6#{$size} {
+      font-size: $h6;
+    }
+
+    p#{$size} {
+      font-size: $font-size-base;
+    }
+
+
     // PADDING
     .p-0#{$size} {
       padding: 0 !important;
@@ -189,25 +313,6 @@ $breakpoint in $grid-array {
 
     .weight-900#{$size} {
       font-weight: 900 !important;
-    }
-
-
-    // DISPLAY FONTS
-
-    .display-1#{$size} {
-      font-size: 80px;
-    }
-
-    .display-2#{$size} {
-      font-size: 70px;
-    }
-
-    .display-3#{$size} {
-      font-size: 60px;
-    }
-
-    .display-4#{$size} {
-      font-size: 50px;
     }
 
   }

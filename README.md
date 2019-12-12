@@ -1,11 +1,11 @@
 <p align="center">
   <a href="https://getbuttercake.com/?ref=readmeHeader">
-    <img src="https://getbuttercake.com/README/header-1.svg" alt="Butter Cake logo" width="100%">
+    <img src="https://getbuttercake.com/images/logo.png" alt="Butter Cake logo" width="100%">
   </a>
 </p>
 
 <h3 align="center">Butter Cake</h3>
-<p align="center">v3.0.0</p>
+<p align="center">v4.0.0</p>
 
 <p align="center">
   A Modern Lightweight Front End CSS framework for faster and easier web development.
@@ -55,23 +55,18 @@ npm i buttercake
 <script src="https://cdn.jsdelivr.net/npm/buttercake@3.0.0/dist/js/butterCake.min.js"></script>
 ```
 
-### ***Butter Cake is constantly in development! Try it out now.***
-
 ## Documentation
 
 Checkout the official website for the Documentation. [https://getbuttercake.com](https://getbuttercake.com/?ref=readme)
 
 ## Why You  should use - Butter Cake
 
-- ✈️ light weight 59kb (css) &amp; 4kb (js)
+- ✈️ light weight
 - 🗃 Modular Components
 - 🏠 Simple Structure
 - 📜 Built Using Sass(SCSS)
 - 📲 Responsive
 
-> No need to setup development environment with Gulp etc... because Butter Cake uses [Prepros (FREE APP)](https://prepros.io/?ref=getbuttercake.com) to compile SASS(SCSS).
-
-### Can start a new project within seconds 😻
 
 ## 🌐 Browser Support
 

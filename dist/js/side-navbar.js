@@ -1,34 +1,18 @@
-(function ($, window) {
-
-
-  // BODY
-  $body = $('body , html');
-
-
-  /**
-   * NAVBAR
-   * ––––––––––––––––––––––––––––––––––––––––––––––––––
-   */
+ // NAVBAR
+ ButterCake.plugin('navbar', function () {
   var $toggler = $('.navbar .toggler');
-  var breakPoint = {
-    'sm': 580,
-    'md': 780,
-    'lg': 1150,
-    'xl': 1250
-  }
-
   // NAVBAR RESPONSIVE BREAKING POINTS
   // 
   $('.navbar').each(function () {
 
     if ($(this).hasClass('expand-sm')) {
-      $(this).attr('data-toggle', breakPoint.sm);
+      $(this).attr('data-toggle', ButterCake.settings.breakPoints.sm);
     } else if ($(this).hasClass('expand-md')) {
-      $(this).attr('data-toggle', breakPoint.md);
+      $(this).attr('data-toggle', ButterCake.settings.breakPoints.md);
     } else if ($(this).hasClass('expand-lg')) {
-      $(this).attr('data-toggle', breakPoint.lg);
+      $(this).attr('data-toggle', ButterCake.settings.breakPoints.lg);
     } else if ($(this).hasClass('expand-xl')) {
-      $(this).attr('data-toggle', breakPoint.xl);
+      $(this).attr('data-toggle', ButterCake.settings.breakPoints.xl);
     } else if ($(this).hasClass('expanded')) {
       $(this).attr('data-toggle', 'null');
     } else {
@@ -53,7 +37,6 @@
           }
         }
       }
-
     });
   }
 
@@ -65,25 +48,21 @@
 
   // TOGGLER CLICK
   $toggler.on('click', function () {
-    $id = $(this).attr('data-nav');
-    $body.toggleClass('noScroll');
+    var $id = $(this).attr('data-nav');
+    ButterCake.settings.body.toggleClass('noScroll');
     $($id).toggleClass('toggled');
   });
 
   // MENU CLOSE
   $('.menu-close').on('click', function () {
-    $body.removeClass('noScroll');
-    $($id).removeClass('toggled');
+    ButterCake.settings.body.removeClass('noScroll');
+    $('.navbar .menu-box').removeClass('toggled');
   });
 
 
   // SHADOW CLICK
   $('.navbar .shadow-fixed').click(function (e) {
-    if (!$(e.target).is($id)) {
-      $body.removeClass('noScroll');
-      $($id).removeClass('toggled');
-    }
+    $(this).parents('.navbar').find('.toggled').removeClass('toggled');
+    ButterCake.settings.body.removeClass('noScroll');
   });
-
-
-}(jQuery, window))
+}, true);

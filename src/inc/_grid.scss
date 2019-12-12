@@ -2,17 +2,6 @@
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 
-// GRID SYSTEM
-$grid_name: 'row'; // Name
-$grid_col: 12; // Columns
-$grid_gutter: $default-padding; // Path: ./vars/variables
-$grid_col_name: 'col'; // ex: col-md-12
-$grid_auto: 'column'; // Auto column
-
-
-// DO NOT EDIT BELOW WITHOUT PROPER KNOWLEDGE- 'DEVELOPER NOTE'
-// ––––––––––––––––––––––––––––––––––––––––––––––––––
-
 /*
 * * .row
 */
@@ -20,8 +9,6 @@ $grid_auto: 'column'; // Auto column
 .#{$grid_name} {
     display: flex;
     flex-wrap: wrap;
-    max-width: 100%;
-    width: 100%;
 }
 
 // AUTO GRID
@@ -38,6 +25,8 @@ $grid_auto: 'column'; // Auto column
 * * .row.no-gutters
 */
 .#{$grid_name} {
+    margin-left: -$grid_gutter;
+    margin-right: -$grid_gutter;
     &.no-gutters {
         &>div {
             padding-left: 0 !important;

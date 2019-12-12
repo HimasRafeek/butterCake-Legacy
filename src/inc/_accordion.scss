@@ -16,6 +16,9 @@
             padding: 15px;
             background-color: $white;
             border: 1px solid darken($light, 10%);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
             &:not(.active) {
                 margin-bottom: 5px;
