@@ -89,4 +89,4 @@ Butter Cake uses [autoprefixer](https://github.com/postcss/autoprefixer) to make
 
 ## Copyright and license
 
-Code copyright 2018 - 2019 Himas Rafeek. Code released under the [MIT license](https://github.com/HimasRafeek/butterCake/blob/master/LICENSE).
+Code copyright 2018 - 2021 Himas Rafeek. Code released under the [MIT license](https://github.com/HimasRafeek/butterCake/blob/master/LICENSE).
