@@ -380,7 +380,8 @@ label {
     input[type='checkbox'] {
         display: block;
         margin: 0 10px 0 0;
-        -webkit-appearance: button;
+        appearance: none;
+        -webkit-appearance: none;
         border: none;
         outline: none;
         background-color: darken($light, 10%);
