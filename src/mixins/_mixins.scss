@@ -8,7 +8,42 @@
     background-color: $color;
 
     // Light Button
-    @if $color !=$light OR $color !=$white {
+    @if $color !="white" {
+
+
+        &.active,
+        &:focus,
+        &:hover {
+            color: $textColor !important;
+            background-color: darken($color, 10%) !important;
+            border-color: darken($color, 10%) !important;
+        }
+
+        &:focus,
+        &:active {
+            box-shadow: 0 0 0 2px rgba($color, 0.5) !important;
+        }
+
+
+        &.outline {
+            border-width: 2px;
+
+            &:hover {
+                color: $textColor !important;
+                border-color: $color !important;
+                background-color: $color !important;
+            }
+
+            &:focus,
+            &:active {
+                background-color: darken($color, 20%) !important;
+            }
+        }
+
+    }
+
+
+    @if $color !="#f4f5f6" {
 
 
         &.active,
@@ -43,10 +78,19 @@
     }
 
     // Light Button
-    @if $color==$light OR $color==$white {
+    @if $color==$white {
         border-color: rgba(0, 0, 0, 0.125) !important;
 
-        &.active{
+        &.active {
+            color: black !important;
+        }
+    }
+
+    // Light Button
+    @if $color==$light {
+        border-color: rgba(0, 0, 0, 0.125) !important;
+
+        &.active {
             color: black !important;
         }
     }
@@ -55,17 +99,15 @@
 
 // MAKE BUTTONS
 @mixin makeButton {
+
     // REGULAR BUTTON
     @each $color,
     $value in $btn-colors {
 
-        // Regular Button
-        .btn.#{$color} {
-            @include button($value, $white);
-        }
+
 
         // Light Button
-        @if $color=='light'OR $color=='white' {
+        @if ($value==$light) {
             .btn.#{$color} {
                 background-color: $value;
                 color: $dark !important;
@@ -97,6 +139,11 @@
         }
 
         @else {
+
+            // Regular Button
+            .btn.#{$color} {
+                @include button($value, $white);
+            }
 
             // Regular Outline Button
             .btn.#{$color}.outline {
